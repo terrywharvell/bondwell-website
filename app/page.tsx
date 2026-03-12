@@ -8,7 +8,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a
   href="#top"
-  className="flex items-center gap-3 text-xl font-semibold tracking-tight transition hover:opacity-80"
+  className="flex items-center gap-3 text-xl font-bold tracking-tight transition hover:opacity-80"
 >
   <img
     src="/bondwell-icon.png"

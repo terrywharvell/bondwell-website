@@ -94,73 +94,88 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="screens" className="relative mx-auto max-w-6xl px-6 py-20">
-        <div className="mb-12 text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
-            See BondWell in action
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-            Calm support, shown simply
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#5A514A]">
-            BondWell is designed to feel clear, gentle, and easy to follow —
-            for the person using it and for the partner or carer supporting them.
-          </p>
+      <section id="screens" className="mx-auto max-w-6xl px-6 py-20">
+
+  <div className="mb-12 text-center">
+    <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
+      See BondWell in action
+    </p>
+
+    <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+      Calm support, shown simply
+    </h2>
+
+    <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#5A514A]">
+      BondWell is designed to feel clear, gentle, and easy to follow —
+      for the person using it and for the partner or carer supporting them.
+    </p>
+  </div>
+
+  <div className="flex flex-col items-center gap-16 md:flex-row md:justify-center md:gap-12">
+
+    {/* LEFT PHONE */}
+    <div className="text-center md:translate-y-10">
+      <div className="mx-auto w-[250px] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
+        <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
+          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src="/screens/user-home.jpg"
+            alt="BondWell daily overview screen"
+            className="block w-full"
+          />
         </div>
+      </div>
 
-        <div className="grid items-end gap-10 md:grid-cols-3">
-          <div className="text-center md:translate-y-8">
-            <div className="mx-auto w-[260px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18),0_0_60px_rgba(200,169,107,0.22)]">
-              <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
-                <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
-                <img
-                  src="/screens/user-home.jpg"
-                  alt="BondWell daily overview screen"
-                  className="block w-full"
-                />
-              </div>
-            </div>
-            <p className="mt-6 text-base font-semibold">Daily overview</p>
-            <p className="mx-auto mt-2 max-w-[260px] text-sm leading-7 text-[#5A514A]">
-              A calm home screen with the day’s support, reminders, and status in one place.
-            </p>
-          </div>
+      <p className="mt-6 text-base font-semibold">Daily overview</p>
 
-          <div className="text-center">
-            <div className="mx-auto w-[300px] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_30px_90px_rgba(47,42,38,0.22),0_0_90px_rgba(200,169,107,0.28)]">
-              <div className="relative overflow-hidden rounded-[2.35rem] bg-black">
-                <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
-                <img
-                  src="/screens/user-ask-for-support.jpg"
-                  alt="BondWell ask for support screen"
-                  className="block w-full"
-                />
-              </div>
-            </div>
-            <p className="mt-6 text-base font-semibold">Ask for support</p>
-            <p className="mx-auto mt-2 max-w-[280px] text-sm leading-7 text-[#5A514A]">
-              A simple, low-pressure way to say support is needed without adding extra stress.
-            </p>
-          </div>
+      <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
+        A calm home screen with the day’s support, reminders, and status in one place.
+      </p>
+    </div>
 
-          <div className="text-center md:translate-y-8">
-            <div className="mx-auto w-[260px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18),0_0_60px_rgba(200,169,107,0.22)]">
-              <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
-                <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
-                <img
-                  src="/screens/partner-support-requested.jpg"
-                  alt="BondWell partner support requested screen"
-                  className="block w-full"
-                />
-              </div>
-            </div>
-            <p className="mt-6 text-base font-semibold">Partner view</p>
-            <p className="mx-auto mt-2 max-w-[260px] text-sm leading-7 text-[#5A514A]">
-              A view-only screen that helps partners or carers stay in sync, gently and clearly.
-            </p>
-          </div>
+    {/* CENTER PHONE */}
+    <div className="text-center">
+      <div className="mx-auto w-[320px] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.28)]">
+        <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
+          <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src="/screens/user-ask-for-support.jpg"
+            alt="BondWell ask for support screen"
+            className="block w-full"
+          />
         </div>
-      </section>
+      </div>
+
+      <p className="mt-6 text-base font-semibold">Ask for support</p>
+
+      <p className="mx-auto mt-2 max-w-[300px] text-sm leading-7 text-[#5A514A]">
+        A simple, low-pressure way to say support is needed without adding extra stress.
+      </p>
+    </div>
+
+    {/* RIGHT PHONE */}
+    <div className="text-center md:translate-y-10">
+      <div className="mx-auto w-[250px] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
+        <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
+          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src="/screens/partner-support-requested.jpg"
+            alt="BondWell partner support requested screen"
+            className="block w-full"
+          />
+        </div>
+      </div>
+
+      <p className="mt-6 text-base font-semibold">Partner view</p>
+
+      <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
+        A view-only screen that helps partners or carers stay in sync, gently and clearly.
+      </p>
+    </div>
+
+  </div>
+
+</section>
 
       <section className="mx-auto max-w-6xl px-6 py-8">
         <div className="grid gap-6 md:grid-cols-2">

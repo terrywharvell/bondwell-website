@@ -11,10 +11,10 @@ export default function Home() {
   className="flex items-center gap-2 text-xl font-semibold tracking-tight transition hover:opacity-80"
 >
   <img
-    src="/bondwell-logo.png"
-    alt="BondWell logo"
-    className="h-8 w-auto"
-  />
+  src="/bondwell-logo.png"
+  alt="BondWell logo"
+  className="h-10 w-10 object-contain"
+/>
   <span>BondWell</span>
 </a>
 

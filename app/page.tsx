@@ -90,83 +90,124 @@ Clear calm communication when extra support is needed
 </div>
 </div>
 
-</section>
-
 <section id="screens" className="mx-auto max-w-6xl px-6 py-20">
+  <div className="mb-10 max-w-2xl">
+    <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
+      See BondWell in action
+    </p>
+    <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+      Real screens, designed to feel calm and clear
+    </h2>
+    <p className="mt-4 leading-8 text-[#5A514A]">
+      BondWell is built to reduce noise and make everyday support easier
+      to understand. Gentle prompts, calmer wording, and a clear view of
+      what matters right now.
+    </p>
+  </div>
 
-<div className="text-center mb-14">
+  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
+      <div className="mx-auto w-full max-w-[280px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18)]">
+        <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src="/screens/partner-support-requested.jpg"
+            alt="BondWell partner screen showing support requested"
+            className="block w-full"
+          />
+        </div>
+      </div>
+      <p className="mt-5 text-base font-semibold">Support requested</p>
+      <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+        A calm, easy-to-read partner view that helps reduce guesswork.
+      </p>
+    </div>
 
-<p className="text-sm uppercase tracking-[0.2em] text-[#8A7460]">
-See BondWell in action
-</p>
+    <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
+      <div className="mx-auto w-full max-w-[280px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18)]">
+        <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src="/screens/support-acknowledged.jpg"
+            alt="BondWell screen showing support acknowledged"
+            className="block w-full"
+          />
+        </div>
+      </div>
+      <p className="mt-5 text-base font-semibold">Support acknowledged</p>
+      <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+        Clear reassurance when support has been seen, with gentle next steps.
+      </p>
+    </div>
 
-<h2 className="text-3xl md:text-4xl font-semibold mt-3">
-Calm support, shown simply
-</h2>
+    <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
+      <div className="mx-auto w-full max-w-[280px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18)]">
+        <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src="/screens/thinking-of-you.jpg"
+            alt="BondWell screen showing a calm supportive message"
+            className="block w-full"
+          />
+        </div>
+      </div>
+      <p className="mt-5 text-base font-semibold">Gentle connection</p>
+      <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+        Small supportive moments that help both people feel more in sync.
+      </p>
+    </div>
 
-</div>
+    <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
+      <div className="mx-auto w-full max-w-[280px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18)]">
+        <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src="/screens/resting.jpg"
+            alt="BondWell screen showing resting status and need rest energy option"
+            className="block w-full"
+          />
+        </div>
+      </div>
+      <p className="mt-5 text-base font-semibold">Energy and rest</p>
+      <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+        Simple status sharing that helps communicate how the day feels.
+      </p>
+    </div>
 
-<div className="grid md:grid-cols-3 gap-12 items-end">
+    <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
+      <div className="mx-auto w-full max-w-[280px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18)]">
+        <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src="/screens/user-ask-for-support.jpg"
+            alt="BondWell user home screen with ask for support button"
+            className="block w-full"
+          />
+        </div>
+      </div>
+      <p className="mt-5 text-base font-semibold">Ask for support</p>
+      <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+        A clear, low-pressure way to ask for help when it’s needed.
+      </p>
+    </div>
 
-<div className="text-center">
-
-<div className="mx-auto w-[260px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-xl">
-
-<div className="overflow-hidden rounded-[2.2rem]">
-<img
-src="/screens/user-home.jpg"
-className="w-full"
-/>
-</div>
-
-</div>
-
-<p className="mt-6 font-semibold">
-Daily overview
-</p>
-
-</div>
-
-<div className="text-center">
-
-<div className="mx-auto w-[280px] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-xl">
-
-<div className="overflow-hidden rounded-[2.4rem]">
-<img
-src="/screens/user-ask-for-support.jpg"
-className="w-full"
-/>
-</div>
-
-</div>
-
-<p className="mt-6 font-semibold">
-Ask for support
-</p>
-
-</div>
-
-<div className="text-center">
-
-<div className="mx-auto w-[260px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-xl">
-
-<div className="overflow-hidden rounded-[2.2rem]">
-<img
-src="/screens/partner-support-requested.jpg"
-className="w-full"
-/>
-</div>
-
-</div>
-
-<p className="mt-6 font-semibold">
-Partner view
-</p>
-
-</div>
-
-</div>
-
+    <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
+      <div className="mx-auto w-full max-w-[280px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18)]">
+        <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
+          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+          <img
+            src="/screens/user-home.jpg"
+            alt="BondWell home screen with daily support, energy and quick status"
+            className="block w-full"
+          />
+        </div>
+      </div>
+      <p className="mt-5 text-base font-semibold">Daily overview</p>
+      <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+        Key information at a glance, without overwhelming the screen.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section id="pricing" className="mx-auto max-w-6xl px-6 py-20">

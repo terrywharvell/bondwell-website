@@ -13,7 +13,7 @@ export default function Home() {
   <img
     src="/bondwell-icon.png"
     alt="BondWell logo"
-    className="h-18 w-18 object-contain"
+    className="h-20 w-auto object-contain"
   />
   <span>BondWell</span>
 </a>

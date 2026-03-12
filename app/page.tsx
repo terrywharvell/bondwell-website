@@ -8,13 +8,13 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a
   href="#top"
-  className="flex items-center gap-2 text-xl font-semibold tracking-tight transition hover:opacity-80"
+  className="flex items-center gap-3 text-xl font-semibold tracking-tight transition hover:opacity-80"
 >
   <img
-  src="/bondwell-logo.png"
-  alt="BondWell logo"
-  className="h-10 w-10 object-contain"
-/>
+    src="/bondwell-icon.png"
+    alt="BondWell logo"
+    className="h-9 w-9 object-contain"
+  />
   <span>BondWell</span>
 </a>
 

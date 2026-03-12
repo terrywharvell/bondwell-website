@@ -1,4 +1,41 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setStatus("success");
+      setMessage("You’re on the launch list 💛");
+      setEmail("");
+    } catch (err) {
+      setStatus("error");
+      setMessage(err instanceof Error ? err.message : "Something went wrong.");
+    }
+  }
+
   return (
     <main
       id="top"
@@ -7,16 +44,16 @@ export default function Home() {
       <header className="sticky top-0 z-20 border-b border-black/5 bg-[#FAF7F2]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a
-  href="#top"
-  className="flex items-center gap-3 text-xl font-bold tracking-tight transition hover:opacity-80"
->
-  <img
-    src="/bondwell-icon.png"
-    alt="BondWell logo"
-    className="h-20 w-auto object-contain"
-  />
-  <span>BondWell</span>
-</a>
+            href="#top"
+            className="flex items-center gap-3 text-xl font-bold tracking-tight transition hover:opacity-80"
+          >
+            <img
+              src="/bondwell-icon.png"
+              alt="BondWell logo"
+              className="h-20 w-auto object-contain"
+            />
+            <span>BondWell</span>
+          </a>
 
           <nav className="hidden gap-6 text-sm md:flex">
             <a href="#how-it-works" className="hover:opacity-70">
@@ -89,28 +126,18 @@ export default function Home() {
         <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
           <div className="space-y-4">
             <div className="rounded-2xl bg-[#F6F1EA] p-4">
-              <p className="text-sm font-medium text-[#8A7460]">
-                Gentle reminder
-              </p>
+              <p className="text-sm font-medium text-[#8A7460]">Gentle reminder</p>
               <p className="mt-2 text-base">Medication due soon</p>
-              <p className="mt-1 text-sm text-[#6C635C]">
-                Taking it gently today 💛
-              </p>
+              <p className="mt-1 text-sm text-[#6C635C]">Taking it gently today 💛</p>
             </div>
 
             <div className="rounded-2xl bg-[#FAF7F2] p-4">
-              <p className="text-sm font-medium text-[#8A7460]">
-                Quick check-in
-              </p>
-              <p className="mt-2 text-base">
-                A simple way to say how you’re doing
-              </p>
+              <p className="text-sm font-medium text-[#8A7460]">Quick check-in</p>
+              <p className="mt-2 text-base">A simple way to say how you’re doing</p>
             </div>
 
             <div className="rounded-2xl bg-[#F6F1EA] p-4">
-              <p className="text-sm font-medium text-[#8A7460]">
-                Support requested
-              </p>
+              <p className="text-sm font-medium text-[#8A7460]">Support requested</p>
               <p className="mt-2 text-base">
                 Clear, calm communication when extra support is needed
               </p>
@@ -380,20 +407,40 @@ export default function Home() {
             coming next for BondWell.
           </p>
 
-          <div className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
+          <form
+            onSubmit={handleSubmit}
+            className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row"
+          >
             <input
               type="email"
               placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
               className="w-full rounded-full border border-[#D8CEC2] bg-white px-5 py-3 outline-none"
             />
-            <button className="rounded-full bg-[#2F2A26] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90">
-              Join list
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="rounded-full bg-[#2F2A26] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90 disabled:opacity-60"
+            >
+              {status === "loading" ? "Joining..." : "Join list"}
             </button>
-          </div>
+          </form>
+
+          {message ? (
+            <p
+              className={`mt-4 text-sm ${
+                status === "success" ? "text-[#557A46]" : "text-[#A14B4B]"
+              }`}
+            >
+              {message}
+            </p>
+          ) : null}
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-6 pb-20">
+      <section id="contact" className="mx-auto max-w-6xl px-6 pb-12">
         <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
           <h2 className="text-2xl font-semibold">Contact</h2>
           <p className="mt-4 leading-8 text-[#5A514A]">
@@ -404,6 +451,24 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <footer className="border-t border-black/5 px-6 py-8">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-[#6C635C] md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} BondWell. All rights reserved.</p>
+
+          <div className="flex flex-wrap gap-4">
+            <a href="#privacy" className="hover:opacity-70">
+              Privacy
+            </a>
+            <a href="#faq" className="hover:opacity-70">
+              FAQs
+            </a>
+            <a href="#contact" className="hover:opacity-70">
+              Contact
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

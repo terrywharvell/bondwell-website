@@ -95,7 +95,6 @@ export default function Home() {
       </section>
 
       <section id="screens" className="relative mx-auto max-w-6xl px-6 py-20">
-<div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_rgba(200,169,107,0.55),_transparent_65%)] blur-2xl" />
         <div className="mb-12 text-center">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
             See BondWell in action
@@ -111,7 +110,7 @@ export default function Home() {
 
         <div className="grid items-end gap-10 md:grid-cols-3">
           <div className="text-center md:translate-y-8">
-            <div className="mx-auto w-[260px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18)]">
+            <div className="mx-auto w-[260px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18),0_0_60px_rgba(200,169,107,0.22)]">
               <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
                 <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
                 <img
@@ -128,7 +127,7 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <div className="mx-auto w-[300px] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_30px_90px_rgba(47,42,38,0.22)]">
+            <div className="mx-auto w-[300px] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_30px_90px_rgba(47,42,38,0.22),0_0_90px_rgba(200,169,107,0.28)]">
               <div className="relative overflow-hidden rounded-[2.35rem] bg-black">
                 <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
                 <img
@@ -145,7 +144,7 @@ export default function Home() {
           </div>
 
           <div className="text-center md:translate-y-8">
-            <div className="mx-auto w-[260px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18)]">
+            <div className="mx-auto w-[260px] rounded-[2.8rem] bg-[#1F1A17] p-[10px] shadow-[0_25px_80px_rgba(47,42,38,0.18),0_0_60px_rgba(200,169,107,0.22)]">
               <div className="relative overflow-hidden rounded-[2.2rem] bg-black">
                 <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
                 <img

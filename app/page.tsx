@@ -1,19 +1,37 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FAF7F2] text-[#2F2A26] bg-[radial-gradient(circle_at_top,_rgba(200,169,107,0.10),_transparent_35%)]">
+    <main
+      id="top"
+      className="min-h-screen bg-[#FAF7F2] text-[#2F2A26] bg-[radial-gradient(circle_at_top,_rgba(200,169,107,0.10),_transparent_35%)]"
+    >
       <header className="sticky top-0 z-20 border-b border-black/5 bg-[#FAF7F2]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="/" className="text-xl font-semibold tracking-tight hover:opacity-80">
-  BondWell
-</a>
+          <a
+            href="#top"
+            className="text-xl font-semibold tracking-tight transition hover:opacity-80"
+          >
+            BondWell
+          </a>
 
           <nav className="hidden gap-6 text-sm md:flex">
-            <a href="#how-it-works" className="hover:opacity-70">How it works</a>
-            <a href="#screens" className="hover:opacity-70">Screens</a>
-            <a href="#pricing" className="hover:opacity-70">Pricing</a>
-            <a href="#privacy" className="hover:opacity-70">Privacy</a>
-            <a href="#faq" className="hover:opacity-70">FAQs</a>
-            <a href="#contact" className="hover:opacity-70">Contact</a>
+            <a href="#how-it-works" className="hover:opacity-70">
+              How it works
+            </a>
+            <a href="#screens" className="hover:opacity-70">
+              Screens
+            </a>
+            <a href="#pricing" className="hover:opacity-70">
+              Pricing
+            </a>
+            <a href="#privacy" className="hover:opacity-70">
+              Privacy
+            </a>
+            <a href="#faq" className="hover:opacity-70">
+              FAQs
+            </a>
+            <a href="#contact" className="hover:opacity-70">
+              Contact
+            </a>
           </nav>
 
           <a
@@ -97,92 +115,91 @@ export default function Home() {
       </section>
 
       <section id="screens" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mb-12 text-center">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
+            See BondWell in action
+          </p>
 
-  <div className="mb-12 text-center">
-    <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
-      See BondWell in action
-    </p>
+          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+            Calm support, shown simply
+          </h2>
 
-    <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-      Calm support, shown simply
-    </h2>
-
-    <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#5A514A]">
-      BondWell is designed to feel clear, gentle, and easy to follow —
-      for the person using it and for the partner or carer supporting them.
-    </p>
-  </div>
-
-  <div className="flex flex-col items-center gap-16 md:flex-row md:justify-center md:gap-12">
-
-    {/* LEFT PHONE */}
-    <div className="text-center md:translate-y-10">
-      <div className="mx-auto w-[250px] animate-[float_6s_ease-in-out_infinite] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
-        <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
-          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
-          <img
-            src="/screens/user-home.jpg"
-            alt="BondWell daily overview screen"
-            className="block w-full"
-          />
+          <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#5A514A]">
+            BondWell is designed to feel clear, gentle, and easy to follow —
+            for the person using it and for the partner or carer supporting
+            them.
+          </p>
         </div>
-      </div>
 
-      <p className="mt-6 text-base font-semibold">Daily overview</p>
+        <div className="flex flex-col items-center gap-16 md:flex-row md:justify-center md:gap-12">
+          <div className="text-center md:translate-y-10">
+            <div className="mx-auto w-[250px] animate-[float_6s_ease-in-out_infinite] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
+              <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
+                <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+                <img
+                  src="/screens/user-home.jpg"
+                  alt="BondWell daily overview screen"
+                  className="block w-full"
+                />
+              </div>
+            </div>
 
-      <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
-        A calm home screen with the day’s support, reminders, and status in one place.
-      </p>
-    </div>
+            <p className="mt-6 text-base font-semibold">Daily overview</p>
 
-    {/* CENTER PHONE */}
-    <div className="text-center">
-      <div className="mx-auto w-[320px] animate-[float_7s_ease-in-out_infinite] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.28)]">
-        <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
-          <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
-          <img
-            src="/screens/user-ask-for-support.jpg"
-            alt="BondWell ask for support screen"
-            className="block w-full"
-          />
+            <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
+              A calm home screen with the day’s support, reminders, and status
+              in one place.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="mx-auto w-[320px] animate-[float_7s_ease-in-out_infinite] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.28)]">
+              <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
+                <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
+                <img
+                  src="/screens/user-ask-for-support.jpg"
+                  alt="BondWell ask for support screen"
+                  className="block w-full"
+                />
+              </div>
+            </div>
+
+            <p className="mt-6 text-base font-semibold">Ask for support</p>
+
+            <p className="mx-auto mt-2 max-w-[300px] text-sm leading-7 text-[#5A514A]">
+              A simple, low-pressure way to say support is needed without adding
+              extra stress.
+            </p>
+          </div>
+
+          <div className="text-center md:translate-y-10">
+            <div className="mx-auto w-[250px] animate-[float_6.5s_ease-in-out_infinite] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
+              <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
+                <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
+                <img
+                  src="/screens/partner-support-requested.jpg"
+                  alt="BondWell partner support requested screen"
+                  className="block w-full"
+                />
+              </div>
+            </div>
+
+            <p className="mt-6 text-base font-semibold">Partner view</p>
+
+            <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
+              A view-only screen that helps partners or carers stay in sync,
+              gently and clearly.
+            </p>
+          </div>
         </div>
-      </div>
-
-      <p className="mt-6 text-base font-semibold">Ask for support</p>
-
-      <p className="mx-auto mt-2 max-w-[300px] text-sm leading-7 text-[#5A514A]">
-        A simple, low-pressure way to say support is needed without adding extra stress.
-      </p>
-    </div>
-
-    {/* RIGHT PHONE */}
-    <div className="text-center md:translate-y-10">
-      <div className="mx-auto w-[250px] animate-[float_6.5s_ease-in-out_infinite] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
-        <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
-          <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
-          <img
-            src="/screens/partner-support-requested.jpg"
-            alt="BondWell partner support requested screen"
-            className="block w-full"
-          />
-        </div>
-      </div>
-
-      <p className="mt-6 text-base font-semibold">Partner view</p>
-
-      <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
-        A view-only screen that helps partners or carers stay in sync, gently and clearly.
-      </p>
-    </div>
-
-  </div>
-
-</section>
+      </section>
 
       <section className="mx-auto max-w-6xl px-6 py-8">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-semibold">For people living with epilepsy</h2>
+            <h2 className="text-2xl font-semibold">
+              For people living with epilepsy
+            </h2>
             <p className="mt-4 leading-8 text-[#5A514A]">
               Build steady routines around medication, hydration, meals, and
               gentle check-ins — without pressure. BondWell is designed to help
@@ -214,7 +231,9 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
             <div className="text-sm font-medium text-[#8A7460]">01</div>
-            <h3 className="mt-3 text-xl font-semibold">Set your gentle routine</h3>
+            <h3 className="mt-3 text-xl font-semibold">
+              Set your gentle routine
+            </h3>
             <p className="mt-4 leading-8 text-[#5A514A]">
               Add the reminders you want for medication, hydration, meals, and
               simple check-ins.
@@ -223,7 +242,9 @@ export default function Home() {
 
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
             <div className="text-sm font-medium text-[#8A7460]">02</div>
-            <h3 className="mt-3 text-xl font-semibold">Choose what you share</h3>
+            <h3 className="mt-3 text-xl font-semibold">
+              Choose what you share
+            </h3>
             <p className="mt-4 leading-8 text-[#5A514A]">
               BondWell is consent-based. Sharing is optional, clear, and led by
               the person using the app.
@@ -232,7 +253,9 @@ export default function Home() {
 
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
             <div className="text-sm font-medium text-[#8A7460]">03</div>
-            <h3 className="mt-3 text-xl font-semibold">Ask for support calmly</h3>
+            <h3 className="mt-3 text-xl font-semibold">
+              Ask for support calmly
+            </h3>
             <p className="mt-4 leading-8 text-[#5A514A]">
               When support is needed, BondWell helps reduce guesswork and makes
               communication simpler.
@@ -287,10 +310,18 @@ export default function Home() {
             Built around consent, clarity, and calmer communication
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl bg-[#FAF7F2] p-5">You choose what is shared</div>
-            <div className="rounded-2xl bg-[#FAF7F2] p-5">Partner mode is view-only</div>
-            <div className="rounded-2xl bg-[#FAF7F2] p-5">Not a medical device</div>
-            <div className="rounded-2xl bg-[#FAF7F2] p-5">Not emergency support</div>
+            <div className="rounded-2xl bg-[#FAF7F2] p-5">
+              You choose what is shared
+            </div>
+            <div className="rounded-2xl bg-[#FAF7F2] p-5">
+              Partner mode is view-only
+            </div>
+            <div className="rounded-2xl bg-[#FAF7F2] p-5">
+              Not a medical device
+            </div>
+            <div className="rounded-2xl bg-[#FAF7F2] p-5">
+              Not emergency support
+            </div>
           </div>
         </div>
       </section>

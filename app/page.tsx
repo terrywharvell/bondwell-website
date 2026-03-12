@@ -24,15 +24,30 @@ export default function Home() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Something went wrong.");
+        const errorText =
+          typeof data?.error === "string" ? data.error.toLowerCase() : "";
+
+        if (
+          errorText.includes("duplicate") ||
+          errorText.includes("already on the list") ||
+          errorText.includes("already on the launch list")
+        ) {
+          setStatus("error");
+          setMessage("You're already on the BondWell launch list 🙂");
+          return;
+        }
+
+        throw new Error(data.error || "Could not save your email right now.");
       }
 
       setStatus("success");
-      setMessage("You’re on the launch list 💛");
+      setMessage("✓ You're on the BondWell launch list. We'll let you know when testing opens.");
       setEmail("");
     } catch (err) {
       setStatus("error");
-      setMessage(err instanceof Error ? err.message : "Something went wrong.");
+      setMessage(
+        err instanceof Error ? err.message : "Could not save your email right now."
+      );
     }
   }
 

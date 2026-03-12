@@ -112,7 +112,7 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
             <img
-              src="/screens/partner-support-requested.png"
+              src="/screens/partner-support-requested.jpg"
               alt="BondWell partner screen showing support requested"
               className="w-full rounded-[1.5rem] border border-[#EDE5DB]"
             />
@@ -124,7 +124,7 @@ export default function Home() {
 
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
             <img
-              src="/screens/support-acknowledged.png"
+              src="/screens/support-acknowledged.jpg"
               alt="BondWell screen showing support acknowledged"
               className="w-full rounded-[1.5rem] border border-[#EDE5DB]"
             />
@@ -137,7 +137,7 @@ export default function Home() {
 
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
             <img
-              src="/screens/thinking-of-you.png"
+              src="/screens/thinking-of-you.jpg"
               alt="BondWell screen showing a calm supportive message"
               className="w-full rounded-[1.5rem] border border-[#EDE5DB]"
             />
@@ -149,7 +149,7 @@ export default function Home() {
 
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
             <img
-              src="/screens/resting.png"
+              src="/screens/resting.jpg"
               alt="BondWell screen showing resting status and need rest energy option"
               className="w-full rounded-[1.5rem] border border-[#EDE5DB]"
             />
@@ -161,7 +161,7 @@ export default function Home() {
 
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
             <img
-              src="/screens/user-ask-for-support.png"
+              src="/screens/user-ask-for-support.jpg"
               alt="BondWell user home screen with ask for support button"
               className="w-full rounded-[1.5rem] border border-[#EDE5DB]"
             />
@@ -173,7 +173,7 @@ export default function Home() {
 
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-4 shadow-sm">
             <img
-              src="/screens/user-home.png"
+              src="/screens/user-home.jpg"
               alt="BondWell home screen with daily support, energy and quick status"
               className="w-full rounded-[1.5rem] border border-[#EDE5DB]"
             />

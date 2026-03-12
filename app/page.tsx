@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       <section id="screens" className="relative mx-auto max-w-6xl px-6 py-20">
-<div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_rgba(200,169,107,0.12),_transparent_55%)]" />
+<div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_rgba(200,169,107,0.28),_transparent_60%)]" />
         <div className="mb-12 text-center">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
             See BondWell in action

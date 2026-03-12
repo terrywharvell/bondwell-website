@@ -3,7 +3,9 @@ export default function Home() {
     <main className="min-h-screen bg-[#FAF7F2] text-[#2F2A26] bg-[radial-gradient(circle_at_top,_rgba(200,169,107,0.10),_transparent_35%)]">
       <header className="sticky top-0 z-20 border-b border-black/5 bg-[#FAF7F2]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="text-xl font-semibold tracking-tight">BondWell</div>
+          <a href="/" className="text-xl font-semibold tracking-tight hover:opacity-80">
+  BondWell
+</a>
 
           <nav className="hidden gap-6 text-sm md:flex">
             <a href="#how-it-works" className="hover:opacity-70">How it works</a>

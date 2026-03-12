@@ -23,11 +23,6 @@ export async function POST(req: Request) {
     const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
     if (!supabaseUrl || !serviceRoleKey) {
-      console.error("Missing env vars", {
-        hasSupabaseUrl: !!supabaseUrl,
-        hasServiceRoleKey: !!serviceRoleKey,
-      });
-
       return NextResponse.json(
         { error: "Server is missing Supabase environment variables." },
         { status: 500 }
@@ -39,7 +34,6 @@ export async function POST(req: Request) {
       headers: {
         "Content-Type": "application/json",
         apikey: serviceRoleKey,
-        Authorization: `Bearer ${serviceRoleKey}`,
         Prefer: "return=representation",
       },
       body: JSON.stringify([{ email: cleanEmail }]),

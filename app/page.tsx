@@ -115,7 +115,7 @@ export default function Home() {
 
     {/* LEFT PHONE */}
     <div className="text-center md:translate-y-10">
-      <div className="mx-auto w-[250px] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
+      <div className="mx-auto w-[250px] animate-[float_6s_ease-in-out_infinite] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
         <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
           <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
           <img
@@ -135,7 +135,7 @@ export default function Home() {
 
     {/* CENTER PHONE */}
     <div className="text-center">
-      <div className="mx-auto w-[320px] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.28)]">
+      <div className="mx-auto w-[320px] animate-[float_7s_ease-in-out_infinite] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.28)]">
         <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
           <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
           <img
@@ -155,7 +155,7 @@ export default function Home() {
 
     {/* RIGHT PHONE */}
     <div className="text-center md:translate-y-10">
-      <div className="mx-auto w-[250px] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
+      <div className="mx-auto w-[250px] animate-[float_6.5s_ease-in-out_infinite] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
         <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
           <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
           <img

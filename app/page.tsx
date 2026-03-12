@@ -7,11 +7,16 @@ export default function Home() {
       <header className="sticky top-0 z-20 border-b border-black/5 bg-[#FAF7F2]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a
-            href="#top"
-            className="text-xl font-semibold tracking-tight transition hover:opacity-80"
-          >
-            BondWell
-          </a>
+  href="#top"
+  className="flex items-center gap-2 text-xl font-semibold tracking-tight transition hover:opacity-80"
+>
+  <img
+    src="/bondwell-logo.png"
+    alt="BondWell logo"
+    className="h-8 w-auto"
+  />
+  <span>BondWell</span>
+</a>
 
           <nav className="hidden gap-6 text-sm md:flex">
             <a href="#how-it-works" className="hover:opacity-70">

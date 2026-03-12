@@ -12,13 +12,22 @@ export async function POST(req: Request) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(cleanEmail)) {
-      return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
+      return NextResponse.json(
+        { error: "Please enter a valid email address." },
+        { status: 400 }
+      );
     }
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseUrl =
+      process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
     const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
     if (!supabaseUrl || !serviceRoleKey) {
+      console.error("Missing env vars", {
+        hasSupabaseUrl: !!supabaseUrl,
+        hasServiceRoleKey: !!serviceRoleKey,
+      });
+
       return NextResponse.json(
         { error: "Server is missing Supabase environment variables." },
         { status: 500 }
@@ -31,15 +40,16 @@ export async function POST(req: Request) {
         "Content-Type": "application/json",
         apikey: serviceRoleKey,
         Authorization: `Bearer ${serviceRoleKey}`,
-        Prefer: "return=minimal",
+        Prefer: "return=representation",
       },
       body: JSON.stringify([{ email: cleanEmail }]),
     });
 
-    if (!response.ok) {
-      const text = await response.text();
+    const text = await response.text();
+    console.error("Supabase waitlist response", response.status, text);
 
-      if (text.includes("duplicate key")) {
+    if (!response.ok) {
+      if (text.toLowerCase().includes("duplicate key")) {
         return NextResponse.json(
           { error: "That email is already on the list." },
           { status: 409 }
@@ -47,13 +57,15 @@ export async function POST(req: Request) {
       }
 
       return NextResponse.json(
-        { error: "Could not save your email right now." },
+        { error: `Supabase error: ${text}` },
         { status: 500 }
       );
     }
 
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error("Waitlist route error", error);
+
     return NextResponse.json(
       { error: "Something went wrong. Please try again." },
       { status: 500 }

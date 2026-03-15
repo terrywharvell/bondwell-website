@@ -100,20 +100,22 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
+      <section className="relative mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-2 md:items-center">
         <div>
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
-            Calm support, shared gently
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.25em] text-[#8A7460]">
+            Built from real epilepsy support
           </p>
 
-          <h1 className="max-w-xl text-4xl font-semibold leading-tight md:text-6xl">
-            BondWell helps support feel calmer — for both of you.
+          <h1 className="max-w-xl text-5xl font-semibold leading-tight md:text-6xl">
+            Support that helps both people feel calmer.
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-[#5A514A]">
-            A gentle routine app for people living with epilepsy and the person
-            who supports them. Reminders, check-ins, and a clear support
-            requested flow — always consent-based.
+            BondWell is a gentle routine and support app designed for people living
+            with epilepsy and the partner or carer supporting them.
+            <br />
+            <br />
+            Built from real life experience caring for epilepsy for over nine years.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -128,35 +130,52 @@ export default function Home() {
               href="#how-it-works"
               className="rounded-full border border-[#D8CEC2] px-6 py-3 text-center text-sm font-medium transition hover:bg-white/60"
             >
-              See how it works
+              See how BondWell works
             </a>
           </div>
 
           <p className="mt-6 text-sm text-[#7A6F66]">
-            Not a medical device. Not emergency support. For medical questions,
-            speak with a qualified healthcare professional.
+            Built with both a carer perspective and the lived experience of epilepsy.
           </p>
         </div>
 
-        <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
-          <div className="space-y-4">
-            <div className="rounded-2xl bg-[#F6F1EA] p-4">
-              <p className="text-sm font-medium text-[#8A7460]">Gentle reminder</p>
-              <p className="mt-2 text-base">Medication due soon</p>
-              <p className="mt-1 text-sm text-[#6C635C]">Taking it gently today 💛</p>
-            </div>
+        <div className="relative flex justify-center">
+          <div className="absolute -top-10 h-[420px] w-[420px] rounded-full bg-[#C8A96B]/10 blur-3xl" />
 
-            <div className="rounded-2xl bg-[#FAF7F2] p-4">
-              <p className="text-sm font-medium text-[#8A7460]">Quick check-in</p>
-              <p className="mt-2 text-base">A simple way to say how you’re doing</p>
-            </div>
+          <div className="relative w-[320px] animate-[float_7s_ease-in-out_infinite] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.28)]">
+            <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
+              <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
 
-            <div className="rounded-2xl bg-[#F6F1EA] p-4">
-              <p className="text-sm font-medium text-[#8A7460]">Support requested</p>
-              <p className="mt-2 text-base">
-                Clear, calm communication when extra support is needed
-              </p>
+              <img
+                src="/screens/user-home.jpg"
+                alt="BondWell daily overview"
+                className="block w-full"
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-8">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
+            <h2 className="text-2xl font-semibold">
+              For people living with epilepsy
+            </h2>
+            <p className="mt-4 leading-8 text-[#5A514A]">
+              Build steady routines around medication, hydration, meals, and
+              gentle check-ins without pressure. BondWell is designed to help
+              everyday support feel clearer and calmer.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
+            <h2 className="text-2xl font-semibold">For partners and carers</h2>
+            <p className="mt-4 leading-8 text-[#5A514A]">
+              Stay better in sync through consent-based sharing and a view-only
+              partner experience. BondWell supports connection without taking
+              control away from the person using it.
+            </p>
           </div>
         </div>
       </section>
@@ -236,30 +255,6 @@ export default function Home() {
             <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
               A view-only screen that helps partners or carers stay in sync,
               gently and clearly.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 py-8">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-semibold">
-              For people living with epilepsy
-            </h2>
-            <p className="mt-4 leading-8 text-[#5A514A]">
-              Build steady routines around medication, hydration, meals, and
-              gentle check-ins — without pressure. BondWell is designed to help
-              everyday support feel clearer and calmer.
-            </p>
-          </div>
-
-          <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-semibold">For partners and carers</h2>
-            <p className="mt-4 leading-8 text-[#5A514A]">
-              Stay better in sync through consent-based sharing and a view-only
-              partner experience. BondWell supports connection without taking
-              control away from the person using it.
             </p>
           </div>
         </div>

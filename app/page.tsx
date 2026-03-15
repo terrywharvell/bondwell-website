@@ -41,7 +41,9 @@ export default function Home() {
       }
 
       setStatus("success");
-      setMessage("✓ You're on the BondWell launch list. We'll let you know when testing opens.");
+      setMessage(
+        "✓ You're on the BondWell launch list. We'll let you know when testing opens."
+      );
       setEmail("");
     } catch (err) {
       setStatus("error");
@@ -111,11 +113,12 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-[#5A514A]">
-            BondWell is a gentle routine and support app designed for people living
-            with epilepsy and the partner or carer supporting them.
+            BondWell is a gentle routine and support app designed for people
+            living with epilepsy and the partner or carer supporting them.
             <br />
             <br />
-            Built from real life experience caring for epilepsy for over nine years.
+            Built from real life experience caring for epilepsy for over nine
+            years.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -135,7 +138,8 @@ export default function Home() {
           </div>
 
           <p className="mt-6 text-sm text-[#7A6F66]">
-            Built with both a carer perspective and the lived experience of epilepsy.
+            Built with both a carer perspective and the lived experience of
+            epilepsy.
           </p>
         </div>
 
@@ -175,6 +179,71 @@ export default function Home() {
               Stay better in sync through consent-based sharing and a view-only
               partner experience. BondWell supports connection without taking
               control away from the person using it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mb-12 max-w-3xl">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
+            Real stories behind BondWell
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+            Built from lived experience, not guesswork.
+          </h2>
+          <p className="mt-4 leading-8 text-[#5A514A]">
+            BondWell was created through real life with epilepsy — from both the
+            perspective of caring for someone and living with it day to day.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
+            <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#8A7460]">
+              A carer’s perspective
+            </p>
+            <h3 className="mt-3 text-2xl font-semibold">
+              Support can become stressful when the same questions never stop.
+            </h3>
+            <p className="mt-4 leading-8 text-[#5A514A]">
+              After caring for Jaz for the past nine years, it became clear that
+              epilepsy is not only about seizures. It is also about the daily
+              routines around medication, hydration, food, rest, and energy.
+            </p>
+            <p className="mt-4 leading-8 text-[#5A514A]">
+              Asking the same basic questions again and again — “Have you taken
+              your tablets?”, “Have you had enough water?”, “Have you eaten?” —
+              comes from care, but it can also create stress for both people.
+            </p>
+            <p className="mt-4 leading-8 text-[#5A514A]">
+              BondWell was created to remove some of that pressure, reduce
+              anxiety, and make support feel calmer and clearer for both the
+              person living with epilepsy and the person supporting them.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
+            <p className="text-sm font-medium uppercase tracking-[0.15em] text-[#8A7460]">
+              Living with epilepsy
+            </p>
+            <h3 className="mt-3 text-2xl font-semibold">
+              Epilepsy affects much more than the moments people can see.
+            </h3>
+            <p className="mt-4 leading-8 text-[#5A514A]">
+              As Jaz shared, some of the same questions come up almost every
+              day: “Have you taken your tablets?”, “Have you had food or drink
+              today?”, “Have you had enough rest?”, “How are you feeling?”
+            </p>
+            <p className="mt-4 leading-8 text-[#5A514A]">
+              Those questions come from love, but hearing them constantly can
+              still feel frustrating and heavy. Epilepsy changes routines,
+              energy, memory, and daily life in ways that are often invisible to
+              other people.
+            </p>
+            <p className="mt-4 leading-8 text-[#5A514A]">
+              BondWell exists to make those everyday parts of epilepsy feel more
+              supported, less stressful, and easier to manage together.
             </p>
           </div>
         </div>

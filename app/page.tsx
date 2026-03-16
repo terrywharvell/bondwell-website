@@ -113,7 +113,7 @@ export default function Home() {
           <div className="absolute left-[-80px] top-[280px] h-[220px] w-[220px] rounded-full bg-[#EEF7F4] blur-3xl" />
         </div>
 
-        <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-20 pt-16 lg:grid-cols-[0.98fr_1.02fr] lg:items-center lg:gap-16 lg:pb-24 lg:pt-20">
+        <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-20 pt-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-20 lg:pb-24 lg:pt-16">
           <div className="max-w-2xl">
             <p className="mb-4 text-sm uppercase tracking-[0.25em] text-[#8A7460]">
               Calm support, shared gently
@@ -175,41 +175,51 @@ export default function Home() {
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative h-[620px] w-full max-w-[620px]">
-              <div className="absolute left-1/2 top-4 z-10 w-[300px] -translate-x-1/2 rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.22)] md:w-[340px]">
-                <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
-                  <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
-                  <img
-                    src="/screens/user-home.jpg"
-                    alt="BondWell user home screen"
-                    className="block w-full"
-                  />
+            <div className="relative h-[620px] w-full max-w-[660px] overflow-visible">
+              <div className="absolute left-1/2 top-8 h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-[#F7F1E8] blur-3xl" />
+              <div className="absolute right-8 top-24 h-[180px] w-[180px] rounded-full bg-[#EEF4FF] blur-3xl" />
+              <div className="absolute left-8 bottom-16 h-[170px] w-[170px] rounded-full bg-[#EEF7F4] blur-3xl" />
+
+              <div className="absolute left-8 top-28 z-10 hidden w-[180px] -rotate-[8deg] md:block">
+                <div className="rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.18)] transition-transform duration-500 hover:-translate-y-2">
+                  <div className="relative overflow-hidden rounded-[1.8rem] bg-black">
+                    <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
+                    <img
+                      src="/screens/user-ask-for-support.jpg"
+                      alt="BondWell ask for support screen"
+                      className="block w-full"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div className="absolute left-2 top-24 hidden w-[190px] rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.15)] md:block">
-                <div className="relative overflow-hidden rounded-[1.8rem] bg-black">
-                  <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
-                  <img
-                    src="/screens/user-ask-for-support.jpg"
-                    alt="BondWell ask for support screen"
-                    className="block w-full"
-                  />
+              <div className="absolute left-1/2 top-2 z-20 w-[300px] -translate-x-1/2 rotate-[1.5deg] xl:w-[320px]">
+                <div className="rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.24)] transition-transform duration-500 hover:-translate-y-2">
+                  <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
+                    <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
+                    <img
+                      src="/screens/user-home.jpg"
+                      alt="BondWell user home screen"
+                      className="block w-full"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div className="absolute bottom-20 right-2 hidden w-[190px] rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.15)] md:block">
-                <div className="relative overflow-hidden rounded-[1.8rem] bg-black">
-                  <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
-                  <img
-                    src="/screens/partner-support-requested.jpg"
-                    alt="BondWell partner support requested screen"
-                    className="block w-full"
-                  />
+              <div className="absolute right-0 top-44 z-10 hidden w-[180px] rotate-[8deg] md:block">
+                <div className="rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.18)] transition-transform duration-500 hover:-translate-y-2">
+                  <div className="relative overflow-hidden rounded-[1.8rem] bg-black">
+                    <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
+                    <img
+                      src="/screens/partner-support-requested.jpg"
+                      alt="BondWell partner support requested screen"
+                      className="block w-full"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div className="absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 rounded-full border border-[#E8DED1] bg-white px-5 py-3 text-sm text-[#5A514A] shadow-[0_14px_34px_rgba(47,42,38,0.12)] md:flex">
+              <div className="absolute bottom-10 left-1/2 z-30 hidden -translate-x-1/2 rounded-full border border-[#E8DED1] bg-white px-5 py-3 text-sm text-[#5A514A] shadow-[0_14px_34px_rgba(47,42,38,0.12)] md:flex">
                 Designed to feel calm, simple, and supportive
               </div>
             </div>

@@ -108,12 +108,12 @@ export default function Home() {
 
       <section className="relative overflow-hidden bg-white">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-[-140px] h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-[#F6EFE5] blur-3xl" />
-          <div className="absolute right-[-60px] top-[100px] h-[220px] w-[220px] rounded-full bg-[#F8F2EA] blur-3xl" />
-          <div className="absolute left-[-80px] top-[280px] h-[220px] w-[220px] rounded-full bg-[#F5EEE6] blur-3xl" />
+          <div className="absolute left-1/2 top-[-150px] h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-[#F6EFE5] blur-3xl" />
+          <div className="absolute right-[-70px] top-[80px] h-[250px] w-[250px] rounded-full bg-[#F3F7FF] blur-3xl" />
+          <div className="absolute left-[-80px] top-[280px] h-[220px] w-[220px] rounded-full bg-[#EEF7F4] blur-3xl" />
         </div>
 
-        <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-20 pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-16 lg:pb-24 lg:pt-24">
+        <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-20 pt-16 lg:grid-cols-[0.98fr_1.02fr] lg:items-center lg:gap-16 lg:pb-24 lg:pt-20">
           <div className="max-w-2xl">
             <p className="mb-4 text-sm uppercase tracking-[0.25em] text-[#8A7460]">
               Calm support, shared gently
@@ -175,8 +175,8 @@ export default function Home() {
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[560px]">
-              <div className="mx-auto w-[300px] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.22)] md:w-[340px]">
+            <div className="relative h-[620px] w-full max-w-[620px]">
+              <div className="absolute left-1/2 top-4 z-10 w-[300px] -translate-x-1/2 rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.22)] md:w-[340px]">
                 <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
                   <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
                   <img
@@ -187,7 +187,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="absolute left-0 top-10 hidden w-[190px] rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.15)] md:block">
+              <div className="absolute left-2 top-24 hidden w-[190px] rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.15)] md:block">
                 <div className="relative overflow-hidden rounded-[1.8rem] bg-black">
                   <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
                   <img
@@ -198,7 +198,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="absolute bottom-6 right-0 hidden w-[190px] rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.15)] md:block">
+              <div className="absolute bottom-20 right-2 hidden w-[190px] rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.15)] md:block">
                 <div className="relative overflow-hidden rounded-[1.8rem] bg-black">
                   <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
                   <img
@@ -209,7 +209,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="absolute -bottom-8 left-1/2 hidden -translate-x-1/2 rounded-full border border-[#E8DED1] bg-white px-5 py-3 text-sm text-[#5A514A] shadow-md md:flex">
+              <div className="absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 rounded-full border border-[#E8DED1] bg-white px-5 py-3 text-sm text-[#5A514A] shadow-[0_14px_34px_rgba(47,42,38,0.12)] md:flex">
                 Designed to feel calm, simple, and supportive
               </div>
             </div>
@@ -302,7 +302,44 @@ export default function Home() {
       </section>
 
       <section className="bg-[#FCFAF7]">
-        <div className="mx-auto max-w-7xl px-6 pb-8">
+        <div className="mx-auto max-w-7xl px-6 py-4">
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
+              <p className="text-sm uppercase tracking-[0.22em] text-[#8A7460]">
+                How BondWell was made
+              </p>
+              <h3 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26]">
+                Built around the reality of everyday support.
+              </h3>
+              <p className="mt-5 text-base leading-8 text-[#5A514A]">
+                BondWell was not imagined from the outside looking in. It has
+                been shaped by real routines, repeated conversations, emotional
+                weight, and the need to make support feel steadier for both
+                people.
+              </p>
+              <p className="mt-4 text-base leading-8 text-[#5A514A]">
+                The goal has always been simple: create something calm, useful,
+                respectful, and genuinely supportive — not clinical, not loud,
+                and not overwhelming.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 shadow-sm">
+              <p className="text-sm uppercase tracking-[0.22em] text-[#8A7460]">
+                Founder note
+              </p>
+              <p className="mt-5 text-xl leading-9 text-[#2F2A26]">
+                “BondWell is being built to reduce pressure, bring more calm to
+                daily life, and help support feel like connection instead of
+                constant worry.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#FCFAF7]">
+        <div className="mx-auto max-w-7xl px-6 pb-8 pt-8">
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
               <h2 className="text-2xl font-semibold text-[#2F2A26]">

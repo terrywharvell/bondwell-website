@@ -7,6 +7,47 @@ export default function Home() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
+  const heroCards = [
+    {
+      title: "Built from real life",
+      text: "Shaped through lived experience, not just a concept.",
+    },
+    {
+      title: "Calm by design",
+      text: "Support that feels gentle, clear, and emotionally safe.",
+    },
+    {
+      title: "For both sides",
+      text: "Helping the person and the partner stay better in sync.",
+    },
+  ];
+
+  const trustPillars = [
+    {
+      title: "Lived experience",
+      text: "Built from everyday reality, not just theory.",
+    },
+    {
+      title: "Daily reassurance",
+      text: "Designed around the moments in between, not only the obvious ones.",
+    },
+    {
+      title: "Consent-based",
+      text: "Sharing is optional, clear, and led by the person using the app.",
+    },
+    {
+      title: "Human-first",
+      text: "Supportive technology that reduces pressure, not adds to it.",
+    },
+  ];
+
+  const promisePoints = [
+    "Designed around lived experience",
+    "Focused on reassurance as well as routine",
+    "Made for both the person and the partner",
+    "Built to feel calm rather than clinical",
+  ];
+
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
@@ -54,11 +95,11 @@ export default function Home() {
 
   return (
     <main id="top" className="min-h-screen bg-white text-[#2F2A26]">
-      <header className="sticky top-0 z-30 border-b border-[#EDE5DB] bg-white/95 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-[#EDE5DB] bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a
             href="#top"
-            className="flex items-center gap-3 text-xl font-semibold tracking-tight hover:opacity-85"
+            className="flex items-center gap-3 text-xl font-semibold tracking-tight hover:opacity-90"
           >
             <img
               src="/bondwell-icon.png"
@@ -109,17 +150,18 @@ export default function Home() {
       <section className="relative overflow-hidden bg-white">
         <div className="absolute inset-0 -z-10">
           <div className="absolute left-1/2 top-[-150px] h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-[#F6EFE5] blur-3xl" />
-          <div className="absolute right-[-70px] top-[80px] h-[250px] w-[250px] rounded-full bg-[#F3F7FF] blur-3xl" />
-          <div className="absolute left-[-80px] top-[280px] h-[220px] w-[220px] rounded-full bg-[#EEF7F4] blur-3xl" />
+          <div className="absolute right-[-60px] top-[80px] h-[260px] w-[260px] rounded-full bg-[#F2F7FF] blur-3xl" />
+          <div className="absolute left-[-80px] top-[300px] h-[220px] w-[220px] rounded-full bg-[#EEF7F4] blur-3xl" />
         </div>
 
-        <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-20 pt-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-20 lg:pb-24 lg:pt-16">
+        <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-16 lg:grid-cols-[0.94fr_1.06fr] lg:items-center lg:gap-20 lg:pt-20">
           <div className="max-w-2xl">
-            <p className="mb-4 text-sm uppercase tracking-[0.25em] text-[#8A7460]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#E8DED1] bg-[#FCFAF7] px-4 py-2 text-sm text-[#8A7460]">
+              <span className="h-2 w-2 rounded-full bg-[#C8A96B]" />
               Calm support, shared gently
-            </p>
+            </div>
 
-            <h1 className="text-5xl font-semibold leading-[1.04] tracking-tight text-[#2F2A26] md:text-6xl">
+            <h1 className="mt-6 text-5xl font-semibold leading-[1.02] tracking-tight text-[#2F2A26] md:text-6xl">
               BondWell helps support feel calmer — for both of you.
             </h1>
 
@@ -145,44 +187,31 @@ export default function Home() {
             </div>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-[1.6rem] border border-[#EEE4D8] bg-[#FCFAF7] p-4">
-                <p className="text-sm font-semibold text-[#2F2A26]">
-                  Built from real life
-                </p>
-                <p className="mt-2 text-sm leading-6 text-[#5A514A]">
-                  Shaped through lived experience, not just a concept.
-                </p>
-              </div>
-
-              <div className="rounded-[1.6rem] border border-[#EEE4D8] bg-[#FCFAF7] p-4">
-                <p className="text-sm font-semibold text-[#2F2A26]">
-                  Calm by design
-                </p>
-                <p className="mt-2 text-sm leading-6 text-[#5A514A]">
-                  Support that feels gentle, clear, and emotionally safe.
-                </p>
-              </div>
-
-              <div className="rounded-[1.6rem] border border-[#EEE4D8] bg-[#FCFAF7] p-4">
-                <p className="text-sm font-semibold text-[#2F2A26]">
-                  For both sides
-                </p>
-                <p className="mt-2 text-sm leading-6 text-[#5A514A]">
-                  Helping the person and the partner stay better in sync.
-                </p>
-              </div>
+              {heroCards.map((card) => (
+                <div
+                  key={card.title}
+                  className="rounded-[1.6rem] border border-[#EEE4D8] bg-[#FCFAF7] p-5"
+                >
+                  <p className="text-sm font-semibold text-[#2F2A26]">
+                    {card.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-[#5A514A]">
+                    {card.text}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative h-[620px] w-full max-w-[660px] overflow-visible">
-              <div className="absolute left-1/2 top-8 h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-[#F7F1E8] blur-3xl" />
+            <div className="relative h-[640px] w-full max-w-[680px] overflow-visible">
+              <div className="absolute left-1/2 top-6 h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-[#F7F1E8] blur-3xl" />
               <div className="absolute right-8 top-24 h-[180px] w-[180px] rounded-full bg-[#EEF4FF] blur-3xl" />
-              <div className="absolute left-8 bottom-16 h-[170px] w-[170px] rounded-full bg-[#EEF7F4] blur-3xl" />
+              <div className="absolute left-10 bottom-24 h-[170px] w-[170px] rounded-full bg-[#EEF7F4] blur-3xl" />
 
-              <div className="absolute left-8 top-28 z-10 hidden w-[180px] -rotate-[8deg] md:block">
-                <div className="rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.18)] transition-transform duration-500 hover:-translate-y-2">
-                  <div className="relative overflow-hidden rounded-[1.8rem] bg-black">
+              <div className="absolute left-2 top-44 z-10 hidden w-[170px] -rotate-[8deg] md:block lg:left-4">
+                <div className="rounded-[2.1rem] bg-[#1F1A17] p-[8px] shadow-[0_22px_60px_rgba(47,42,38,0.18)] transition duration-500 hover:-translate-y-2 hover:-rotate-[6deg]">
+                  <div className="relative overflow-hidden rounded-[1.7rem] bg-black">
                     <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
                     <img
                       src="/screens/user-ask-for-support.jpg"
@@ -193,8 +222,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="absolute left-1/2 top-2 z-20 w-[300px] -translate-x-1/2 rotate-[1.5deg] xl:w-[320px]">
-                <div className="rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.24)] transition-transform duration-500 hover:-translate-y-2">
+              <div className="absolute left-1/2 top-4 z-20 w-[300px] -translate-x-1/2 rotate-[1.5deg] md:w-[320px]">
+                <div className="rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.22)] transition duration-500 hover:-translate-y-2">
                   <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
                     <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
                     <img
@@ -206,9 +235,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="absolute right-0 top-44 z-10 hidden w-[180px] rotate-[8deg] md:block">
-                <div className="rounded-[2.2rem] bg-[#1F1A17] p-[8px] shadow-[0_24px_60px_rgba(47,42,38,0.18)] transition-transform duration-500 hover:-translate-y-2">
-                  <div className="relative overflow-hidden rounded-[1.8rem] bg-black">
+              <div className="absolute right-0 top-34 z-10 hidden w-[170px] rotate-[8deg] md:block lg:right-4">
+                <div className="rounded-[2.1rem] bg-[#1F1A17] p-[8px] shadow-[0_22px_60px_rgba(47,42,38,0.18)] transition duration-500 hover:-translate-y-2 hover:rotate-[6deg]">
+                  <div className="relative overflow-hidden rounded-[1.7rem] bg-black">
                     <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
                     <img
                       src="/screens/partner-support-requested.jpg"
@@ -219,7 +248,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="absolute bottom-10 left-1/2 z-30 hidden -translate-x-1/2 rounded-full border border-[#E8DED1] bg-white px-5 py-3 text-sm text-[#5A514A] shadow-[0_14px_34px_rgba(47,42,38,0.12)] md:flex">
+              <div className="absolute bottom-14 left-1/2 z-30 hidden -translate-x-1/2 rounded-full border border-[#E8DED1] bg-white px-5 py-3 text-sm text-[#5A514A] shadow-[0_14px_34px_rgba(47,42,38,0.12)] md:flex">
                 Designed to feel calm, simple, and supportive
               </div>
             </div>
@@ -229,43 +258,19 @@ export default function Home() {
 
       <section className="border-y border-[#F0E8DE] bg-[#FCFAF7]">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 py-8 md:grid-cols-4">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8A7460]">
-              Lived experience
-            </p>
-            <p className="mt-2 text-sm leading-6 text-[#5A514A]">
-              Built from everyday reality, not just theory.
-            </p>
-          </div>
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8A7460]">
-              Daily reassurance
-            </p>
-            <p className="mt-2 text-sm leading-6 text-[#5A514A]">
-              Designed around the moments in between, not only the obvious ones.
-            </p>
-          </div>
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8A7460]">
-              Consent-based
-            </p>
-            <p className="mt-2 text-sm leading-6 text-[#5A514A]">
-              Sharing is optional, clear, and led by the person using the app.
-            </p>
-          </div>
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8A7460]">
-              Human-first
-            </p>
-            <p className="mt-2 text-sm leading-6 text-[#5A514A]">
-              Supportive technology that reduces pressure, not adds to it.
-            </p>
-          </div>
+          {trustPillars.map((item) => (
+            <div key={item.title}>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8A7460]">
+                {item.title}
+              </p>
+              <p className="mt-2 text-sm leading-6 text-[#5A514A]">{item.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="story" className="bg-white">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] text-[#8A7460]">
               Why BondWell exists
@@ -304,17 +309,15 @@ export default function Home() {
               people closer together, not create more anxiety.
             </p>
 
-            <p className="font-medium text-[#2F2A26]">
-              This is the BondWell way.
-            </p>
+            <p className="font-medium text-[#2F2A26]">This is the BondWell way.</p>
           </div>
         </div>
       </section>
 
       <section className="bg-[#FCFAF7]">
-        <div className="mx-auto max-w-7xl px-6 py-4">
-          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
+        <div className="mx-auto max-w-7xl px-6 py-6">
+          <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm md:p-10">
               <p className="text-sm uppercase tracking-[0.22em] text-[#8A7460]">
                 How BondWell was made
               </p>
@@ -334,7 +337,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 shadow-sm">
+            <div className="rounded-[2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 shadow-sm md:p-10">
               <p className="text-sm uppercase tracking-[0.22em] text-[#8A7460]">
                 Founder note
               </p>
@@ -349,7 +352,7 @@ export default function Home() {
       </section>
 
       <section className="bg-[#FCFAF7]">
-        <div className="mx-auto max-w-7xl px-6 pb-8 pt-8">
+        <div className="mx-auto max-w-7xl px-6 pb-10 pt-6">
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
               <h2 className="text-2xl font-semibold text-[#2F2A26]">
@@ -370,6 +373,51 @@ export default function Home() {
                 Stay better in sync through consent-based sharing and a view-only
                 partner experience. BondWell supports connection without taking
                 control away from the person using it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-10">
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-[1.8rem] border border-[#E7DED4] bg-[#FCFAF7] p-7">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#8A7460]">
+                BondWell promise
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-[#2F2A26]">
+                Calm-first support
+              </h3>
+              <p className="mt-3 leading-7 text-[#5A514A]">
+                BondWell is being built to feel supportive and steady, never loud
+                or overwhelming.
+              </p>
+            </div>
+
+            <div className="rounded-[1.8rem] border border-[#E7DED4] bg-[#FCFAF7] p-7">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#8A7460]">
+                BondWell promise
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-[#2F2A26]">
+                Consent-led connection
+              </h3>
+              <p className="mt-3 leading-7 text-[#5A514A]">
+                Sharing and partner support are designed to feel respectful, clear,
+                and person-led.
+              </p>
+            </div>
+
+            <div className="rounded-[1.8rem] border border-[#E7DED4] bg-[#FCFAF7] p-7">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#8A7460]">
+                BondWell promise
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-[#2F2A26]">
+                For both people
+              </h3>
+              <p className="mt-3 leading-7 text-[#5A514A]">
+                Built to support the person living with epilepsy and the loved one
+                beside them.
               </p>
             </div>
           </div>
@@ -542,6 +590,34 @@ export default function Home() {
                 When support is needed, BondWell helps reduce guesswork and
                 makes communication simpler.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-10">
+          <div className="rounded-[2rem] border border-[#E7DED4] bg-[#FCFAF7] p-8 shadow-sm md:p-10">
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+              <div>
+                <p className="text-sm uppercase tracking-[0.22em] text-[#8A7460]">
+                  Trust signals
+                </p>
+                <h3 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26]">
+                  Built with care, clarity, and purpose.
+                </h3>
+              </div>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                {promisePoints.map((point) => (
+                  <div
+                    key={point}
+                    className="rounded-[1.4rem] border border-[#E7DED4] bg-white p-5 text-[#5A514A]"
+                  >
+                    {point}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

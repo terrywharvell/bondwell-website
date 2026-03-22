@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendWaitlistAutoreply } from "@/lib/waitlistAutoreply";
 
 export async function POST(req: Request) {
   try {
@@ -34,6 +35,7 @@ export async function POST(req: Request) {
       headers: {
         "Content-Type": "application/json",
         apikey: serviceRoleKey,
+        Authorization: `Bearer ${serviceRoleKey}`,
         Prefer: "return=representation",
       },
       body: JSON.stringify([{ email: cleanEmail }]),
@@ -56,7 +58,18 @@ export async function POST(req: Request) {
       );
     }
 
-    return NextResponse.json({ ok: true });
+    let emailSent = false;
+    let emailSkippedReason: string | null = null;
+
+    try {
+      const emailResult = await sendWaitlistAutoreply(cleanEmail);
+      emailSent = !emailResult.skipped;
+      emailSkippedReason = emailResult.skipped ? emailResult.reason : null;
+    } catch (emailError) {
+      console.error("Waitlist auto-reply error", emailError);
+    }
+
+    return NextResponse.json({ ok: true, emailSent, emailSkippedReason });
   } catch (error) {
     console.error("Waitlist route error", error);
 

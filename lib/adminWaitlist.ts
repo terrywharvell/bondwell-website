@@ -51,6 +51,38 @@ function parseContentRangeCount(contentRange: string | null) {
   return Number.isFinite(parsed) ? parsed : 0;
 }
 
+async function fetchWaitlistEntries(limit?: number): Promise<AdminWaitlistEntry[]> {
+  const config = getSupabaseConfig();
+
+  if (!config) {
+    throw new Error("Supabase environment variables are missing for admin waitlist access.");
+  }
+
+  const { supabaseUrl, serviceRoleKey } = config;
+  const params = new URLSearchParams({
+    select: "id,email,created_at,time",
+    order: "created_at.desc",
+  });
+
+  if (typeof limit === "number") {
+    params.set("limit", String(limit));
+  }
+
+  const response = await fetch(`${supabaseUrl}/rest/v1/waitlist?${params.toString()}`, {
+    headers: getHeaders(serviceRoleKey),
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    const responseText = await response.text();
+    throw new Error(
+      `Could not load waitlist entries: ${response.status} ${responseText}`
+    );
+  }
+
+  return (await response.json()) as AdminWaitlistEntry[];
+}
+
 export async function getAdminWaitlistData(): Promise<AdminWaitlistData> {
   const config = getSupabaseConfig();
 
@@ -66,19 +98,13 @@ export async function getAdminWaitlistData(): Promise<AdminWaitlistData> {
   const baseUrl = `${supabaseUrl}/rest/v1/waitlist`;
 
   try {
-    const [countResponse, entriesResponse] = await Promise.all([
+    const [countResponse, entries] = await Promise.all([
       fetch(`${baseUrl}?select=id`, {
         method: "HEAD",
         headers: getHeaders(serviceRoleKey, "count=exact"),
         cache: "no-store",
       }),
-      fetch(
-        `${baseUrl}?select=id,email,created_at,time&order=created_at.desc&limit=250`,
-        {
-          headers: getHeaders(serviceRoleKey),
-          cache: "no-store",
-        }
-      ),
+      fetchWaitlistEntries(250),
     ]);
 
     if (!countResponse.ok) {
@@ -88,18 +114,9 @@ export async function getAdminWaitlistData(): Promise<AdminWaitlistData> {
       );
     }
 
-    if (!entriesResponse.ok) {
-      const entriesError = await entriesResponse.text();
-      throw new Error(
-        `Could not load waitlist entries: ${entriesResponse.status} ${entriesError}`
-      );
-    }
-
     const totalCount = parseContentRangeCount(
       countResponse.headers.get("content-range")
     );
-
-    const entries = (await entriesResponse.json()) as AdminWaitlistEntry[];
 
     return {
       totalCount,
@@ -115,4 +132,8 @@ export async function getAdminWaitlistData(): Promise<AdminWaitlistData> {
       error: error instanceof Error ? error.message : "Could not load waitlist.",
     };
   }
+}
+
+export async function getAdminWaitlistExportEntries() {
+  return fetchWaitlistEntries();
 }

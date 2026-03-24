@@ -41,14 +41,22 @@ export default async function AdminHomePage() {
             </p>
           </div>
 
-          <form action="/api/admin/logout" method="POST">
-            <button
-              type="submit"
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="/api/admin/export"
               className="rounded-full border border-[#DCCFC1] px-5 py-2.5 text-sm font-medium text-[#2F2A26] transition hover:bg-[#FAF7F2]"
             >
-              Sign out
-            </button>
-          </form>
+              Export CSV
+            </a>
+            <form action="/api/admin/logout" method="POST">
+              <button
+                type="submit"
+                className="rounded-full border border-[#DCCFC1] px-5 py-2.5 text-sm font-medium text-[#2F2A26] transition hover:bg-[#FAF7F2]"
+              >
+                Sign out
+              </button>
+            </form>
+          </div>
         </div>
 
         <div className="mt-8 grid gap-6 md:grid-cols-[220px_1fr]">

@@ -1,6 +1,13 @@
 import { NextResponse } from "next/server";
 import { sendWaitlistAutoreply } from "@/lib/waitlistAutoreply";
-import { buildUnsubscribeUrl, createUnsubscribeToken, getWaitlistSupabaseConfig, getWaitlistSupabaseHeaders } from "@/lib/waitlistUnsubscribe";
+import {
+  buildUnsubscribeUrl,
+  createUnsubscribeToken,
+  findActiveWaitlistEntryByEmail,
+  getWaitlistSupabaseConfig,
+  getWaitlistSupabaseHeaders,
+  removeWaitlistSuppressionByEmail,
+} from "@/lib/waitlistUnsubscribe";
 
 export async function POST(req: Request) {
   try {
@@ -28,6 +35,17 @@ export async function POST(req: Request) {
         { status: 500 }
       );
     }
+
+    const existingActiveEntry = await findActiveWaitlistEntryByEmail(cleanEmail);
+
+    if (existingActiveEntry) {
+      return NextResponse.json(
+        { error: "That email is already on the list." },
+        { status: 409 }
+      );
+    }
+
+    await removeWaitlistSuppressionByEmail(cleanEmail);
 
     const { supabaseUrl, serviceRoleKey } = config;
     const unsubscribeToken = createUnsubscribeToken();

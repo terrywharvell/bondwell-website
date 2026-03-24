@@ -57,8 +57,10 @@ export default async function UnsubscribePage({
     }
   }
 
-  const canConfirm = Boolean(token && entry && !entry.unsubscribed_at && !status);
-  const alreadyUnsubscribed = Boolean(token && entry?.unsubscribed_at && !status);
+  const canConfirm = Boolean(token && entry?.state === "active" && !status);
+  const alreadyUnsubscribed = Boolean(
+    token && entry?.state === "suppressed" && !status
+  );
 
   return (
     <main className="min-h-screen bg-[#FCFAF7] px-6 py-12 text-[#2F2A26]">

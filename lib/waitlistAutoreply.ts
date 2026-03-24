@@ -12,7 +12,7 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#39;");
 }
 
-function buildWaitlistAutoreplyHtml() {
+function buildWaitlistAutoreplyHtml(unsubscribeUrl: string) {
   return `
     <div style="margin:0;padding:0;background:#f7f3ee;font-family:Arial,Helvetica,sans-serif;color:#2f2a26;">
       <div style="max-width:640px;margin:0 auto;padding:32px 20px;">
@@ -27,11 +27,12 @@ function buildWaitlistAutoreplyHtml() {
             <p style="margin:0;font-size:16px;line-height:1.75;color:#5a514a;">Warmly,<br />Terry<br />BondWell</p>
           </div>
           <div style="padding:20px 32px;border-top:1px solid #efe7dc;background:#fcfaf7;">
-            <p style="margin:0;font-size:13px;line-height:1.7;color:#8a7460;">Questions? Just reply to this email or contact <a href="mailto:${escapeHtml(
+            <p style="margin:0 0 10px;font-size:13px;line-height:1.7;color:#8a7460;">Questions? Just reply to this email or contact <a href="mailto:${escapeHtml(
               REPLY_TO_EMAIL
             )}" style="color:#6b5a4b;text-decoration:none;">${escapeHtml(
     REPLY_TO_EMAIL
   )}</a>.</p>
+            <p style="margin:0;font-size:13px;line-height:1.7;color:#8a7460;">Don't want future BondWell waitlist updates? <a href="${escapeHtml(unsubscribeUrl)}" style="color:#6b5a4b;text-decoration:none;">Unsubscribe here</a>.</p>
           </div>
         </div>
       </div>
@@ -39,7 +40,7 @@ function buildWaitlistAutoreplyHtml() {
   `;
 }
 
-function buildWaitlistAutoreplyText() {
+function buildWaitlistAutoreplyText(unsubscribeUrl: string) {
   return [
     "You’re on the BondWell waitlist",
     "",
@@ -55,10 +56,12 @@ function buildWaitlistAutoreplyText() {
     "Terry",
     "BondWell",
     REPLY_TO_EMAIL,
+    "",
+    `Unsubscribe from future BondWell waitlist updates: ${unsubscribeUrl}`,
   ].join("\n");
 }
 
-export async function sendWaitlistAutoreply(toEmail: string) {
+export async function sendWaitlistAutoreply(toEmail: string, unsubscribeUrl: string) {
   const resendApiKey = process.env.RESEND_API_KEY;
 
   if (!resendApiKey) {
@@ -77,8 +80,8 @@ export async function sendWaitlistAutoreply(toEmail: string) {
       to: [toEmail],
       reply_to: REPLY_TO_EMAIL,
       subject: "You’re on the BondWell waitlist",
-      html: buildWaitlistAutoreplyHtml(),
-      text: buildWaitlistAutoreplyText(),
+      html: buildWaitlistAutoreplyHtml(unsubscribeUrl),
+      text: buildWaitlistAutoreplyText(unsubscribeUrl),
       tags: [
         { name: "flow", value: "waitlist" },
         { name: "type", value: "autoresponse" },

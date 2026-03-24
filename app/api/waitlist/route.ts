@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { sendWaitlistAutoreply } from "@/lib/waitlistAutoreply";
+import { buildUnsubscribeUrl, createUnsubscribeToken, getWaitlistSupabaseConfig, getWaitlistSupabaseHeaders } from "@/lib/waitlistUnsubscribe";
 
 export async function POST(req: Request) {
   try {
@@ -19,26 +20,22 @@ export async function POST(req: Request) {
       );
     }
 
-    const supabaseUrl =
-      process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const config = getWaitlistSupabaseConfig();
 
-    if (!supabaseUrl || !serviceRoleKey) {
+    if (!config) {
       return NextResponse.json(
         { error: "Server is missing Supabase environment variables." },
         { status: 500 }
       );
     }
 
+    const { supabaseUrl, serviceRoleKey } = config;
+    const unsubscribeToken = createUnsubscribeToken();
+
     const response = await fetch(`${supabaseUrl}/rest/v1/waitlist`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        apikey: serviceRoleKey,
-        Authorization: `Bearer ${serviceRoleKey}`,
-        Prefer: "return=representation",
-      },
-      body: JSON.stringify([{ email: cleanEmail }]),
+      headers: getWaitlistSupabaseHeaders(serviceRoleKey, "return=representation"),
+      body: JSON.stringify([{ email: cleanEmail, unsubscribe_token: unsubscribeToken }]),
     });
 
     const text = await response.text();
@@ -62,7 +59,10 @@ export async function POST(req: Request) {
     let emailSkippedReason: string | null = null;
 
     try {
-      const emailResult = await sendWaitlistAutoreply(cleanEmail);
+      const emailResult = await sendWaitlistAutoreply(
+        cleanEmail,
+        buildUnsubscribeUrl(unsubscribeToken)
+      );
       emailSent = !emailResult.skipped;
       emailSkippedReason = emailResult.skipped ? emailResult.reason : null;
     } catch (emailError) {

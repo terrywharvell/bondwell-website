@@ -41,6 +41,21 @@ export default function Home() {
     },
   ];
 
+  const audienceCards = [
+    {
+      title: "People living with epilepsy",
+      text: "BondWell is designed to make daily support feel calmer, clearer, and less repetitive.",
+    },
+    {
+      title: "Partners, carers, and loved ones",
+      text: "A view-only, consent-led experience helps support feel connected rather than controlling.",
+    },
+    {
+      title: "Daily life beyond one condition",
+      text: "Built around epilepsy first, with a calm routine-led approach that may also feel helpful for other long-term conditions and care needs.",
+    },
+  ];
+
   const promiseCards = [
     {
       title: "Calm-first support",
@@ -216,6 +231,18 @@ export default function Home() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-7 rounded-[1.6rem] border border-[#EEE4D8] bg-white p-5 shadow-[0_12px_36px_rgba(47,42,38,0.05)]">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#8A7460]">
+                Built around epilepsy first
+              </p>
+              <p className="mt-3 text-sm leading-7 text-[#5A514A]">
+                BondWell is being shaped around epilepsy and everyday caring, while
+                the calm routine-led approach may also feel helpful for other long-term
+                conditions and care needs where reassurance, routine, and shared
+                support matter.
+              </p>
+            </div>
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
@@ -281,6 +308,37 @@ export default function Home() {
               <p className="mt-3 text-sm leading-6 text-[#5A514A]">{item.text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-10">
+          <div className="rounded-[2rem] border border-[#E7DED4] bg-[#FCFAF7] p-8 shadow-sm md:p-10">
+            <div className="max-w-3xl">
+              <p className="text-sm uppercase tracking-[0.22em] text-[#8A7460]">
+                Who BondWell is for
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26] md:text-4xl">
+                Built for real support in everyday life.
+              </h2>
+            </div>
+
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {audienceCards.map((card) => (
+                <div
+                  key={card.title}
+                  className="rounded-[1.6rem] border border-[#E7DED4] bg-white p-6"
+                >
+                  <h3 className="text-lg font-semibold text-[#2F2A26]">
+                    {card.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-[#5A514A]">
+                    {card.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -726,49 +784,72 @@ export default function Home() {
       </section>
 
       <section id="launch" className="bg-white">
-        <div className="mx-auto max-w-4xl px-6 py-20">
-          <div className="rounded-[2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 text-center shadow-sm md:p-10">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
-              Launch updates
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold text-[#2F2A26] md:text-4xl">
-              Join the BondWell launch list
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#5A514A]">
-              Be the first to hear about testing, launch updates, and what’s
-              coming next for BondWell.
-            </p>
-
-            <form
-              onSubmit={handleSubmit}
-              className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row"
-            >
-              <input
-                type="email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full rounded-full border border-[#D8CEC2] bg-white px-5 py-3 outline-none transition focus:border-[#2F2A26]"
-              />
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className="rounded-full bg-[#2F2A26] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90 disabled:opacity-60"
-              >
-                {status === "loading" ? "Joining..." : "Join list"}
-              </button>
-            </form>
-
-            {message ? (
-              <p
-                className={`mt-4 text-sm ${
-                  status === "success" ? "text-[#557A46]" : "text-[#A14B4B]"
-                }`}
-              >
-                {message}
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <div className="grid gap-8 rounded-[2.2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 shadow-sm md:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
+                Launch updates
               </p>
-            ) : null}
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26] md:text-4xl">
+                Join the BondWell launch list
+              </h2>
+              <p className="mt-4 max-w-xl leading-8 text-[#5A514A]">
+                Be the first to hear about testing, launch updates, and what’s
+                coming next for BondWell.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3 text-sm text-[#5A514A]">
+                <span className="rounded-full border border-[#E6D7C4] bg-white px-4 py-2">
+                  Early access updates
+                </span>
+                <span className="rounded-full border border-[#E6D7C4] bg-white px-4 py-2">
+                  Built from lived experience
+                </span>
+                <span className="rounded-full border border-[#E6D7C4] bg-white px-4 py-2">
+                  Calm support, shared gently
+                </span>
+              </div>
+            </div>
+
+            <div className="rounded-[1.8rem] border border-[#E8D8C4] bg-white p-5 shadow-[0_18px_48px_rgba(47,42,38,0.06)] md:p-6">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
+                Join the journey
+              </p>
+              <p className="mt-3 text-sm leading-7 text-[#5A514A]">
+                We’ll only use your email for BondWell launch updates and news.
+              </p>
+
+              <form
+                onSubmit={handleSubmit}
+                className="mt-5 flex flex-col gap-3"
+              >
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="w-full rounded-full border border-[#D8CEC2] bg-[#FCFAF7] px-5 py-3 outline-none transition focus:border-[#2F2A26]"
+                />
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="rounded-full bg-[#2F2A26] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90 disabled:opacity-60"
+                >
+                  {status === "loading" ? "Joining..." : "Join launch list"}
+                </button>
+              </form>
+
+              {message ? (
+                <p
+                  className={`mt-4 text-sm ${
+                    status === "success" ? "text-[#557A46]" : "text-[#A14B4B]"
+                  }`}
+                >
+                  {message}
+                </p>
+              ) : null}
+            </div>
           </div>
         </div>
       </section>

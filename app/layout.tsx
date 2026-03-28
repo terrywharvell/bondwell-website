@@ -15,48 +15,59 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bondwell.co.uk"),
   title: {
-    default: "BondWell | Calm epilepsy support for people and carers",
+    default: "BondWell | Calm epilepsy support app for people and carers",
     template: "%s | BondWell",
   },
   description:
-    "BondWell is a calm daily support app for people living with epilepsy and the partners, carers, and loved ones supporting them. Built around routines, reassurance, and connection.",
+    "BondWell is a calm epilepsy support app for people living with epilepsy and the partners, carers, and loved ones supporting them. Built around gentle reminders, routines, reassurance, and consent-based linked support.",
   applicationName: "BondWell",
+  authors: [{ name: "BondWell" }],
+  creator: "BondWell",
+  publisher: "BondWell",
+  category: "Health & Wellness",
   keywords: [
     "BondWell",
     "epilepsy support app",
+    "epilepsy support app UK",
     "epilepsy reminders",
     "epilepsy carer app",
     "epilepsy partner support",
     "medication reminders epilepsy",
     "hydration reminders epilepsy",
     "epilepsy daily routine",
+    "carer support app",
+    "partner support app",
   ],
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "BondWell | Calm epilepsy support for people and carers",
+    title: "BondWell | Calm epilepsy support app for people and carers",
     description:
-      "A calm daily support app for people living with epilepsy and the people who care for them.",
+      "A calm epilepsy support app for people living with epilepsy and the people who care for them.",
     url: "https://bondwell.co.uk",
     siteName: "BondWell",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://bondwell.co.uk/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "BondWell - calm epilepsy support for people and carers",
+        alt: "BondWell homepage preview showing calm epilepsy support for people and carers",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BondWell | Calm epilepsy support for people and carers",
+    title: "BondWell | Calm epilepsy support app for people and carers",
     description:
-      "A calm daily support app for people living with epilepsy and the people who care for them.",
-    images: ["/og-image.jpg"],
+      "A calm epilepsy support app for people living with epilepsy and the people who care for them.",
+    images: ["https://bondwell.co.uk/og-image.jpg"],
   },
   icons: {
     icon: [{ url: "/bondwell-icon.png", type: "image/png" }],

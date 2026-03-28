@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import { FormEvent, useState } from "react";
 
 export default function Home() {
@@ -79,6 +80,47 @@ export default function Home() {
     "Built to feel calm rather than clinical",
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: "BondWell",
+        url: "https://bondwell.co.uk",
+        logo: "https://bondwell.co.uk/bondwell-icon.png",
+        email: "hello@bondwell.co.uk",
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "BondWell",
+        applicationCategory: "HealthApplication",
+        operatingSystem: "iOS, Android",
+        url: "https://bondwell.co.uk",
+        image: "https://bondwell.co.uk/og-image.jpg",
+        description:
+          "BondWell is a calm epilepsy support app for people living with epilepsy and the partners, carers, and loved ones supporting them. It focuses on gentle reminders, routines, reassurance, and consent-based linked support.",
+        featureList: [
+          "Medication reminders",
+          "Hydration reminders",
+          "Meal reminders",
+          "Gentle check-ins",
+          "Support requested flow",
+          "Consent-based linked support across two phones",
+        ],
+        publisher: {
+          "@type": "Organization",
+          name: "BondWell",
+        },
+      },
+      {
+        "@type": "WebSite",
+        name: "BondWell",
+        url: "https://bondwell.co.uk",
+      },
+    ],
+  };
+
+
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
@@ -126,6 +168,11 @@ export default function Home() {
 
   return (
     <main id="top" className="min-h-screen bg-white text-[#2F2A26]">
+      <Script
+        id="bondwell-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <header className="sticky top-0 z-40 border-b border-[#EDE5DB] bg-white/95 backdrop-blur">
         <div className="mx-auto max-w-7xl px-6 py-4">
           <div className="flex items-center justify-between gap-4">

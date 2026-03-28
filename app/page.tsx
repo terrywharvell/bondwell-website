@@ -720,20 +720,55 @@ export default function Home() {
             <h2 className="mt-3 text-3xl font-semibold text-[#2F2A26] md:text-4xl">
               Built around consent, clarity, and calmer communication
             </h2>
+            <p className="mt-5 max-w-3xl leading-8 text-[#5A514A]">
+              BondWell is designed to reduce pressure, not create it. Sharing is optional,
+              led by the person using the app, and focused on calm day-to-day support rather
+              than surveillance.
+            </p>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
-              <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
-                You choose what is shared
+              <div className="rounded-2xl bg-[#FAF7F2] p-5">
+                <p className="font-semibold text-[#2F2A26]">You choose what is shared</p>
+                <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+                  Shared support is consent-based and can be changed in the app settings.
+                </p>
               </div>
-              <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
-                Partner mode is view-only
+              <div className="rounded-2xl bg-[#FAF7F2] p-5">
+                <p className="font-semibold text-[#2F2A26]">Partner mode is view-only</p>
+                <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+                  Partner or carer support is there to help someone stay in step, not to take
+                  control away from them.
+                </p>
               </div>
-              <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
-                Not a medical device
+              <div className="rounded-2xl bg-[#FAF7F2] p-5">
+                <p className="font-semibold text-[#2F2A26]">Medication names stay private</p>
+                <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+                  BondWell is built around timing, routine, and reassurance rather than exposing
+                  personal medical details.
+                </p>
               </div>
-              <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
-                Not emergency support
+              <div className="rounded-2xl bg-[#FAF7F2] p-5">
+                <p className="font-semibold text-[#2F2A26]">Not a medical or emergency service</p>
+                <p className="mt-2 text-sm leading-7 text-[#5A514A]">
+                  BondWell supports everyday routines and communication. It is not seizure
+                  tracking, diagnosis, emergency monitoring, or urgent support.
+                </p>
               </div>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-4 text-sm">
+              <a
+                href="/privacy"
+                className="rounded-full border border-[#DCCFC1] px-5 py-2.5 text-[#2F2A26] transition hover:bg-[#FAF7F2]"
+              >
+                Read Privacy Policy
+              </a>
+              <a
+                href="/terms"
+                className="rounded-full border border-[#DCCFC1] px-5 py-2.5 text-[#2F2A26] transition hover:bg-[#FAF7F2]"
+              >
+                Read Terms of Use
+              </a>
             </div>
           </div>
         </div>
@@ -755,9 +790,9 @@ export default function Home() {
               <h3 className="font-semibold text-[#2F2A26]">
                 Is BondWell a medical device?
               </h3>
-              <p className="mt-2 text-[#5A514A]">
-                No. BondWell supports routines and communication. For medical
-                advice, speak with a qualified healthcare professional.
+              <p className="mt-2 leading-7 text-[#5A514A]">
+                No. BondWell supports routines, communication, and day-to-day reassurance. It does
+                not provide diagnosis, treatment, or medical advice.
               </p>
             </div>
 
@@ -765,8 +800,20 @@ export default function Home() {
               <h3 className="font-semibold text-[#2F2A26]">
                 Is BondWell emergency support?
               </h3>
-              <p className="mt-2 text-[#5A514A]">
-                No. If urgent help is needed, contact emergency services.
+              <p className="mt-2 leading-7 text-[#5A514A]">
+                No. BondWell is not an emergency service or urgent monitoring tool. If urgent help
+                is needed, contact emergency services or the appropriate healthcare support.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
+              <h3 className="font-semibold text-[#2F2A26]">
+                What can a partner or carer see?
+              </h3>
+              <p className="mt-2 leading-7 text-[#5A514A]">
+                BondWell is designed to share calm support information only, such as whether
+                something has been marked, whether support has been requested, and shared routine
+                timing. Medication names are not shown.
               </p>
             </div>
 
@@ -774,9 +821,30 @@ export default function Home() {
               <h3 className="font-semibold text-[#2F2A26]">
                 Can a partner control the app?
               </h3>
-              <p className="mt-2 text-[#5A514A]">
-                No. Partner features are designed to be view-only and
-                consent-based.
+              <p className="mt-2 leading-7 text-[#5A514A]">
+                No. Partner features are designed to be view-only and consent-based, so support can
+                feel connected without becoming controlling.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
+              <h3 className="font-semibold text-[#2F2A26]">
+                What happens if a reminder is missed?
+              </h3>
+              <p className="mt-2 leading-7 text-[#5A514A]">
+                BondWell is designed to encourage calm follow-through, not panic. Depending on the
+                settings chosen, the app may show the reminder as still open and may gently involve
+                a partner or carer if sharing has been turned on.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
+              <h3 className="font-semibold text-[#2F2A26]">
+                Can sharing be turned off?
+              </h3>
+              <p className="mt-2 leading-7 text-[#5A514A]">
+                Yes. Sharing is designed to be optional, clear, and person-led. It can be changed
+                from within the app settings.
               </p>
             </div>
           </div>
@@ -817,6 +885,16 @@ export default function Home() {
               </p>
               <p className="mt-3 text-sm leading-7 text-[#5A514A]">
                 We’ll only use your email for BondWell launch updates and news.
+              </p>
+              <p className="mt-2 text-xs leading-6 text-[#7A6F66]">
+                By joining, you agree to BondWell’s{" "}
+                <a href="/privacy" className="underline underline-offset-2 hover:opacity-80">
+                  Privacy Policy
+                </a>{" "}
+                and{" "}
+                <a href="/terms" className="underline underline-offset-2 hover:opacity-80">
+                  Terms of Use
+                </a>.
               </p>
 
               <form
@@ -873,7 +951,7 @@ export default function Home() {
           <p>© {new Date().getFullYear()} BondWell. All rights reserved.</p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#privacy" className="hover:opacity-70">
+            <a href="/privacy" className="hover:opacity-70">
               Privacy
             </a>
             <a href="/terms" className="hover:opacity-70">

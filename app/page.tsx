@@ -674,37 +674,69 @@ export default function Home() {
 
       <section id="pricing" className="scroll-mt-28 md:scroll-mt-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
-          <div className="mb-10 max-w-2xl">
+          <div className="mb-10 max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
               Pricing
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-[#2F2A26] md:text-4xl">
-              Simple pricing, with core support kept accessible
+              Simple support on one phone, with Premium for linked support across two
             </h2>
+            <p className="mt-4 leading-8 text-[#5A514A]">
+              BondWell Free is for one person using BondWell on a single phone.
+              BondWell Premium is for linked support across two phones, so a partner,
+              carer, or loved one can stay gently in step through consent-based sharing.
+            </p>
+          </div>
+
+          <div className="mb-6 rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-5">
+            <p className="text-sm leading-7 text-[#5A514A]">
+              Core BondWell support stays accessible on one phone. Premium is for the
+              added linked experience across two separate phones.
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-[2rem] border border-[#E7DED4] bg-[#FCFAF7] p-8 shadow-sm">
-              <h3 className="text-2xl font-semibold text-[#2F2A26]">Free</h3>
+              <div className="inline-flex rounded-full border border-[#E2D7CA] bg-white px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-[#8A7460]">
+                One phone
+              </div>
+
+              <h3 className="mt-5 text-2xl font-semibold text-[#2F2A26]">Free</h3>
+              <p className="mt-3 leading-7 text-[#5A514A]">
+                For one person using BondWell on their own phone.
+              </p>
+
               <ul className="mt-6 space-y-3 text-[#5A514A]">
                 <li>Medication reminders</li>
                 <li>Hydration reminders</li>
                 <li>Meal reminders</li>
                 <li>Gentle check-ins</li>
                 <li>Support requested flow</li>
+                <li>Calm daily routine support on one device</li>
               </ul>
             </div>
 
             <div className="rounded-[2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 shadow-sm">
-              <h3 className="text-2xl font-semibold text-[#2F2A26]">Premium</h3>
+              <div className="inline-flex rounded-full border border-[#E3CFAB] bg-white px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-[#8A7460]">
+                Two linked phones
+              </div>
+
+              <h3 className="mt-5 text-2xl font-semibold text-[#2F2A26]">Premium</h3>
+              <p className="mt-3 leading-7 text-[#5A514A]">
+                Everything in Free, plus linked support between the person using
+                BondWell and a partner, carer, or loved one on a separate phone.
+              </p>
+
               <ul className="mt-6 space-y-3 text-[#5A514A]">
                 <li>Everything in Free</li>
-                <li>Linking across separate phones</li>
-                <li>Partner/carer connection features</li>
-                <li>Future device linking</li>
+                <li>Linking across two separate phones</li>
+                <li>View-only partner/carer connection</li>
+                <li>Consent-based shared support updates</li>
+                <li>Premium linked support features as BondWell grows</li>
               </ul>
+
               <p className="mt-6 text-sm text-[#7A6F66]">
-                Premium is planned for optional linking features only.
+                Final Premium pricing will be confirmed before launch.
               </p>
             </div>
           </div>

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bondwell.co.uk"),
+  metadataBase: new URL("https://www.bondwell.co.uk"),
   title: {
     default: "BondWell | Calm epilepsy support app for people and carers",
     template: "%s | BondWell",
@@ -52,13 +52,13 @@ export const metadata: Metadata = {
     title: "BondWell | Calm epilepsy support app for people and carers",
     description:
       "A calm epilepsy support app with gentle reminders, daily routines, reassurance, and consent-based linked support for people and carers.",
-    url: "https://bondwell.co.uk",
+    url: "https://www.bondwell.co.uk",
     siteName: "BondWell",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://bondwell.co.uk/og-image.jpg",
+        url: "https://www.bondwell.co.uk/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "BondWell homepage preview showing calm epilepsy support for people and carers",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "BondWell | Calm epilepsy support app for people and carers",
     description:
       "A calm epilepsy support app with gentle reminders, daily routines, reassurance, and consent-based linked support for people and carers.",
-    images: ["https://bondwell.co.uk/og-image.jpg"],
+    images: ["https://www.bondwell.co.uk/og-image.jpg"],
   },
   icons: {
     icon: [{ url: "/bondwell-icon.png", type: "image/png" }],

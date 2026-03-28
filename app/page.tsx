@@ -73,9 +73,9 @@ export default function Home() {
 
   const trustSignals = [
     "Designed around lived experience",
-    "Consent-led and person-led",
-    "Partner support stays view-only",
-    "Medication names stay private",
+    "Focused on reassurance as well as routine",
+    "Made for both the person and the partner",
+    "Built to feel calm rather than clinical",
   ];
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -342,7 +342,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="story" className="scroll-mt-28 bg-white md:scroll-mt-32">
+      <section id="story" className="bg-white">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] text-[#8A7460]">
@@ -473,7 +473,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="perspective" className="scroll-mt-28 bg-white md:scroll-mt-32">
+      <section id="perspective" className="bg-white">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="rounded-[2rem] border border-[#E7DED4] bg-[#FCFAF7] p-8 shadow-sm md:p-10">
             <p className="text-sm uppercase tracking-[0.25em] text-[#8A7460]">
@@ -508,7 +508,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="screens" className="scroll-mt-28 bg-white md:scroll-mt-32">
+      <section id="screens" className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-12 text-center">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -596,7 +596,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="scroll-mt-28 bg-[#FCFAF7] md:scroll-mt-32">
+      <section id="how-it-works" className="bg-[#FCFAF7]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -672,7 +672,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="scroll-mt-28 bg-white md:scroll-mt-32">
+      <section id="pricing" className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -711,7 +711,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="privacy" className="scroll-mt-28 bg-[#FCFAF7] md:scroll-mt-32">
+      <section id="privacy" className="bg-[#FCFAF7]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm md:p-10">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -720,11 +720,6 @@ export default function Home() {
             <h2 className="mt-3 text-3xl font-semibold text-[#2F2A26] md:text-4xl">
               Built around consent, clarity, and calmer communication
             </h2>
-            <p className="mt-5 max-w-3xl leading-8 text-[#5A514A]">
-              BondWell is designed to support daily routines and reduce pressure between the person using it and the
-              partner, carer, or loved one beside them. It is built around consent, view-only support, and clear
-              boundaries.
-            </p>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
@@ -734,41 +729,17 @@ export default function Home() {
                 Partner mode is view-only
               </div>
               <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
-                Medication names stay private
-              </div>
-              <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
-                Not seizure tracking or diagnosis
-              </div>
-              <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
                 Not a medical device
               </div>
               <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
                 Not emergency support
               </div>
             </div>
-
-            <div className="mt-8 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-              <div className="rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-6">
-                <h3 className="text-xl font-semibold text-[#2F2A26]">In plain English</h3>
-                <p className="mt-4 leading-8 text-[#5A514A]">
-                  BondWell helps both people stay gently in step. It does not turn a partner or carer into a
-                  controller, and it does not replace medical advice, emergency support, or seizure monitoring.
-                </p>
-              </div>
-
-              <div className="rounded-[1.6rem] border border-[#E7DED4] bg-white p-6">
-                <h3 className="text-xl font-semibold text-[#2F2A26]">What a missed reminder means</h3>
-                <p className="mt-4 leading-8 text-[#5A514A]">
-                  If sharing is turned on, BondWell can help prompt calmer support between both people. It is not an
-                  alarm system, and it should not be relied on for emergencies or urgent medical situations.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <section id="faq" className="scroll-mt-28 bg-white md:scroll-mt-32">
+      <section id="faq" className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -785,8 +756,8 @@ export default function Home() {
                 Is BondWell a medical device?
               </h3>
               <p className="mt-2 text-[#5A514A]">
-                No. BondWell supports routines, reassurance, and communication. It does not diagnose, predict, or
-                treat seizures, and it is not a medical device.
+                No. BondWell supports routines and communication. For medical
+                advice, speak with a qualified healthcare professional.
               </p>
             </div>
 
@@ -795,28 +766,7 @@ export default function Home() {
                 Is BondWell emergency support?
               </h3>
               <p className="mt-2 text-[#5A514A]">
-                No. If urgent help is needed, or you think someone may be in danger, contact emergency services or a
-                qualified healthcare professional.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
-              <h3 className="font-semibold text-[#2F2A26]">
-                What can a partner or carer actually see?
-              </h3>
-              <p className="mt-2 text-[#5A514A]">
-                Only what the person using BondWell chooses to share, such as timing-based routine updates, gentle
-                support prompts, or a support request. Medication names and medical detail stay private.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
-              <h3 className="font-semibold text-[#2F2A26]">
-                What happens if a reminder is missed?
-              </h3>
-              <p className="mt-2 text-[#5A514A]">
-                If sharing is turned on, BondWell can help prompt calmer support between both people. It is not an
-                alarm system and should not be relied on for emergencies or seizure monitoring.
+                No. If urgent help is needed, contact emergency services.
               </p>
             </div>
 
@@ -825,15 +775,15 @@ export default function Home() {
                 Can a partner control the app?
               </h3>
               <p className="mt-2 text-[#5A514A]">
-                No. Partner features are designed to be view-only and consent-based, so support can feel connected
-                rather than controlling.
+                No. Partner features are designed to be view-only and
+                consent-based.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="launch" className="scroll-mt-28 bg-white md:scroll-mt-32">
+      <section id="launch" className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid gap-8 rounded-[2.2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 shadow-sm md:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
@@ -866,7 +816,17 @@ export default function Home() {
                 Join the journey
               </p>
               <p className="mt-3 text-sm leading-7 text-[#5A514A]">
-                We’ll only use your email for BondWell launch updates and news. No spam, and you can unsubscribe any time.
+                We’ll only use your email for BondWell launch updates and news.
+              </p>
+              <p className="mt-2 text-xs leading-6 text-[#7A6F66]">
+                By joining, you agree to BondWell’s{' '}
+                <a href="/privacy" className="underline underline-offset-2 hover:opacity-80">
+                  Privacy Policy
+                </a>{' '}
+                and{' '}
+                <a href="/terms" className="underline underline-offset-2 hover:opacity-80">
+                  Terms of Use
+                </a>.
               </p>
 
               <form
@@ -904,7 +864,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-28 bg-white md:scroll-mt-32">
+      <section id="contact" className="bg-white">
         <div className="mx-auto max-w-7xl px-6 pb-12">
           <div className="rounded-[2rem] border border-[#E7DED4] bg-[#FCFAF7] p-8 shadow-sm">
             <h2 className="text-2xl font-semibold text-[#2F2A26]">Contact</h2>
@@ -923,8 +883,11 @@ export default function Home() {
           <p>© {new Date().getFullYear()} BondWell. All rights reserved.</p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#privacy" className="hover:opacity-70">
+            <a href="/privacy" className="hover:opacity-70">
               Privacy
+            </a>
+            <a href="/terms" className="hover:opacity-70">
+              Terms
             </a>
             <a href="#faq" className="hover:opacity-70">
               FAQs

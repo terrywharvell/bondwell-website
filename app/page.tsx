@@ -6,6 +6,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const heroCards = [
     {
@@ -126,54 +127,154 @@ export default function Home() {
   return (
     <main id="top" className="min-h-screen bg-white text-[#2F2A26]">
       <header className="sticky top-0 z-40 border-b border-[#EDE5DB] bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a
-            href="#top"
-            className="flex items-center gap-3 text-xl font-semibold tracking-tight hover:opacity-90"
-          >
-            <img
-              src="/bondwell-icon.png"
-              alt="BondWell logo"
-              className="h-14 w-auto md:h-16"
-            />
-            <div className="leading-tight">
-              <div className="text-xl font-semibold text-[#2F2A26]">BondWell</div>
-              <div className="text-xs font-normal uppercase tracking-[0.18em] text-[#8A7460]">
-                Calm support, shared gently
+        <div className="mx-auto max-w-7xl px-6 py-4">
+          <div className="flex items-center justify-between gap-4">
+            <a
+              href="#top"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex min-w-0 items-center gap-3 text-xl font-semibold tracking-tight hover:opacity-90"
+            >
+              <img
+                src="/bondwell-icon.png"
+                alt="BondWell logo"
+                className="h-14 w-auto md:h-16"
+              />
+              <div className="leading-tight">
+                <div className="text-xl font-semibold text-[#2F2A26]">BondWell</div>
+                <div className="text-xs font-normal uppercase tracking-[0.18em] text-[#8A7460]">
+                  Calm support, shared gently
+                </div>
               </div>
+            </a>
+
+            <nav className="hidden items-center gap-7 text-sm text-[#5A514A] lg:flex">
+              <a href="#story" className="transition hover:text-[#2F2A26]">
+                Story
+              </a>
+              <a href="#perspective" className="transition hover:text-[#2F2A26]">
+                Perspective
+              </a>
+              <a href="#screens" className="transition hover:text-[#2F2A26]">
+                Screens
+              </a>
+              <a href="#how-it-works" className="transition hover:text-[#2F2A26]">
+                How it works
+              </a>
+              <a href="#privacy" className="transition hover:text-[#2F2A26]">
+                Privacy
+              </a>
+              <a href="#faq" className="transition hover:text-[#2F2A26]">
+                FAQs
+              </a>
+              <a href="#contact" className="transition hover:text-[#2F2A26]">
+                Contact
+              </a>
+            </nav>
+
+            <a
+              href="#launch"
+              className="hidden rounded-full bg-[#2F2A26] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90 lg:inline-flex"
+            >
+              Join launch list
+            </a>
+
+            <button
+              type="button"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
+              onClick={() => setMobileMenuOpen((open) => !open)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#DCCFC1] bg-white text-[#2F2A26] transition hover:bg-[#FAF7F2] lg:hidden"
+            >
+              <span className="relative block h-4 w-5">
+                <span
+                  className={`absolute left-0 top-0 h-[1.5px] w-5 rounded-full bg-current transition ${
+                    mobileMenuOpen ? "translate-y-[7px] rotate-45" : ""
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-[7px] h-[1.5px] w-5 rounded-full bg-current transition ${
+                    mobileMenuOpen ? "opacity-0" : ""
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-[14px] h-[1.5px] w-5 rounded-full bg-current transition ${
+                    mobileMenuOpen ? "-translate-y-[7px] -rotate-45" : ""
+                  }`}
+                />
+              </span>
+            </button>
+          </div>
+
+          {mobileMenuOpen ? (
+            <div className="mt-4 rounded-[1.8rem] border border-[#E7DED4] bg-white p-4 shadow-[0_18px_48px_rgba(47,42,38,0.08)] lg:hidden">
+              <nav className="flex flex-col text-sm text-[#5A514A]">
+                <a
+                  href="#story"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                >
+                  Story
+                </a>
+                <a
+                  href="#perspective"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                >
+                  Perspective
+                </a>
+                <a
+                  href="#screens"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                >
+                  Screens
+                </a>
+                <a
+                  href="#how-it-works"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                >
+                  How it works
+                </a>
+                <a
+                  href="#pricing"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                >
+                  Pricing
+                </a>
+                <a
+                  href="#privacy"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                >
+                  Privacy
+                </a>
+                <a
+                  href="#faq"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                >
+                  FAQs
+                </a>
+                <a
+                  href="#contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                >
+                  Contact
+                </a>
+              </nav>
+
+              <a
+                href="#launch"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mt-4 flex w-full items-center justify-center rounded-full bg-[#2F2A26] px-5 py-3 text-sm font-medium text-white transition hover:opacity-90"
+              >
+                Join launch list
+              </a>
             </div>
-          </a>
-
-          <nav className="hidden items-center gap-7 text-sm text-[#5A514A] lg:flex">
-            <a href="#story" className="transition hover:text-[#2F2A26]">
-              Story
-            </a>
-            <a href="#perspective" className="transition hover:text-[#2F2A26]">
-              Perspective
-            </a>
-            <a href="#screens" className="transition hover:text-[#2F2A26]">
-              Screens
-            </a>
-            <a href="#how-it-works" className="transition hover:text-[#2F2A26]">
-              How it works
-            </a>
-            <a href="#privacy" className="transition hover:text-[#2F2A26]">
-              Privacy
-            </a>
-            <a href="#faq" className="transition hover:text-[#2F2A26]">
-              FAQs
-            </a>
-            <a href="#contact" className="transition hover:text-[#2F2A26]">
-              Contact
-            </a>
-          </nav>
-
-          <a
-            href="#launch"
-            className="rounded-full bg-[#2F2A26] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90"
-          >
-            Join launch list
-          </a>
+          ) : null}
         </div>
       </header>
 

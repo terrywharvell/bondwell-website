@@ -342,7 +342,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="story" className="bg-white">
+      <section id="story" className="scroll-mt-28 md:scroll-mt-32 bg-white">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] text-[#8A7460]">
@@ -473,7 +473,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="perspective" className="bg-white">
+      <section id="perspective" className="scroll-mt-28 md:scroll-mt-32 bg-white">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="rounded-[2rem] border border-[#E7DED4] bg-[#FCFAF7] p-8 shadow-sm md:p-10">
             <p className="text-sm uppercase tracking-[0.25em] text-[#8A7460]">
@@ -508,7 +508,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="screens" className="bg-white">
+      <section id="screens" className="scroll-mt-28 md:scroll-mt-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-12 text-center">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -596,7 +596,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="bg-[#FCFAF7]">
+      <section id="how-it-works" className="scroll-mt-28 md:scroll-mt-32 bg-[#FCFAF7]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -672,7 +672,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="bg-white">
+      <section id="pricing" className="scroll-mt-28 md:scroll-mt-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -711,7 +711,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="privacy" className="bg-[#FCFAF7]">
+      <section id="privacy" className="scroll-mt-28 md:scroll-mt-32 bg-[#FCFAF7]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm md:p-10">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -739,7 +739,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="bg-white">
+      <section id="faq" className="scroll-mt-28 md:scroll-mt-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
@@ -783,7 +783,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="launch" className="bg-white">
+      <section id="launch" className="scroll-mt-28 md:scroll-mt-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid gap-8 rounded-[2.2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 shadow-sm md:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
@@ -817,16 +817,6 @@ export default function Home() {
               </p>
               <p className="mt-3 text-sm leading-7 text-[#5A514A]">
                 We’ll only use your email for BondWell launch updates and news.
-              </p>
-              <p className="mt-2 text-xs leading-6 text-[#7A6F66]">
-                By joining, you agree to BondWell’s{' '}
-                <a href="/privacy" className="underline underline-offset-2 hover:opacity-80">
-                  Privacy Policy
-                </a>{' '}
-                and{' '}
-                <a href="/terms" className="underline underline-offset-2 hover:opacity-80">
-                  Terms of Use
-                </a>.
               </p>
 
               <form
@@ -864,7 +854,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-white">
+      <section id="contact" className="scroll-mt-28 md:scroll-mt-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 pb-12">
           <div className="rounded-[2rem] border border-[#E7DED4] bg-[#FCFAF7] p-8 shadow-sm">
             <h2 className="text-2xl font-semibold text-[#2F2A26]">Contact</h2>
@@ -883,11 +873,8 @@ export default function Home() {
           <p>© {new Date().getFullYear()} BondWell. All rights reserved.</p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="/privacy" className="hover:opacity-70">
+            <a href="#privacy" className="hover:opacity-70">
               Privacy
-            </a>
-            <a href="/terms" className="hover:opacity-70">
-              Terms
             </a>
             <a href="#faq" className="hover:opacity-70">
               FAQs

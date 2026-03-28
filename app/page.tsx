@@ -721,6 +721,10 @@ export default function Home() {
               Built around consent, clarity, and calmer communication
             </h2>
 
+            <p className="mt-5 max-w-3xl leading-8 text-[#5A514A]">
+              BondWell is designed to support daily routines and reduce pressure between the person using it and the partner, carer, or loved one beside them. It is built around consent, view-only support, and clear boundaries.
+            </p>
+
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
                 You choose what is shared
@@ -729,10 +733,46 @@ export default function Home() {
                 Partner mode is view-only
               </div>
               <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
+                Medication names stay private
+              </div>
+              <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
+                Not seizure tracking or diagnosis
+              </div>
+              <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
                 Not a medical device
               </div>
               <div className="rounded-2xl bg-[#FAF7F2] p-5 text-[#2F2A26]">
                 Not emergency support
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-6 lg:grid-cols-2">
+              <div className="rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-6">
+                <h3 className="text-lg font-semibold text-[#2F2A26]">In plain English</h3>
+                <p className="mt-3 text-sm leading-7 text-[#5A514A]">
+                  BondWell helps both people stay gently in step. It does not turn a partner or carer into a controller, and it does not replace medical advice, emergency support, or seizure monitoring.
+                </p>
+              </div>
+
+              <div className="rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-6">
+                <h3 className="text-lg font-semibold text-[#2F2A26]">Full policies</h3>
+                <p className="mt-3 text-sm leading-7 text-[#5A514A]">
+                  We are writing BondWell’s legal documents in the same clear, human tone as the product itself.
+                </p>
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="/privacy"
+                    className="rounded-full bg-[#2F2A26] px-5 py-3 text-center text-sm font-medium text-white transition hover:opacity-90"
+                  >
+                    Read Privacy Policy
+                  </a>
+                  <a
+                    href="/terms"
+                    className="rounded-full border border-[#DCCFC1] px-5 py-3 text-center text-sm font-medium text-[#2F2A26] transition hover:bg-[#FAF7F2]"
+                  >
+                    Read Terms of Use
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -818,6 +858,9 @@ export default function Home() {
               <p className="mt-3 text-sm leading-7 text-[#5A514A]">
                 We’ll only use your email for BondWell launch updates and news.
               </p>
+              <p className="mt-2 text-xs leading-6 text-[#7A6F66]">
+                By joining, you agree to our <a href="/privacy" className="underline">Privacy Policy</a> and <a href="/terms" className="underline">Terms of Use</a>.
+              </p>
 
               <form
                 onSubmit={handleSubmit}
@@ -873,8 +916,11 @@ export default function Home() {
           <p>© {new Date().getFullYear()} BondWell. All rights reserved.</p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#privacy" className="hover:opacity-70">
-              Privacy
+            <a href="/privacy" className="hover:opacity-70">
+              Privacy Policy
+            </a>
+            <a href="/terms" className="hover:opacity-70">
+              Terms of Use
             </a>
             <a href="#faq" className="hover:opacity-70">
               FAQs

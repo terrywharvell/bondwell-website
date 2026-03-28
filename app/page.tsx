@@ -876,6 +876,9 @@ export default function Home() {
             <a href="#privacy" className="hover:opacity-70">
               Privacy
             </a>
+            <a href="/terms" className="hover:opacity-70">
+              Terms
+            </a>
             <a href="#faq" className="hover:opacity-70">
               FAQs
             </a>

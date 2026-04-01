@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import { FormEvent, useState } from "react";
 
 export default function Home() {
@@ -80,47 +79,6 @@ export default function Home() {
     "Built to feel calm rather than clinical",
   ];
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: "BondWell",
-        url: "https://bondwell.co.uk",
-        logo: "https://bondwell.co.uk/bondwell-icon.png",
-        email: "hello@bondwell.co.uk",
-      },
-      {
-        "@type": "SoftwareApplication",
-        name: "BondWell",
-        applicationCategory: "HealthApplication",
-        operatingSystem: "iOS, Android",
-        url: "https://bondwell.co.uk",
-        image: "https://bondwell.co.uk/og-image.jpg",
-        description:
-          "BondWell is a calm epilepsy support app for people living with epilepsy and the partners, carers, and loved ones supporting them. It focuses on gentle reminders, routines, reassurance, and consent-based linked support.",
-        featureList: [
-          "Medication reminders",
-          "Hydration reminders",
-          "Meal reminders",
-          "Gentle check-ins",
-          "Support requested flow",
-          "Consent-based linked support across two phones",
-        ],
-        publisher: {
-          "@type": "Organization",
-          name: "BondWell",
-        },
-      },
-      {
-        "@type": "WebSite",
-        name: "BondWell",
-        url: "https://bondwell.co.uk",
-      },
-    ],
-  };
-
-
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
@@ -168,11 +126,6 @@ export default function Home() {
 
   return (
     <main id="top" className="min-h-screen bg-white text-[#2F2A26]">
-      <Script
-        id="bondwell-structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
       <header className="sticky top-0 z-40 border-b border-[#EDE5DB] bg-white/95 backdrop-blur">
         <div className="mx-auto max-w-7xl px-6 py-4">
           <div className="flex items-center justify-between gap-4">
@@ -212,6 +165,9 @@ export default function Home() {
               </a>
               <a href="#faq" className="transition hover:text-[#2F2A26]">
                 FAQs
+              </a>
+              <a href="/help" className="transition hover:text-[#2F2A26]">
+                Help
               </a>
               <a href="#contact" className="transition hover:text-[#2F2A26]">
                 Contact
@@ -303,6 +259,13 @@ export default function Home() {
                   className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
                 >
                   FAQs
+                </a>
+                <a
+                  href="/help"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                >
+                  Help
                 </a>
                 <a
                   href="#contact"
@@ -672,6 +635,14 @@ export default function Home() {
               for the person using it and for the partner or carer supporting
               them.
             </p>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <a
+                href="/help"
+                className="rounded-full border border-[#DCCFC1] px-5 py-2.5 text-[#2F2A26] transition hover:bg-[#FAF7F2]"
+              >
+                Open setup help
+              </a>
+            </div>
           </div>
 
           <div className="flex flex-col items-center gap-16 md:flex-row md:justify-center md:gap-12">
@@ -1136,6 +1107,9 @@ export default function Home() {
             </a>
             <a href="/terms" className="hover:opacity-70">
               Terms
+            </a>
+            <a href="/help" className="hover:opacity-70">
+              Help
             </a>
             <a href="#faq" className="hover:opacity-70">
               FAQs

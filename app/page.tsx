@@ -34,7 +34,7 @@ export default function Home() {
     },
     {
       title: "Consent-based",
-      text: "Sharing is optional, clear, and led by the person using the app.",
+      text: "Linked support is clear, consent-based, and under your control.",
     },
     {
       title: "Human-first",
@@ -64,7 +64,7 @@ export default function Home() {
     },
     {
       title: "Consent-led connection",
-      text: "Sharing and partner support are designed to feel respectful, clear, and person-led.",
+      text: "Linked support and partner support are designed to feel respectful, clear, and under your control.",
     },
     {
       title: "For both people",
@@ -741,11 +741,11 @@ export default function Home() {
             <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
               <div className="text-sm font-medium text-[#8A7460]">02</div>
               <h3 className="mt-3 text-xl font-semibold text-[#2F2A26]">
-                Choose what you share
+                Stay connected clearly
               </h3>
               <p className="mt-4 leading-8 text-[#5A514A]">
-                BondWell is consent-based. Sharing is optional, clear, and led by
-                the person using the app.
+                BondWell is designed to keep linked support clear, calm, and under
+                your control.
               </p>
             </div>
 
@@ -872,16 +872,16 @@ export default function Home() {
               Built around consent, clarity, and calmer communication
             </h2>
             <p className="mt-5 max-w-3xl leading-8 text-[#5A514A]">
-              BondWell is designed to reduce pressure, not create it. Sharing is optional,
-              led by the person using the app, and focused on calm day-to-day support rather
-              than surveillance.
+              BondWell is designed to reduce pressure, not create it. Linked support is
+              clear, consent-based, and focused on calm day-to-day support rather than
+              surveillance.
             </p>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl bg-[#FAF7F2] p-5">
-                <p className="font-semibold text-[#2F2A26]">You choose what is shared</p>
+                <p className="font-semibold text-[#2F2A26]">Linked support stays in your control</p>
                 <p className="mt-2 text-sm leading-7 text-[#5A514A]">
-                  Shared support is consent-based and can be changed in the app settings.
+                  Linked support is designed to feel clear, respectful, and easy to stop by unlinking the other phone.
                 </p>
               </div>
               <div className="rounded-2xl bg-[#FAF7F2] p-5">
@@ -985,17 +985,16 @@ export default function Home() {
               <p className="mt-2 leading-7 text-[#5A514A]">
                 BondWell is designed to encourage calm follow-through, not panic. Depending on the
                 settings chosen, the app may show the reminder as still open and may gently involve
-                a partner or carer if sharing has been turned on.
+                a partner or carer when phones are linked for support.
               </p>
             </div>
 
             <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
               <h3 className="font-semibold text-[#2F2A26]">
-                Can sharing be turned off?
+                Can linked support be stopped?
               </h3>
               <p className="mt-2 leading-7 text-[#5A514A]">
-                Yes. Sharing is designed to be optional, clear, and person-led. It can be changed
-                from within the app settings.
+                Yes. Linked support can be stopped by unlinking the other phone in BondWell settings.
               </p>
             </div>
           </div>

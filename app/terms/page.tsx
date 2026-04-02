@@ -70,7 +70,7 @@ export default function TermsPage() {
           <section>
             <h2 className={sectionTitle}>4. Linked support</h2>
             <p className={bodyText}>
-              BondWell linked support is designed to help a partner or carer stay informed in a calm, consent-based, view-only way. The person using BondWell remains in control of what is shared and whether linked support is enabled.
+              BondWell linked support is designed to help a partner or carer stay informed in a calm, consent-based, view-only way. The person using BondWell remains in control of linking and unlinking the other phone for support.
             </p>
           </section>
 

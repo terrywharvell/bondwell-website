@@ -34,7 +34,7 @@ export default function PrivacyPage() {
               Privacy Policy
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#5A514A]">
-              BondWell is built around calm support, consent, and clearer communication. This policy explains what information we collect, how we use it, and what may be shared when linked support is turned on.
+              BondWell is built around calm support, consent, and clearer communication. This policy explains what information we collect, how we use it, and what may be shared when phones are linked for support.
             </p>
             <p className="mt-4 text-sm text-[#7A6F66]">Last updated: March 2026</p>
           </div>
@@ -80,7 +80,7 @@ export default function PrivacyPage() {
               <ul className="list-disc space-y-2 pl-6">
                 <li>Medication names are not part of the shared partner experience.</li>
                 <li>Partner mode is designed to be view-only.</li>
-                <li>The person using BondWell stays in control of whether gentle sharing is turned on.</li>
+                <li>Linked support is designed to feel clear, consent-based, and in your control.</li>
                 <li>BondWell is designed to support communication, not surveillance.</li>
               </ul>
             </div>
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
               <p>We use information to:</p>
               <ul className="list-disc space-y-2 pl-6">
                 <li>provide BondWell’s routine, reminder, and linked-support features</li>
-                <li>help both phones reflect the same shared routine and support status where sharing is enabled</li>
+                <li>help both phones reflect the same shared routine and support status when phones are linked for support</li>
                 <li>send account, security, and launch-list communications</li>
                 <li>improve reliability, safety, and product performance</li>
               </ul>
@@ -102,7 +102,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className={sectionTitle}>6. What may be shared with a linked partner or carer</h2>
             <p className={bodyText}>
-              If linked support is enabled, BondWell may share routine and support status information such as whether a reminder has been marked, whether support was requested, whether rest mode is on, and selected contact details such as a saved phone number. The linked phone is designed to help someone support the person using BondWell — not to take control of the account.
+              When phones are linked for support, BondWell may share routine and support status information such as whether a reminder has been marked, whether support was requested, whether rest mode is on, and selected contact details such as a saved phone number. The linked phone is designed to help someone support the person using BondWell — not to take control of the account.
             </p>
           </section>
 
@@ -110,8 +110,7 @@ export default function PrivacyPage() {
             <h2 className={sectionTitle}>7. Your control and choices</h2>
             <div className="mt-4 space-y-4 text-base leading-8 text-[#5A514A]">
               <ul className="list-disc space-y-2 pl-6">
-                <li>You can turn gentle sharing off.</li>
-                <li>You can unlink the other phone.</li>
+                <li>You can unlink the other phone to stop linked support.</li>
                 <li>You can change reminder timings and routine settings.</li>
                 <li>You can contact us if you want to ask about your information.</li>
               </ul>

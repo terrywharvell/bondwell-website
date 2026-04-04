@@ -66,7 +66,7 @@ export default function PrivacyPage() {
                 <li>routine timing information such as medication check-in times, meal reminders, hydration reminders, and gentle check-ins</li>
                 <li>status information such as whether a check-in has been marked, whether support was requested, and whether rest mode is on</li>
                 <li>linked support information needed to connect two phones for partner or carer support</li>
-                <li>contact details you choose to save, such as a phone number for support contact</li>
+                <li>contact details you choose to save, such as an optional phone number used for support-related features, including contact flows inside the app</li>
                 <li>launch list information if you join the BondWell waitlist on our website</li>
                 <li>basic technical and service information needed to keep the app working reliably and securely</li>
               </ul>
@@ -102,7 +102,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className={sectionTitle}>6. What may be shared with a linked partner or carer</h2>
             <p className={bodyText}>
-              When phones are linked for support, BondWell may share routine and support status information such as whether a reminder has been marked, whether support was requested, whether rest mode is on, and selected contact details such as a saved phone number. The linked phone is designed to help someone support the person using BondWell — not to take control of the account.
+              When phones are linked for support, BondWell may share routine and support status information such as whether a reminder has been marked, whether support was requested, whether rest mode is on, and selected contact details such as an optional saved phone number where needed for the support features the user chooses to use. The linked phone is designed to help someone support the person using BondWell — not to take control of the account.
             </p>
           </section>
 

@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://www.bondwell.co.uk";
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://www.oleni.app";
 const siteUrl = rawSiteUrl.startsWith("http") ? rawSiteUrl : `https://${rawSiteUrl}`;
 const siteMetadataBase = new URL(siteUrl);
 const ogImageUrl = new URL("/og-image-oleni.png", siteMetadataBase).toString();

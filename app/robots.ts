@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://bondwell.co.uk/sitemap.xml",
+    sitemap: "https://www.oleni.app/sitemap.xml",
   };
 }

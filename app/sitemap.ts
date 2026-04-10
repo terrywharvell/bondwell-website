@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.bondwell.co.uk";
+  const baseUrl = "https://www.oleni.app";
   const lastModified = new Date("2026-03-28");
 
   return [

@@ -15,18 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bondwell.co.uk"),
   title: {
-    default: "BondWell | Calm epilepsy support app for people and carers",
-    template: "%s | BondWell",
+    default: "Oleni | Calm epilepsy support app for people and carers",
+    template: "%s | Oleni",
   },
   description:
-    "BondWell is a calm epilepsy support app with gentle reminders, daily routines, reassurance, and consent-based linked support for people living with epilepsy and the people who care for them.",
-  applicationName: "BondWell",
-  authors: [{ name: "BondWell" }],
-  creator: "BondWell",
-  publisher: "BondWell",
+    "Oleni is a calm epilepsy support app with gentle reminders, daily routines, reassurance, and consent-based linked support for people living with epilepsy and the people who care for them.",
+  applicationName: "Oleni",
+  authors: [{ name: "Oleni" }],
+  creator: "Oleni",
+  publisher: "Oleni",
   category: "Health & Wellness",
   keywords: [
-    "BondWell",
+    "Oleni",
     "calm epilepsy support app",
     "epilepsy support app",
     "epilepsy support app UK",
@@ -49,33 +49,33 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "BondWell | Calm epilepsy support app for people and carers",
+    title: "Oleni | Calm epilepsy support app for people and carers",
     description:
       "A calm epilepsy support app with gentle reminders, daily routines, reassurance, and consent-based linked support for people and carers.",
     url: "https://www.bondwell.co.uk",
-    siteName: "BondWell",
+    siteName: "Oleni",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.bondwell.co.uk/og-image-v2.jpg",
+        url: "https://www.bondwell.co.uk/og-image-oleni.png",
         width: 1200,
         height: 630,
-        alt: "BondWell homepage preview showing calm epilepsy support for people and carers",
+        alt: "Oleni homepage preview showing calm epilepsy support for people and carers",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BondWell | Calm epilepsy support app for people and carers",
+    title: "Oleni | Calm epilepsy support app for people and carers",
     description:
       "A calm epilepsy support app with gentle reminders, daily routines, reassurance, and consent-based linked support for people and carers.",
-    images: ["https://www.bondwell.co.uk/og-image-v2.jpg"],
+    images: ["https://www.bondwell.co.uk/og-image-oleni.png"],
   },
   icons: {
-    icon: [{ url: "/bondwell-icon.png", type: "image/png" }],
-    apple: [{ url: "/bondwell-icon.png", type: "image/png" }],
-    shortcut: ["/bondwell-icon.png"],
+    icon: [{ url: "/oleni-app-icon.png", type: "image/png" }],
+    apple: [{ url: "/oleni-app-icon.png", type: "image/png" }],
+    shortcut: ["/oleni-app-icon.png"],
   },
 };
 

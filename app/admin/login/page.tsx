@@ -31,7 +31,7 @@ export default async function AdminLoginPage({ searchParams }: LoginPageProps) {
     <main className="min-h-screen bg-[#FCFAF7] px-6 py-10 text-[#2F2A26]">
       <div className="mx-auto max-w-md rounded-[2rem] border border-[#E9DED2] bg-white p-8 shadow-[0_16px_50px_rgba(47,42,38,0.08)]">
         <p className="text-xs uppercase tracking-[0.22em] text-[#8A7460]">
-          BondWell Admin
+          Oleni Admin
         </p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight text-[#2F2A26]">
           Sign in

@@ -45,7 +45,7 @@ export default function Home() {
   const audienceCards = [
     {
       title: "People living with epilepsy",
-      text: "BondWell is designed to make daily support feel calmer, clearer, and less repetitive.",
+      text: "Oleni is designed to make daily support feel calmer, clearer, and less repetitive.",
     },
     {
       title: "Partners, carers, and loved ones",
@@ -60,7 +60,7 @@ export default function Home() {
   const promiseCards = [
     {
       title: "Calm-first support",
-      text: "BondWell is being built to feel supportive and steady, never loud or overwhelming.",
+      text: "Oleni is being built to feel supportive and steady, never loud or overwhelming.",
     },
     {
       title: "Consent-led connection",
@@ -104,7 +104,7 @@ export default function Home() {
           errorText.includes("already on the list")
         ) {
           setStatus("error");
-          setMessage("You're already on the BondWell launch list 🙂");
+          setMessage("You're already on the Oleni launch list 🙂");
           return;
         }
 
@@ -113,7 +113,7 @@ export default function Home() {
 
       setStatus("success");
       setMessage(
-        "✓ You're on the BondWell launch list. We'll let you know when testing opens."
+        "✓ You're on the Oleni launch list. We'll let you know when testing opens."
       );
       setEmail("");
     } catch (err) {
@@ -135,12 +135,12 @@ export default function Home() {
               className="flex min-w-0 items-center gap-3 text-xl font-semibold tracking-tight hover:opacity-90"
             >
               <img
-                src="/bondwell-icon.png"
-                alt="BondWell logo"
+                src="/oleni-emblem.png"
+                alt="Oleni emblem"
                 className="h-14 w-auto md:h-16"
               />
               <div className="leading-tight">
-                <div className="text-xl font-semibold text-[#2F2A26]">BondWell</div>
+                <div className="text-xl font-semibold text-[#2F2A26]">Oleni</div>
                 <div className="text-xs font-normal uppercase tracking-[0.18em] text-[#8A7460]">
                   Calm support, shared gently
                 </div>
@@ -303,7 +303,7 @@ export default function Home() {
             </div>
 
             <h1 className="mt-6 text-5xl font-semibold leading-[1.02] tracking-tight text-[#2F2A26] md:text-6xl">
-              BondWell helps support feel calmer — for both of you.
+              Oleni helps support feel calmer — for both of you.
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-[#5A514A] md:text-xl">
@@ -323,7 +323,7 @@ export default function Home() {
                 href="#story"
                 className="rounded-full border border-[#DCCFC1] px-7 py-3.5 text-center text-sm font-medium text-[#2F2A26] transition hover:bg-[#FAF7F2]"
               >
-                Why BondWell exists
+                Why Oleni exists
               </a>
             </div>
 
@@ -348,7 +348,7 @@ export default function Home() {
                 Built around epilepsy first
               </p>
               <p className="mt-3 text-sm leading-7 text-[#5A514A]">
-                BondWell is being shaped around epilepsy and everyday caring, while
+                Oleni is being shaped around epilepsy and everyday caring, while
                 the calm routine-led approach may also feel helpful for other long-term
                 conditions and care needs where reassurance, routine, and shared
                 support matter.
@@ -368,7 +368,7 @@ export default function Home() {
                     <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
                     <img
                       src="/screens/user-ask-for-support.jpg"
-                      alt="BondWell ask for support screen"
+                      alt="Oleni ask for support screen"
                       className="block w-full"
                     />
                   </div>
@@ -381,7 +381,7 @@ export default function Home() {
                     <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
                     <img
                       src="/screens/user-home.jpg"
-                      alt="BondWell user home screen"
+                      alt="Oleni user home screen"
                       className="block w-full"
                     />
                   </div>
@@ -394,7 +394,7 @@ export default function Home() {
                     <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
                     <img
                       src="/screens/partner-support-requested.jpg"
-                      alt="BondWell partner support requested screen"
+                      alt="Oleni partner support requested screen"
                       className="block w-full"
                     />
                   </div>
@@ -427,7 +427,7 @@ export default function Home() {
           <div className="rounded-[2rem] border border-[#E7DED4] bg-[#FCFAF7] p-8 shadow-sm md:p-10">
             <div className="max-w-3xl">
               <p className="text-sm uppercase tracking-[0.22em] text-[#8A7460]">
-                Who BondWell is for
+                Who Oleni is for
               </p>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26] md:text-4xl">
                 Built for real support in everyday life.
@@ -457,7 +457,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] text-[#8A7460]">
-              Why BondWell exists
+              Why Oleni exists
             </p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight text-[#2F2A26]">
               Built from real life experience
@@ -482,7 +482,7 @@ export default function Home() {
             <p>
               Medication, hydration, rest and routine can all affect seizure
               risk — yet memory issues can make these simple things difficult to
-              track. BondWell was built to remove that pressure.
+              track. Oleni was built to remove that pressure.
             </p>
 
             <p>
@@ -493,7 +493,7 @@ export default function Home() {
               people closer together, not create more anxiety.
             </p>
 
-            <p className="font-medium text-[#2F2A26]">This is the BondWell way.</p>
+            <p className="font-medium text-[#2F2A26]">This is the Oleni way.</p>
           </div>
         </div>
       </section>
@@ -503,13 +503,13 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm md:p-10">
               <p className="text-sm uppercase tracking-[0.22em] text-[#8A7460]">
-                How BondWell was made
+                How Oleni was made
               </p>
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26]">
                 Built around the reality of everyday support.
               </h3>
               <p className="mt-5 text-base leading-8 text-[#5A514A]">
-                BondWell was not imagined from the outside looking in. It has
+                Oleni was not imagined from the outside looking in. It has
                 been shaped by real routines, repeated conversations, emotional
                 weight, and the need to make support feel steadier for both
                 people.
@@ -526,7 +526,7 @@ export default function Home() {
                 Founder note
               </p>
               <p className="mt-5 text-xl leading-9 text-[#2F2A26]">
-                “BondWell is being built to reduce pressure, bring more calm to
+                “Oleni is being built to reduce pressure, bring more calm to
                 daily life, and help support feel like connection instead of
                 constant worry.”
               </p>
@@ -544,7 +544,7 @@ export default function Home() {
               </h2>
               <p className="mt-4 leading-8 text-[#5A514A]">
                 Build steady routines around medication, hydration, meals, and
-                gentle check-ins without pressure. BondWell is designed to help
+                gentle check-ins without pressure. Oleni is designed to help
                 everyday support feel clearer and calmer.
               </p>
             </div>
@@ -555,7 +555,7 @@ export default function Home() {
               </h2>
               <p className="mt-4 leading-8 text-[#5A514A]">
                 Stay better in sync through consent-based sharing and a view-only
-                partner experience. BondWell supports connection without taking
+                partner experience. Oleni supports connection without taking
                 control away from the person using it.
               </p>
             </div>
@@ -572,7 +572,7 @@ export default function Home() {
                 className="rounded-[1.8rem] border border-[#E7DED4] bg-[#FCFAF7] p-7"
               >
                 <p className="text-sm uppercase tracking-[0.2em] text-[#8A7460]">
-                  BondWell promise
+                  Oleni promise
                 </p>
                 <h3 className="mt-3 text-xl font-semibold text-[#2F2A26]">
                   {card.title}
@@ -603,7 +603,7 @@ export default function Home() {
               </p>
 
               <p>
-                BondWell is being built with that understanding at its core —
+                Oleni is being built with that understanding at its core —
                 not as a cold tracking tool, but as something calmer, more
                 human, and more respectful of what everyday life can really feel
                 like.
@@ -623,7 +623,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-12 text-center">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
-              See BondWell in action
+              See Oleni in action
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold text-[#2F2A26] md:text-4xl">
@@ -631,7 +631,7 @@ export default function Home() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#5A514A]">
-              BondWell is designed to feel clear, gentle, and easy to follow —
+              Oleni is designed to feel clear, gentle, and easy to follow —
               for the person using it and for the partner or carer supporting
               them.
             </p>
@@ -652,7 +652,7 @@ export default function Home() {
                   <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
                   <img
                     src="/screens/user-home.jpg"
-                    alt="BondWell daily overview screen"
+                    alt="Oleni daily overview screen"
                     className="block w-full"
                   />
                 </div>
@@ -674,7 +674,7 @@ export default function Home() {
                   <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
                   <img
                     src="/screens/user-ask-for-support.jpg"
-                    alt="BondWell ask for support screen"
+                    alt="Oleni ask for support screen"
                     className="block w-full"
                   />
                 </div>
@@ -696,7 +696,7 @@ export default function Home() {
                   <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
                   <img
                     src="/screens/partner-support-requested.jpg"
-                    alt="BondWell partner support requested screen"
+                    alt="Oleni partner support requested screen"
                     className="block w-full"
                   />
                 </div>
@@ -744,7 +744,7 @@ export default function Home() {
                 Stay connected clearly
               </h3>
               <p className="mt-4 leading-8 text-[#5A514A]">
-                BondWell is designed to keep linked support clear, calm, and under
+                Oleni is designed to keep linked support clear, calm, and under
                 your control.
               </p>
             </div>
@@ -755,7 +755,7 @@ export default function Home() {
                 Ask for support calmly
               </h3>
               <p className="mt-4 leading-8 text-[#5A514A]">
-                When support is needed, BondWell helps reduce guesswork and
+                When support is needed, Oleni helps reduce guesswork and
                 makes communication simpler.
               </p>
             </div>
@@ -801,15 +801,15 @@ export default function Home() {
               Simple support on one phone, with Premium for linked support across two
             </h2>
             <p className="mt-4 leading-8 text-[#5A514A]">
-              BondWell Free is for one person using BondWell on a single phone.
-              BondWell Premium is for linked support across two phones, so a partner,
+              Oleni Free is for one person using Oleni on a single phone.
+              Oleni Premium is for linked support across two phones, so a partner,
               carer, or loved one can stay gently in step through consent-based sharing.
             </p>
           </div>
 
           <div className="mb-6 rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-5">
             <p className="text-sm leading-7 text-[#5A514A]">
-              Core BondWell support stays accessible on one phone. Premium is for the
+              Core Oleni support stays accessible on one phone. Premium is for the
               added linked experience across two separate phones.
             </p>
           </div>
@@ -822,7 +822,7 @@ export default function Home() {
 
               <h3 className="mt-5 text-2xl font-semibold text-[#2F2A26]">Free</h3>
               <p className="mt-3 leading-7 text-[#5A514A]">
-                For one person using BondWell on their own phone.
+                For one person using Oleni on their own phone.
               </p>
 
               <ul className="mt-6 space-y-3 text-[#5A514A]">
@@ -843,7 +843,7 @@ export default function Home() {
               <h3 className="mt-5 text-2xl font-semibold text-[#2F2A26]">Premium</h3>
               <p className="mt-3 leading-7 text-[#5A514A]">
                 Everything in Free, plus linked support between the person using
-                BondWell and a partner, carer, or loved one on a separate phone.
+                Oleni and a partner, carer, or loved one on a separate phone.
               </p>
 
               <ul className="mt-6 space-y-3 text-[#5A514A]">
@@ -851,7 +851,7 @@ export default function Home() {
                 <li>Linking across two separate phones</li>
                 <li>View-only partner/carer connection</li>
                 <li>Consent-based shared support updates</li>
-                <li>Premium linked support features as BondWell grows</li>
+                <li>Premium linked support features as Oleni grows</li>
               </ul>
 
               <p className="mt-6 text-sm text-[#7A6F66]">
@@ -872,7 +872,7 @@ export default function Home() {
               Built around consent, clarity, and calmer communication
             </h2>
             <p className="mt-5 max-w-3xl leading-8 text-[#5A514A]">
-              BondWell is designed to reduce pressure, not create it. Linked support is
+              Oleni is designed to reduce pressure, not create it. Linked support is
               clear, consent-based, and focused on calm day-to-day support rather than
               surveillance.
             </p>
@@ -894,14 +894,14 @@ export default function Home() {
               <div className="rounded-2xl bg-[#FAF7F2] p-5">
                 <p className="font-semibold text-[#2F2A26]">Medication names stay private</p>
                 <p className="mt-2 text-sm leading-7 text-[#5A514A]">
-                  BondWell is built around timing, routine, and reassurance rather than exposing
+                  Oleni is built around timing, routine, and reassurance rather than exposing
                   personal medical details.
                 </p>
               </div>
               <div className="rounded-2xl bg-[#FAF7F2] p-5">
                 <p className="font-semibold text-[#2F2A26]">Not a medical or emergency service</p>
                 <p className="mt-2 text-sm leading-7 text-[#5A514A]">
-                  BondWell supports everyday routines and communication. It is not seizure
+                  Oleni supports everyday routines and communication. It is not seizure
                   tracking, diagnosis, emergency monitoring, or urgent support.
                 </p>
               </div>
@@ -939,20 +939,20 @@ export default function Home() {
           <div className="space-y-4">
             <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
               <h3 className="font-semibold text-[#2F2A26]">
-                Is BondWell a medical device?
+                Is Oleni a medical device?
               </h3>
               <p className="mt-2 leading-7 text-[#5A514A]">
-                No. BondWell supports routines, communication, and day-to-day reassurance. It does
+                No. Oleni supports routines, communication, and day-to-day reassurance. It does
                 not provide diagnosis, treatment, or medical advice.
               </p>
             </div>
 
             <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
               <h3 className="font-semibold text-[#2F2A26]">
-                Is BondWell emergency support?
+                Is Oleni emergency support?
               </h3>
               <p className="mt-2 leading-7 text-[#5A514A]">
-                No. BondWell is not an emergency service or urgent monitoring tool. If urgent help
+                No. Oleni is not an emergency service or urgent monitoring tool. If urgent help
                 is needed, contact emergency services or the appropriate healthcare support.
               </p>
             </div>
@@ -962,7 +962,7 @@ export default function Home() {
                 What can a partner or carer see?
               </h3>
               <p className="mt-2 leading-7 text-[#5A514A]">
-                BondWell is designed to share calm support information only, such as whether
+                Oleni is designed to share calm support information only, such as whether
                 something has been marked, whether support has been requested, and shared routine
                 timing. Medication names are not shown.
               </p>
@@ -983,7 +983,7 @@ export default function Home() {
                 What happens if a reminder is missed?
               </h3>
               <p className="mt-2 leading-7 text-[#5A514A]">
-                BondWell is designed to encourage calm follow-through, not panic. Depending on the
+                Oleni is designed to encourage calm follow-through, not panic. Depending on the
                 settings chosen, the app may show the reminder as still open and may gently involve
                 a partner or carer when phones are linked for support.
               </p>
@@ -994,7 +994,7 @@ export default function Home() {
                 Can linked support be stopped?
               </h3>
               <p className="mt-2 leading-7 text-[#5A514A]">
-                Yes. Linked support can be stopped by unlinking the other phone in BondWell settings.
+                Yes. Linked support can be stopped by unlinking the other phone in Oleni settings.
               </p>
             </div>
           </div>
@@ -1009,11 +1009,11 @@ export default function Home() {
                 Launch updates
               </p>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26] md:text-4xl">
-                Join the BondWell launch list
+                Join the Oleni launch list
               </h2>
               <p className="mt-4 max-w-xl leading-8 text-[#5A514A]">
                 Be the first to hear about testing, launch updates, and what’s
-                coming next for BondWell.
+                coming next for Oleni.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3 text-sm text-[#5A514A]">
@@ -1034,10 +1034,10 @@ export default function Home() {
                 Join the journey
               </p>
               <p className="mt-3 text-sm leading-7 text-[#5A514A]">
-                We’ll only use your email for BondWell launch updates and news.
+                We’ll only use your email for Oleni launch updates and news.
               </p>
               <p className="mt-2 text-xs leading-6 text-[#7A6F66]">
-                By joining, you agree to BondWell’s{" "}
+                By joining, you agree to Oleni’s{" "}
                 <a href="/privacy" className="underline underline-offset-2 hover:opacity-80">
                   Privacy Policy
                 </a>{" "}
@@ -1098,7 +1098,7 @@ export default function Home() {
 
       <footer className="border-t border-[#F0E8DE] bg-white px-6 py-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-[#6C635C] md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} BondWell. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Oleni. All rights reserved.</p>
 
           <div className="flex flex-wrap gap-4">
             <a href="/privacy" className="hover:opacity-70">

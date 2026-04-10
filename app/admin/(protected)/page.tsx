@@ -62,13 +62,13 @@ export default async function AdminHomePage({ searchParams }: AdminHomePageProps
         <div className="flex flex-col gap-6 rounded-[2rem] border border-[#E9DED2] bg-white p-8 shadow-[0_16px_50px_rgba(47,42,38,0.08)] md:flex-row md:items-start md:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-[#8A7460]">
-              BondWell Admin
+              Oleni Admin
             </p>
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-[#2F2A26]">
               Waitlist overview
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#5A514A]">
-              A simple first admin view for the BondWell launch list. This shows
+              A simple first admin view for the Oleni launch list. This shows
               the total count and the newest signups first, without touching the
               public website flow.
             </p>

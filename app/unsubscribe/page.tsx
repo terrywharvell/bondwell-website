@@ -12,15 +12,15 @@ function getMessage(status: string | undefined, email?: string) {
       return {
         title: "You’ve been unsubscribed",
         body: email
-          ? `${email} will no longer receive BondWell waitlist updates.`
-          : "You will no longer receive BondWell waitlist updates.",
+          ? `${email} will no longer receive Oleni waitlist updates.`
+          : "You will no longer receive Oleni waitlist updates.",
       };
     case "already":
       return {
         title: "You’re already unsubscribed",
         body: email
-          ? `${email} is already unsubscribed from BondWell waitlist updates.`
-          : "This email is already unsubscribed from BondWell waitlist updates.",
+          ? `${email} is already unsubscribed from Oleni waitlist updates.`
+          : "This email is already unsubscribed from Oleni waitlist updates.",
       };
     case "invalid":
       return {
@@ -67,7 +67,7 @@ export default async function UnsubscribePage({
       <div className="mx-auto max-w-2xl">
         <section className="rounded-[2rem] border border-[#E9DED2] bg-white p-8 shadow-[0_16px_50px_rgba(47,42,38,0.08)] sm:p-10">
           <p className="text-xs uppercase tracking-[0.22em] text-[#8A7460]">
-            BondWell
+            Oleni
           </p>
 
           {resultMessage ? (
@@ -82,10 +82,10 @@ export default async function UnsubscribePage({
           ) : canConfirm ? (
             <>
               <h1 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26]">
-                Unsubscribe from BondWell updates?
+                Unsubscribe from Oleni updates?
               </h1>
               <p className="mt-4 text-base leading-7 text-[#5A514A]">
-                {entry?.email} will stop receiving BondWell waitlist and launch updates.
+                {entry?.email} will stop receiving Oleni waitlist and launch updates.
               </p>
               <form action="/api/unsubscribe" method="POST" className="mt-8">
                 <input type="hidden" name="token" value={token} />
@@ -97,7 +97,7 @@ export default async function UnsubscribePage({
                 </button>
               </form>
               <p className="mt-4 text-sm leading-6 text-[#8A7460]">
-                If you change your mind later, just join the BondWell waitlist again.
+                If you change your mind later, just join the Oleni waitlist again.
               </p>
             </>
           ) : alreadyUnsubscribed ? (
@@ -106,13 +106,13 @@ export default async function UnsubscribePage({
                 You’re already unsubscribed
               </h1>
               <p className="mt-4 text-base leading-7 text-[#5A514A]">
-                {entry?.email || "This email"} is already unsubscribed from BondWell waitlist updates.
+                {entry?.email || "This email"} is already unsubscribed from Oleni waitlist updates.
               </p>
             </>
           ) : (
             <>
               <h1 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26]">
-                Unsubscribe from BondWell updates
+                Unsubscribe from Oleni updates
               </h1>
               <p className="mt-4 text-base leading-7 text-[#5A514A]">
                 This link may be incomplete or missing. Please use the unsubscribe link from your email, or contact hello@bondwell.co.uk.

@@ -11,15 +11,15 @@ export default function Home() {
   const heroCards = [
     {
       title: "Built from real life",
-      text: "Shaped through lived experience, not just a concept.",
+      text: "Shaped through lived experience, not just an idea.",
     },
     {
       title: "Calm by design",
-      text: "Support that feels gentle, clear, and emotionally safe.",
+      text: "Made to feel gentle, clear, and emotionally safe.",
     },
     {
-      title: "For both sides",
-      text: "Helping the person and the partner stay better in sync.",
+      title: "Shared with care",
+      text: "Helping both people feel more supported, not more pressured.",
     },
   ];
 
@@ -29,45 +29,45 @@ export default function Home() {
       text: "Built from everyday reality, not just theory.",
     },
     {
-      title: "Daily reassurance",
-      text: "Designed around the moments in between, not only the obvious ones.",
+      title: "Emotionally safe",
+      text: "Designed to reduce pressure and help support feel softer.",
     },
     {
-      title: "Consent-based",
-      text: "Linked support is clear, consent-based, and under your control.",
+      title: "Consent-led",
+      text: "Shared support is clear, respectful, and under your control.",
     },
     {
       title: "Human-first",
-      text: "Supportive technology that reduces pressure, not adds to it.",
+      text: "Technology that helps people feel cared for, not managed.",
     },
   ];
 
   const audienceCards = [
     {
       title: "People living with epilepsy",
-      text: "Oleni is designed to make daily support feel calmer, clearer, and less repetitive.",
+      text: "Oleni is designed to make everyday support feel calmer, clearer, and less repetitive.",
     },
     {
       title: "Partners, carers, and loved ones",
       text: "A view-only, consent-led experience helps support feel connected rather than controlling.",
     },
     {
-      title: "Daily life beyond one condition",
-      text: "Built around epilepsy first, with a calm routine-led approach that may also feel helpful for other long-term conditions and care needs.",
+      title: "Both people, together",
+      text: "Oleni is built around the relationship too — helping support feel more joined-up, reassuring, and kind on both sides.",
     },
   ];
 
   const promiseCards = [
     {
-      title: "Calm-first support",
-      text: "Oleni is being built to feel supportive and steady, never loud or overwhelming.",
+      title: "Support without pressure",
+      text: "Oleni is being built to feel steady, reassuring, and never overwhelming.",
     },
     {
-      title: "Consent-led connection",
-      text: "Linked support and partner support are designed to feel respectful, clear, and under your control.",
+      title: "Connection without control",
+      text: "Shared support is designed to feel respectful, clear, and safely in your hands.",
     },
     {
-      title: "For both people",
+      title: "Care you can feel",
       text: "Built to support the person living with epilepsy and the loved one beside them.",
     },
   ];
@@ -75,8 +75,8 @@ export default function Home() {
   const trustSignals = [
     "Designed around lived experience",
     "Focused on reassurance as well as routine",
-    "Made for both the person and the partner",
-    "Built to feel calm rather than clinical",
+    "Made for both the person and the loved one beside them",
+    "Built to feel caring rather than clinical",
   ];
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -303,12 +303,12 @@ export default function Home() {
             </div>
 
             <h1 className="mt-6 text-5xl font-semibold leading-[1.02] tracking-tight text-[#2F2A26] md:text-6xl">
-              Oleni helps support feel calmer — for both of you.
+              Oleni helps daily support feel calmer, closer, and easier to carry.
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-[#5A514A] md:text-xl">
-              A gentle daily routine app for people living with epilepsy and the
-              partner, carer, or loved one supporting them.
+              A gentle daily support app for people living with epilepsy and the
+              partner, carer, or loved one beside them.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -348,10 +348,10 @@ export default function Home() {
                 Built around epilepsy first
               </p>
               <p className="mt-3 text-sm leading-7 text-[#5A514A]">
-                Oleni is being shaped around epilepsy and everyday caring, while
-                the calm routine-led approach may also feel helpful for other long-term
-                conditions and care needs where reassurance, routine, and shared
-                support matter.
+                Oleni is being shaped around epilepsy and everyday caring first.
+                Over time, the same calm, supportive approach may also feel helpful
+                in other long-term conditions and care needs where reassurance,
+                routine, and shared support matter.
               </p>
             </div>
           </div>
@@ -460,37 +460,38 @@ export default function Home() {
               Why Oleni exists
             </p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight text-[#2F2A26]">
-              Built from real life experience
+              Built from lived experience
             </h2>
           </div>
 
           <div className="space-y-6 text-lg leading-9 text-[#5A514A]">
             <p>
-              After caring for Jaz for the last nine years we realised epilepsy
-              support is not just about seizures. The hardest part can often be
-              the daily moments in between.
+              After caring for Jaz for the last nine years, we realised epilepsy
+              support is not only about seizures. Often, the hardest part is the
+              weight of the everyday moments in between.
             </p>
 
             <p>
               Conversations like “Have you taken your tablets?”, “Have you had
-              enough water today?”, “Have you eaten?” start to repeat day after
-              day. For the person living with epilepsy it can feel frustrating
-              and stressful. For the partner or carer it can create constant
-              anxiety not knowing if the basics have been done.
+              enough water today?”, and “Have you eaten?” can repeat day after
+              day. For the person living with epilepsy, that can feel tiring,
+              frustrating, and heavy. For the partner or carer, it can create
+              constant background worry around whether the basics are okay.
             </p>
 
             <p>
-              Medication, hydration, rest and routine can all affect seizure
-              risk — yet memory issues can make these simple things difficult to
-              track. Oleni was built to remove that pressure.
+              Medication, hydration, meals, rest, and routine can all shape how
+              a day feels — yet memory issues can make even simple things harder
+              to hold onto. Oleni was built to take some of that pressure out of
+              the day.
             </p>
 
             <p>
-              Instead of constant questions, the app quietly keeps both people
-              in sync. Medication reminders, hydration prompts and gentle
-              check-ins help reduce the stress on both sides. Because living
-              with epilepsy — or caring for someone who does — should bring
-              people closer together, not create more anxiety.
+              Instead of constant questions, Oleni quietly helps both people
+              stay in step. Gentle reminders, calm check-ins, and consent-led
+              shared support are there to reduce stress on both sides. Because
+              living with epilepsy — or loving someone who does — should feel
+              more supported, not more alone.
             </p>
 
             <p className="font-medium text-[#2F2A26]">This is the Oleni way.</p>
@@ -511,13 +512,13 @@ export default function Home() {
               <p className="mt-5 text-base leading-8 text-[#5A514A]">
                 Oleni was not imagined from the outside looking in. It has
                 been shaped by real routines, repeated conversations, emotional
-                weight, and the need to make support feel steadier for both
-                people.
+                weight, and the need to make support feel steadier, softer, and
+                more joined-up for both people.
               </p>
               <p className="mt-4 text-base leading-8 text-[#5A514A]">
                 The goal has always been simple: create something calm, useful,
-                respectful, and genuinely supportive — not clinical, not loud,
-                and not overwhelming.
+                respectful, and genuinely supportive — something that feels more
+                like care than management.
               </p>
             </div>
 
@@ -526,9 +527,9 @@ export default function Home() {
                 Founder note
               </p>
               <p className="mt-5 text-xl leading-9 text-[#2F2A26]">
-                “Oleni is being built to reduce pressure, bring more calm to
-                daily life, and help support feel like connection instead of
-                constant worry.”
+                “Oleni is being built to feel like a little more breathing room
+                in the day — calmer, kinder support for the person using it and
+                for the one beside them.”
               </p>
             </div>
           </div>
@@ -545,7 +546,7 @@ export default function Home() {
               <p className="mt-4 leading-8 text-[#5A514A]">
                 Build steady routines around medication, hydration, meals, and
                 gentle check-ins without pressure. Oleni is designed to help
-                everyday support feel clearer and calmer.
+                everyday support feel clearer, lighter, and calmer.
               </p>
             </div>
 
@@ -592,7 +593,7 @@ export default function Home() {
             </p>
 
             <h2 className="mt-4 text-4xl font-semibold tracking-tight text-[#2F2A26]">
-              Living with epilepsy affects far more than what people see.
+              Living with epilepsy can affect far more than what people see.
             </h2>
 
             <div className="mt-8 space-y-6 text-lg leading-9 text-[#5A514A]">
@@ -606,7 +607,7 @@ export default function Home() {
                 Oleni is being built with that understanding at its core —
                 not as a cold tracking tool, but as something calmer, more
                 human, and more respectful of what everyday life can really feel
-                like.
+                like on the inside.
               </p>
 
               <p>
@@ -655,8 +656,8 @@ export default function Home() {
               </p>
 
               <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
-                A calm home screen with the day’s support, reminders, and status
-                in one place.
+                A calm home screen with the day’s support, reminders, and gentle
+                reassurance in one place.
               </p>
             </div>
 
@@ -678,7 +679,7 @@ export default function Home() {
 
               <p className="mx-auto mt-2 max-w-[300px] text-sm leading-7 text-[#5A514A]">
                 A simple, low-pressure way to say support is needed without
-                adding extra stress.
+                adding extra emotional weight.
               </p>
             </div>
 
@@ -699,7 +700,7 @@ export default function Home() {
               </p>
 
               <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
-                A view-only screen that helps partners or carers stay in sync,
+                A view-only screen that helps partners or carers stay in step,
                 gently and clearly.
               </p>
             </div>
@@ -714,7 +715,7 @@ export default function Home() {
               How it works
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-[#2F2A26] md:text-4xl">
-              Small supports that make daily life feel easier
+              Small supports that help daily life feel softer
             </h2>
           </div>
 
@@ -726,7 +727,7 @@ export default function Home() {
               </h3>
               <p className="mt-4 leading-8 text-[#5A514A]">
                 Add the reminders you want for medication, hydration, meals, and
-                simple check-ins.
+                simple check-ins, in a way that feels gentle rather than demanding.
               </p>
             </div>
 
@@ -737,7 +738,7 @@ export default function Home() {
               </h3>
               <p className="mt-4 leading-8 text-[#5A514A]">
                 Oleni is designed to keep linked support clear, calm, and under
-                your control.
+                your control, so both people feel more settled.
               </p>
             </div>
 
@@ -747,8 +748,8 @@ export default function Home() {
                 Ask for support calmly
               </h3>
               <p className="mt-4 leading-8 text-[#5A514A]">
-                When support is needed, Oleni helps reduce guesswork and
-                makes communication simpler.
+                When support is needed, Oleni helps reduce guesswork and makes it
+                easier to reach out without turning the moment into something heavier.
               </p>
             </div>
           </div>
@@ -790,11 +791,11 @@ export default function Home() {
               Pricing
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-[#2F2A26] md:text-4xl">
-              Simple support on one phone, with Premium for linked support across two
+              Simple support on one phone, with Premium for shared support across two
             </h2>
             <p className="mt-4 leading-8 text-[#5A514A]">
               Oleni Free is for one person using Oleni on a single phone.
-              Oleni Premium is for linked support across two phones, so a partner,
+              Oleni Premium is for shared support across two phones, so a partner,
               carer, or loved one can stay gently in step through consent-based sharing.
             </p>
           </div>
@@ -802,7 +803,7 @@ export default function Home() {
           <div className="mb-6 rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-5">
             <p className="text-sm leading-7 text-[#5A514A]">
               Core Oleni support stays accessible on one phone. Premium is for the
-              added linked experience across two separate phones.
+              added shared experience across two separate phones.
             </p>
           </div>
 
@@ -834,13 +835,13 @@ export default function Home() {
 
               <h3 className="mt-5 text-2xl font-semibold text-[#2F2A26]">Premium</h3>
               <p className="mt-3 leading-7 text-[#5A514A]">
-                Everything in Free, plus linked support between the person using
+                Everything in Free, plus shared support between the person using
                 Oleni and a partner, carer, or loved one on a separate phone.
               </p>
 
               <ul className="mt-6 space-y-3 text-[#5A514A]">
                 <li>Everything in Free</li>
-                <li>Linking across two separate phones</li>
+                <li>Shared support across two separate phones</li>
                 <li>View-only partner/carer connection</li>
                 <li>Consent-based shared support updates</li>
                 <li>Premium linked support features as Oleni grows</li>
@@ -864,7 +865,7 @@ export default function Home() {
               Built around consent, clarity, and calmer communication
             </h2>
             <p className="mt-5 max-w-3xl leading-8 text-[#5A514A]">
-              Oleni is designed to reduce pressure, not create it. Linked support is
+              Oleni is designed to reduce pressure, not create it. Shared support is
               clear, consent-based, and focused on calm day-to-day support rather than
               surveillance.
             </p>

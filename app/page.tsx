@@ -635,14 +635,6 @@ export default function Home() {
               for the person using it and for the partner or carer supporting
               them.
             </p>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <a
-                href="/help"
-                className="rounded-full border border-[#DCCFC1] px-5 py-2.5 text-[#2F2A26] transition hover:bg-[#FAF7F2]"
-              >
-                Open setup help
-              </a>
-            </div>
           </div>
 
           <div className="flex flex-col items-center gap-16 md:flex-row md:justify-center md:gap-12">

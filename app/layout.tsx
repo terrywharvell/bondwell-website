@@ -12,8 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://www.bondwell.co.uk";
+const siteUrl = rawSiteUrl.startsWith("http") ? rawSiteUrl : `https://${rawSiteUrl}`;
+const siteMetadataBase = new URL(siteUrl);
+const ogImageUrl = new URL("/og-image-oleni.png", siteMetadataBase).toString();
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.bondwell.co.uk"),
+  metadataBase: siteMetadataBase,
   title: {
     default: "Oleni | Calm epilepsy support app for people and carers",
     template: "%s | Oleni",
@@ -52,13 +57,13 @@ export const metadata: Metadata = {
     title: "Oleni | Calm epilepsy support app for people and carers",
     description:
       "A calm epilepsy support app with gentle reminders, daily routines, reassurance, and consent-based linked support for people and carers.",
-    url: "https://www.bondwell.co.uk",
+    url: siteUrl,
     siteName: "Oleni",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.bondwell.co.uk/og-image-oleni.png",
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: "Oleni homepage preview showing calm epilepsy support for people and carers",
@@ -70,7 +75,7 @@ export const metadata: Metadata = {
     title: "Oleni | Calm epilepsy support app for people and carers",
     description:
       "A calm epilepsy support app with gentle reminders, daily routines, reassurance, and consent-based linked support for people and carers.",
-    images: ["https://www.bondwell.co.uk/og-image-oleni.png"],
+    images: [ogImageUrl],
   },
   icons: {
     icon: [{ url: "/oleni-app-icon.png", type: "image/png" }],
@@ -86,9 +91,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>

@@ -139,9 +139,13 @@ export default function Home() {
                 alt="Oleni emblem"
                 className="h-14 w-auto md:h-16"
               />
-              <div className="leading-tight">
-                <div className="text-xl font-semibold text-[#2F2A26]">Oleni</div>
-                <div className="text-xs font-normal uppercase tracking-[0.18em] text-[#8A7460]">
+              <div className="min-w-0 leading-tight">
+                <img
+                  src="/02_oleni_wordmark_transparent.png"
+                  alt="Oleni"
+                  className="h-9 w-auto md:h-10"
+                />
+                <div className="mt-1 text-xs font-normal uppercase tracking-[0.18em] text-[#8A7460]">
                   Calm support, shared gently
                 </div>
               </div>

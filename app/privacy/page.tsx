@@ -17,9 +17,19 @@ export default function PrivacyPage() {
   return (
     <main className="min-h-screen bg-white text-[#2F2A26]">
       <div className="border-b border-[#F0E8DE] bg-white">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
-          <Link href="/" className="text-sm font-medium text-[#5A514A] hover:text-[#2F2A26]">
-            ← Back to Oleni
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-5">
+          <Link href="/" className="flex min-w-0 items-center gap-3 hover:opacity-90">
+            <img src="/oleni-emblem.png" alt="Oleni emblem" className="h-10 w-auto" />
+            <div className="min-w-0 leading-tight">
+              <img
+                src="/02_oleni_wordmark_transparent.png"
+                alt="Oleni"
+                className="h-7 w-auto"
+              />
+              <div className="mt-1 text-[10px] font-normal uppercase tracking-[0.18em] text-[#8A7460]">
+                Calm support, shared gently
+              </div>
+            </div>
           </Link>
           <span className="text-xs uppercase tracking-[0.2em] text-[#8A7460]">Privacy Policy</span>
         </div>
@@ -47,7 +57,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className={sectionTitle}>1. Who we are</h2>
             <p className={bodyText}>
-              Oleni is a daily support app designed to help people living with epilepsy and the partners, carers, or loved ones supporting them stay gently in step. If you have any privacy questions, you can contact us at hello@bondwell.co.uk.
+              Oleni is a daily support app designed to help people living with epilepsy and the partners, carers, or loved ones supporting them stay gently in step. While the Oleni email transition is being completed, privacy questions can still be sent to hello@bondwell.co.uk.
             </p>
           </section>
 
@@ -142,7 +152,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className={sectionTitle}>11. Contact</h2>
             <p className={bodyText}>
-              If you have questions about this Privacy Policy or how Oleni handles information, email <a href="mailto:hello@bondwell.co.uk" className="underline">hello@bondwell.co.uk</a>.
+              If you have questions about this Privacy Policy or how Oleni handles information, email <a href="mailto:hello@bondwell.co.uk" className="underline">hello@bondwell.co.uk</a>. We will switch this to the dedicated Oleni address once the migration is complete.
             </p>
           </section>
         </div>

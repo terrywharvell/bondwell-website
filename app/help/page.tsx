@@ -18,9 +18,19 @@ export default function HelpPage() {
   return (
     <main className="min-h-screen bg-white text-[#2F2A26]">
       <div className="border-b border-[#F0E8DE] bg-white">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
-          <Link href="/" className="text-sm font-medium text-[#5A514A] hover:text-[#2F2A26]">
-            ← Back to Oleni
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-5">
+          <Link href="/" className="flex min-w-0 items-center gap-3 hover:opacity-90">
+            <img src="/oleni-emblem.png" alt="Oleni emblem" className="h-10 w-auto" />
+            <div className="min-w-0 leading-tight">
+              <img
+                src="/02_oleni_wordmark_transparent.png"
+                alt="Oleni"
+                className="h-7 w-auto"
+              />
+              <div className="mt-1 text-[10px] font-normal uppercase tracking-[0.18em] text-[#8A7460]">
+                Calm support, shared gently
+              </div>
+            </div>
           </Link>
           <span className="text-xs uppercase tracking-[0.2em] text-[#8A7460]">Help & setup</span>
         </div>
@@ -109,11 +119,11 @@ export default function HelpPage() {
           <section>
             <h2 className={sectionTitle}>5. Need more help?</h2>
             <p className={bodyText}>
-              If something still does not feel right, email{" "}
+              If something still does not feel right, email{' '}
               <a href="mailto:hello@bondwell.co.uk" className="underline underline-offset-2">
                 hello@bondwell.co.uk
-              </a>{" "}
-              and we will help you work through it.
+              </a>{' '}
+              while the Oleni email transition is being completed, and we will help you work through it.
             </p>
           </section>
         </div>

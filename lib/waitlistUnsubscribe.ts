@@ -1,7 +1,7 @@
 import "server-only";
 import { randomBytes } from "crypto";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.bondwell.co.uk";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.oleni.app";
 
 type WaitlistSupabaseConfig = {
   supabaseUrl: string;

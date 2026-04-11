@@ -1,7 +1,7 @@
 const FROM_EMAIL =
-  process.env.WAITLIST_FROM_EMAIL || "Oleni <hello@bondwell.co.uk>";
+  process.env.WAITLIST_FROM_EMAIL || "Oleni <hello@oleni.app>";
 const REPLY_TO_EMAIL =
-  process.env.WAITLIST_REPLY_TO || "hello@bondwell.co.uk";
+  process.env.WAITLIST_REPLY_TO || "hello@oleni.app";
 
 function escapeHtml(value: string) {
   return value

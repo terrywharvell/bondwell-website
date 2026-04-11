@@ -120,10 +120,10 @@ export default function HelpPage() {
             <h2 className={sectionTitle}>5. Need more help?</h2>
             <p className={bodyText}>
               If something still does not feel right, email{' '}
-              <a href="mailto:hello@bondwell.co.uk" className="underline underline-offset-2">
-                hello@bondwell.co.uk
+              <a href="mailto:hello@oleni.app" className="underline underline-offset-2">
+                hello@oleni.app
               </a>{' '}
-              while the Oleni email transition is being completed, and we will help you work through it.
+              and we will help you work through it.
             </p>
           </section>
         </div>

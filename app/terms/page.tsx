@@ -130,7 +130,7 @@ export default function TermsPage() {
           <section>
             <h2 className={sectionTitle}>11. Contact</h2>
             <p className={bodyText}>
-              If you have questions about these Terms, email <a href="mailto:hello@bondwell.co.uk" className="underline">hello@bondwell.co.uk</a>. We will switch this to the dedicated Oleni address once the migration is complete.
+              If you have questions about these Terms, email <a href="mailto:hello@oleni.app" className="underline">hello@oleni.app</a>.
             </p>
           </section>
         </div>

@@ -57,7 +57,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className={sectionTitle}>1. Who we are</h2>
             <p className={bodyText}>
-              Oleni is a daily support app designed to help people living with epilepsy and the partners, carers, or loved ones supporting them stay gently in step. While the Oleni email transition is being completed, privacy questions can still be sent to hello@bondwell.co.uk.
+              Oleni is a daily support app designed to help people living with epilepsy and the partners, carers, or loved ones supporting them stay gently in step. If you have any privacy questions, you can contact us at hello@oleni.app.
             </p>
           </section>
 
@@ -152,7 +152,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className={sectionTitle}>11. Contact</h2>
             <p className={bodyText}>
-              If you have questions about this Privacy Policy or how Oleni handles information, email <a href="mailto:hello@bondwell.co.uk" className="underline">hello@bondwell.co.uk</a>. We will switch this to the dedicated Oleni address once the migration is complete.
+              If you have questions about this Privacy Policy or how Oleni handles information, email <a href="mailto:hello@oleni.app" className="underline">hello@oleni.app</a>.
             </p>
           </section>
         </div>

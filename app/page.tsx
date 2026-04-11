@@ -1085,8 +1085,8 @@ export default function Home() {
             <h2 className="text-2xl font-semibold text-[#2F2A26]">Contact</h2>
             <p className="mt-4 leading-8 text-[#5A514A]">
               Questions, feedback, or partnership ideas? Get in touch at{" "}
-              <a href="mailto:hello@bondwell.co.uk" className="underline">
-                hello@bondwell.co.uk
+              <a href="mailto:hello@oleni.app" className="underline">
+                hello@oleni.app
               </a>
             </p>
           </div>

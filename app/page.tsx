@@ -795,19 +795,19 @@ export default function Home() {
               Pricing
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-[#2F2A26] md:text-4xl">
-              Simple support on one phone, with Premium for shared support across two
+              Start free on one phone, or unlock shared support across two for £4.99/month
             </h2>
             <p className="mt-4 leading-8 text-[#5A514A]">
               Oleni Free is for one person using Oleni on a single phone.
-              Oleni Premium is for shared support across two phones, so a partner,
+              Oleni Premium is for shared support across two linked phones, so a partner,
               carer, or loved one can stay gently in step through consent-based sharing.
             </p>
           </div>
 
           <div className="mb-6 rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-5">
             <p className="text-sm leading-7 text-[#5A514A]">
-              Core Oleni support stays accessible on one phone. Premium is for the
-              added shared experience across two separate phones.
+              Android launches first. Premium will be available as a Google Play subscription
+              on Android at £4.99/month.
             </p>
           </div>
 
@@ -817,7 +817,13 @@ export default function Home() {
                 One phone
               </div>
 
-              <h3 className="mt-5 text-2xl font-semibold text-[#2F2A26]">Free</h3>
+              <div className="mt-5 flex items-end justify-between gap-4">
+                <div>
+                  <h3 className="text-2xl font-semibold text-[#2F2A26]">Free</h3>
+                  <p className="mt-1 text-sm text-[#7A6F66]">£0/month</p>
+                </div>
+              </div>
+
               <p className="mt-3 leading-7 text-[#5A514A]">
                 For one person using Oleni on their own phone.
               </p>
@@ -837,7 +843,13 @@ export default function Home() {
                 Two linked phones
               </div>
 
-              <h3 className="mt-5 text-2xl font-semibold text-[#2F2A26]">Premium</h3>
+              <div className="mt-5 flex items-end justify-between gap-4">
+                <div>
+                  <h3 className="text-2xl font-semibold text-[#2F2A26]">Premium</h3>
+                  <p className="mt-1 text-sm font-medium text-[#7A6F66]">£4.99/month</p>
+                </div>
+              </div>
+
               <p className="mt-3 leading-7 text-[#5A514A]">
                 Everything in Free, plus shared support between the person using
                 Oleni and a partner, carer, or loved one on a separate phone.
@@ -852,7 +864,7 @@ export default function Home() {
               </ul>
 
               <p className="mt-6 text-sm text-[#7A6F66]">
-                Final Premium pricing will be confirmed before launch.
+                Simple monthly pricing for shared support. More options can be added later as Oleni grows.
               </p>
             </div>
           </div>

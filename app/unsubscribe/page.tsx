@@ -25,12 +25,12 @@ function getMessage(status: string | undefined, email?: string) {
     case "invalid":
       return {
         title: "This unsubscribe link isn’t valid",
-        body: "The link may be incomplete or out of date. You can email hello@bondwell.co.uk if you need help.",
+        body: "The link may be incomplete or out of date. You can email hello@oleni.app if you need help.",
       };
     case "error":
       return {
         title: "We couldn’t process that just now",
-        body: "Please try again in a moment, or email hello@bondwell.co.uk and we’ll sort it for you.",
+        body: "Please try again in a moment, or email hello@oleni.app and we’ll sort it for you.",
       };
     default:
       return null;
@@ -115,7 +115,7 @@ export default async function UnsubscribePage({
                 Unsubscribe from Oleni updates
               </h1>
               <p className="mt-4 text-base leading-7 text-[#5A514A]">
-                This link may be incomplete or missing. Please use the unsubscribe link from your email, or contact hello@bondwell.co.uk.
+                This link may be incomplete or missing. Please use the unsubscribe link from your email, or contact hello@oleni.app.
               </p>
             </>
           )}

@@ -795,7 +795,7 @@ export default function Home() {
               Pricing
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-[#2F2A26] md:text-4xl">
-              Start free on one phone, or unlock shared support across two for £4.99/month
+              Start free on one phone, or unlock shared support across two for £5.99/month
             </h2>
             <p className="mt-4 leading-8 text-[#5A514A]">
               Oleni Free is for one person using Oleni on a single phone.
@@ -807,7 +807,7 @@ export default function Home() {
           <div className="mb-6 rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-5">
             <p className="text-sm leading-7 text-[#5A514A]">
               Android launches first. Premium will be available as a Google Play subscription
-              on Android at £4.99/month.
+              on Android at £5.99/month.
             </p>
           </div>
 
@@ -846,7 +846,7 @@ export default function Home() {
               <div className="mt-5 flex items-end justify-between gap-4">
                 <div>
                   <h3 className="text-2xl font-semibold text-[#2F2A26]">Premium</h3>
-                  <p className="mt-1 text-sm font-medium text-[#7A6F66]">£4.99/month</p>
+                  <p className="mt-1 text-sm font-medium text-[#7A6F66]">£5.99/month</p>
                 </div>
               </div>
 

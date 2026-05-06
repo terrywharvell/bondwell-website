@@ -19,11 +19,11 @@ function buildWaitlistAutoreplyHtml(unsubscribeUrl: string) {
         <div style="background:#ffffff;border:1px solid #e9dfd4;border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(47,42,38,0.06);">
           <div style="padding:32px 32px 20px;">
             <p style="margin:0 0 18px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a7460;">Oleni</p>
-            <h1 style="margin:0 0 18px;font-size:30px;line-height:1.15;font-weight:600;color:#2f2a26;">You’re on the Oleni waitlist</h1>
+            <h1 style="margin:0 0 18px;font-size:30px;line-height:1.15;font-weight:600;color:#2f2a26;">You’re on the Oleni updates list</h1>
             <p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#5a514a;">Hello,</p>
-            <p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#5a514a;">Thank you for joining the Oleni waitlist.</p>
-            <p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#5a514a;">Oleni is being built to support people living with epilepsy and the partners and carers who support them — with a calm, thoughtful approach to daily routines, reminders, and reducing stress together.</p>
-            <p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#5a514a;">We’ll keep you updated as we move closer to launch.</p>
+            <p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#5a514a;">Thank you for joining the Oleni updates list.</p>
+            <p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#5a514a;">Oleni supports people living with epilepsy and the partners and carers beside them — with a calm, thoughtful approach to daily routines, reminders, and reducing stress together.</p>
+            <p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#5a514a;">We’ll keep you updated with important Oleni news, launch updates, and future support ideas.</p>
             <p style="margin:0;font-size:16px;line-height:1.75;color:#5a514a;">Warmly,<br />Terry<br />Oleni</p>
           </div>
           <div style="padding:20px 32px;border-top:1px solid #efe7dc;background:#fcfaf7;">
@@ -32,7 +32,7 @@ function buildWaitlistAutoreplyHtml(unsubscribeUrl: string) {
             )}" style="color:#6b5a4b;text-decoration:none;">${escapeHtml(
     REPLY_TO_EMAIL
   )}</a>.</p>
-            <p style="margin:0;font-size:13px;line-height:1.7;color:#8a7460;">Don't want future Oleni waitlist updates? <a href="${escapeHtml(unsubscribeUrl)}" style="color:#6b5a4b;text-decoration:none;">Unsubscribe here</a>.</p>
+            <p style="margin:0;font-size:13px;line-height:1.7;color:#8a7460;">Don't want future Oleni updates? <a href="${escapeHtml(unsubscribeUrl)}" style="color:#6b5a4b;text-decoration:none;">Unsubscribe here</a>.</p>
           </div>
         </div>
       </div>
@@ -42,22 +42,22 @@ function buildWaitlistAutoreplyHtml(unsubscribeUrl: string) {
 
 function buildWaitlistAutoreplyText(unsubscribeUrl: string) {
   return [
-    "You’re on the Oleni waitlist",
+    "You’re on the Oleni updates list",
     "",
     "Hello,",
     "",
-    "Thank you for joining the Oleni waitlist.",
+    "Thank you for joining the Oleni updates list.",
     "",
-    "Oleni is being built to support people living with epilepsy and the partners and carers who support them — with a calm, thoughtful approach to daily routines, reminders, and reducing stress together.",
+    "Oleni supports people living with epilepsy and the partners and carers beside them — with a calm, thoughtful approach to daily routines, reminders, and reducing stress together.",
     "",
-    "We’ll keep you updated as we move closer to launch.",
+    "We’ll keep you updated with important Oleni news, launch updates, and future support ideas.",
     "",
     "Warmly,",
     "Terry",
     "Oleni",
     REPLY_TO_EMAIL,
     "",
-    `Unsubscribe from future Oleni waitlist updates: ${unsubscribeUrl}`,
+    `Unsubscribe from future Oleni updates: ${unsubscribeUrl}`,
   ].join("\n");
 }
 
@@ -79,7 +79,7 @@ export async function sendWaitlistAutoreply(toEmail: string, unsubscribeUrl: str
       from: FROM_EMAIL,
       to: [toEmail],
       reply_to: REPLY_TO_EMAIL,
-      subject: "You’re on the Oleni waitlist",
+      subject: "You’re on the Oleni updates list",
       html: buildWaitlistAutoreplyHtml(unsubscribeUrl),
       text: buildWaitlistAutoreplyText(unsubscribeUrl),
       tags: [

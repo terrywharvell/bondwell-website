@@ -3,9 +3,9 @@ import "server-only";
 import { createHmac, timingSafeEqual } from "crypto";
 import { cookies } from "next/headers";
 
-export const ADMIN_COOKIE_NAME = "bondwell_admin_session";
+export const ADMIN_COOKIE_NAME = "oleni_admin_session";
 const ADMIN_COOKIE_MAX_AGE = 60 * 60 * 12;
-const ADMIN_SESSION_PAYLOAD = "bondwell-admin-authenticated";
+const ADMIN_SESSION_PAYLOAD = "oleni-admin-authenticated";
 
 function getAdminPassword() {
   return process.env.ADMIN_PASSWORD || "";

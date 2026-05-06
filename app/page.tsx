@@ -1,11 +1,10 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
+
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.terrywharvell.bondwellmvp";
 
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [message, setMessage] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const heroCards = [
@@ -79,51 +78,6 @@ export default function Home() {
     "Built to feel caring rather than clinical",
   ];
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("loading");
-    setMessage("");
-
-    try {
-      const res = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        const errorText =
-          typeof data?.error === "string" ? data.error.toLowerCase() : "";
-
-        if (
-          errorText.includes("duplicate") ||
-          errorText.includes("already on the list")
-        ) {
-          setStatus("error");
-          setMessage("You're already on the Oleni launch list 🙂");
-          return;
-        }
-
-        throw new Error(data.error || "Could not save your email right now.");
-      }
-
-      setStatus("success");
-      setMessage(
-        "✓ You're on the Oleni launch list. We'll let you know when testing opens."
-      );
-      setEmail("");
-    } catch (err) {
-      setStatus("error");
-      setMessage(
-        err instanceof Error ? err.message : "Could not save your email right now."
-      );
-    }
-  }
-
   return (
     <main id="top" className="min-h-screen bg-white text-[#2F2A26]">
       <header className="sticky top-0 z-40 border-b border-[#EDE5DB] bg-white/95 backdrop-blur">
@@ -179,10 +133,12 @@ export default function Home() {
             </nav>
 
             <a
-              href="#launch"
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noreferrer"
               className="hidden rounded-full bg-[#2F2A26] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90 lg:inline-flex"
             >
-              Join launch list
+              Get Oleni on Google Play
             </a>
 
             <button
@@ -281,11 +237,13 @@ export default function Home() {
               </nav>
 
               <a
-                href="#launch"
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-4 flex w-full items-center justify-center rounded-full bg-[#2F2A26] px-5 py-3 text-sm font-medium text-white transition hover:opacity-90"
               >
-                Join launch list
+                Get Oleni on Google Play
               </a>
             </div>
           ) : null}
@@ -317,10 +275,12 @@ export default function Home() {
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
-                href="#launch"
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full bg-[#2F2A26] px-7 py-3.5 text-center text-sm font-medium text-white transition hover:opacity-90"
               >
-                Join the launch list
+                Get Oleni on Google Play
               </a>
 
               <a
@@ -806,7 +766,7 @@ export default function Home() {
 
           <div className="mb-6 rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-5">
             <p className="text-sm leading-7 text-[#5A514A]">
-              Android launches first. Premium will be available as a Google Play subscription
+              Android is launching first. Oleni Premium is managed through Google Play
               on Android at £5.99/month.
             </p>
           </div>
@@ -1015,22 +975,22 @@ export default function Home() {
           <div className="grid gap-8 rounded-[2.2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 shadow-sm md:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
-                Launch updates
+                Android first
               </p>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#2F2A26] md:text-4xl">
-                Join the Oleni launch list
+                Oleni is ready for Google Play
               </h2>
               <p className="mt-4 max-w-xl leading-8 text-[#5A514A]">
-                Be the first to hear about testing, launch updates, and what’s
-                coming next for Oleni.
+                Start free on one phone, or unlock Oleni Premium for linked support
+                across two phones at £5.99/month through Google Play.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3 text-sm text-[#5A514A]">
                 <span className="rounded-full border border-[#E6D7C4] bg-white px-4 py-2">
-                  Early access updates
+                  Free on one phone
                 </span>
                 <span className="rounded-full border border-[#E6D7C4] bg-white px-4 py-2">
-                  Built from lived experience
+                  Premium linked support
                 </span>
                 <span className="rounded-full border border-[#E6D7C4] bg-white px-4 py-2">
                   Calm support, shared gently
@@ -1040,52 +1000,27 @@ export default function Home() {
 
             <div className="rounded-[1.8rem] border border-[#E8D8C4] bg-white p-5 shadow-[0_18px_48px_rgba(47,42,38,0.06)] md:p-6">
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A7460]">
-                Join the journey
+                Download
               </p>
+              <h3 className="mt-3 text-2xl font-semibold text-[#2F2A26]">
+                Get Oleni for Android
+              </h3>
               <p className="mt-3 text-sm leading-7 text-[#5A514A]">
-                We’ll only use your email for Oleni launch updates and news.
+                Oleni is launching on Android first. The Google Play link will open
+                the live store listing once the app is published.
               </p>
-              <p className="mt-2 text-xs leading-6 text-[#7A6F66]">
-                By joining, you agree to Oleni’s{" "}
-                <a href="/privacy" className="underline underline-offset-2 hover:opacity-80">
-                  Privacy Policy
-                </a>{" "}
-                and{" "}
-                <a href="/terms" className="underline underline-offset-2 hover:opacity-80">
-                  Terms of Use
-                </a>.
-              </p>
-
-              <form
-                onSubmit={handleSubmit}
-                className="mt-5 flex flex-col gap-3"
+              <a
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2F2A26] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
               >
-                <input
-                  type="email"
-                  placeholder="you@example.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full rounded-full border border-[#D8CEC2] bg-[#FCFAF7] px-5 py-3 outline-none transition focus:border-[#2F2A26]"
-                />
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="rounded-full bg-[#2F2A26] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90 disabled:opacity-60"
-                >
-                  {status === "loading" ? "Joining..." : "Join launch list"}
-                </button>
-              </form>
-
-              {message ? (
-                <p
-                  className={`mt-4 text-sm ${
-                    status === "success" ? "text-[#557A46]" : "text-[#A14B4B]"
-                  }`}
-                >
-                  {message}
-                </p>
-              ) : null}
+                Open Oleni on Google Play
+              </a>
+              <p className="mt-4 text-xs leading-6 text-[#7A6F66]">
+                Subscriptions are managed securely through Google Play. Oleni does
+                not provide medical advice, emergency monitoring, or seizure tracking.
+              </p>
             </div>
           </div>
         </div>

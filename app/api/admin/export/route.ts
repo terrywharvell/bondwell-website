@@ -20,7 +20,7 @@ function buildCsv(rows: Array<{ email: string; created_at?: string | null; time?
 
 function buildFilename() {
   const stamp = new Date().toISOString().slice(0, 10);
-  return `bondwell-waitlist-${stamp}.csv`;
+  return `oleni-waitlist-${stamp}.csv`;
 }
 
 export async function GET(request: Request) {

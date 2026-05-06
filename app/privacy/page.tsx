@@ -68,7 +68,7 @@ export default function PrivacyPage() {
                 <li>status information such as whether a check-in has been marked, whether support was requested, and whether rest mode is on</li>
                 <li>linked support information needed to connect two phones for partner or carer support</li>
                 <li>contact details you choose to save, such as an optional phone number used for support-related features, including contact flows inside the app</li>
-                <li>launch list information if you join the Oleni waitlist on our website</li>
+                <li>updates list information if you join the Oleni updates list on our website</li>
                 <li>basic technical and service information needed to keep the app working reliably and securely</li>
               </ul>
             </div>
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className={sectionTitle}>8. Service providers and website tools</h2>
             <p className={bodyText}>
-              Oleni may use trusted service providers to support app hosting, data storage, account emails, notifications, and website waitlist forms. These providers only receive the information needed to perform those services for Oleni.
+              Oleni may use trusted service providers to support app hosting, data storage, account emails, notifications, and website updates forms. These providers only receive the information needed to perform those services for Oleni.
             </p>
           </section>
 

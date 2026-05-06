@@ -12,15 +12,15 @@ function getMessage(status: string | undefined, email?: string) {
       return {
         title: "You’ve been unsubscribed",
         body: email
-          ? `${email} will no longer receive Oleni waitlist updates.`
-          : "You will no longer receive Oleni waitlist updates.",
+          ? `${email} will no longer receive Oleni updates.`
+          : "You will no longer receive Oleni updates.",
       };
     case "already":
       return {
         title: "You’re already unsubscribed",
         body: email
-          ? `${email} is already unsubscribed from Oleni waitlist updates.`
-          : "This email is already unsubscribed from Oleni waitlist updates.",
+          ? `${email} is already unsubscribed from Oleni updates.`
+          : "This email is already unsubscribed from Oleni updates.",
       };
     case "invalid":
       return {
@@ -85,7 +85,7 @@ export default async function UnsubscribePage({
                 Unsubscribe from Oleni updates?
               </h1>
               <p className="mt-4 text-base leading-7 text-[#5A514A]">
-                {entry?.email} will stop receiving Oleni waitlist and launch updates.
+                {entry?.email} will stop receiving Oleni updates.
               </p>
               <form action="/api/unsubscribe" method="POST" className="mt-8">
                 <input type="hidden" name="token" value={token} />
@@ -97,7 +97,7 @@ export default async function UnsubscribePage({
                 </button>
               </form>
               <p className="mt-4 text-sm leading-6 text-[#8A7460]">
-                If you change your mind later, just join the Oleni waitlist again.
+                If you change your mind later, just join the Oleni updates list again.
               </p>
             </>
           ) : alreadyUnsubscribed ? (
@@ -106,7 +106,7 @@ export default async function UnsubscribePage({
                 You’re already unsubscribed
               </h1>
               <p className="mt-4 text-base leading-7 text-[#5A514A]">
-                {entry?.email || "This email"} is already unsubscribed from Oleni waitlist updates.
+                {entry?.email || "This email"} is already unsubscribed from Oleni updates.
               </p>
             </>
           ) : (

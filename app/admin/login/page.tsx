@@ -25,7 +25,7 @@ export default async function AdminLoginPage({ searchParams }: LoginPageProps) {
       ? "That password did not match. Please try again."
       : error === "config"
         ? "Admin login is not configured yet. Add the admin environment variables and try again."
-        : "Enter the admin password to access the waitlist area.";
+        : "Enter the admin password to access the updates area.";
 
   return (
     <main className="min-h-screen bg-[#FCFAF7] px-6 py-10 text-[#2F2A26]">

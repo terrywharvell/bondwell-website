@@ -68,7 +68,7 @@ export default async function AdminHomePage({ searchParams }: AdminHomePageProps
               Waitlist overview
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#5A514A]">
-              A simple first admin view for the Oleni launch list. This shows
+              A simple first admin view for the Oleni updates list. This shows
               the total count and the newest signups first, without touching the
               public website flow.
             </p>
@@ -101,7 +101,7 @@ export default async function AdminHomePage({ searchParams }: AdminHomePageProps
               {totalCount}
             </p>
             <p className="mt-3 text-sm leading-6 text-[#5A514A]">
-              Live total from the waitlist table.
+              Live total from the updates table.
             </p>
           </section>
 
@@ -163,8 +163,8 @@ export default async function AdminHomePage({ searchParams }: AdminHomePageProps
             ) : entries.length === 0 ? (
               <div className="mt-6 rounded-[1.5rem] border border-dashed border-[#E4D8CA] bg-[#FFFCF8] px-5 py-8 text-sm leading-6 text-[#5A514A]">
                 {searchQuery
-                  ? `No waitlist emails matched “${searchQuery}”.`
-                  : "No waitlist emails found yet."}
+                  ? `No updates emails matched “${searchQuery}”.`
+                  : "No updates emails found yet."}
               </div>
             ) : (
               <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-[#EEE5DB]">

@@ -37,7 +37,7 @@ export default function PrivacyPage() {
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#5A514A]">
               Oleni is built around calm support, consent, and clearer communication. This policy explains what information we collect, how we use it, and what may be shared when phones are linked for support.
             </p>
-            <p className="mt-4 text-sm text-[#7A6F66]">Last updated: March 2026</p>
+            <p className="mt-4 text-sm text-[#7A6F66]">Last updated: May 2026</p>
           </div>
         </div>
       </section>
@@ -113,7 +113,8 @@ export default function PrivacyPage() {
               <ul className="list-disc space-y-2 pl-6">
                 <li>You can unlink the other phone to stop linked support.</li>
                 <li>You can change reminder timings and routine settings.</li>
-                <li>You can contact us if you want to ask about your information.</li>
+                <li>You can delete your Oleni account inside the app from Settings &gt; Account &gt; Delete Oleni account.</li>
+                <li>You can contact us if you want to ask about, access, correct, or delete your information.</li>
               </ul>
             </div>
           </section>
@@ -126,10 +127,27 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className={sectionTitle}>9. Data retention</h2>
-            <p className={bodyText}>
-              We keep information only for as long as it is needed to provide Oleni, keep the service secure, meet legal obligations, and support product operations. We may update this approach as Oleni develops.
-            </p>
+            <h2 className={sectionTitle}>9. Data retention and deletion</h2>
+            <div className="mt-4 space-y-4 text-base leading-8 text-[#5A514A]">
+              <p>
+                Oleni keeps your account, routine, reminder, and linked-support information for as long as your Oleni account remains active, or for as long as needed to provide the app&apos;s features, keep the service secure, resolve support requests, and meet legal obligations.
+              </p>
+              <p>
+                You can delete your Oleni account inside the app by going to Settings &gt; Account &gt; Delete Oleni account. This removes your Oleni account, saved routines, linked support data, and the connection to the linked phone.
+              </p>
+              <p>
+                If you cannot access the app, you can request account and data deletion by emailing <a href="mailto:hello@oleni.app" className="underline">hello@oleni.app</a>. Please include the email address linked to your Oleni account, or your Support ID if you have it, so we can find the correct account.
+              </p>
+              <p>
+                When an account deletion request is confirmed, we delete or anonymise the personal data linked to that account within 30 days, unless we need to keep limited information for legal, security, fraud prevention, tax, accounting, dispute, or compliance reasons.
+              </p>
+              <p>
+                Website updates-list information is kept until you unsubscribe or ask us to delete it. Limited backup, security, and service logs may remain for a short period after deletion and are removed or anonymised through normal system retention cycles.
+              </p>
+              <p>
+                Google Play subscription and payment records are managed by Google Play. Cancelling, pausing, or managing a subscription must be done through your Google Play account.
+              </p>
+            </div>
           </section>
 
           <section>
@@ -141,9 +159,14 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className={sectionTitle}>11. Contact</h2>
-            <p className={bodyText}>
-              If you have questions about this Privacy Policy or how Oleni handles information, email <a href="mailto:hello@oleni.app" className="underline">hello@oleni.app</a>.
-            </p>
+            <div className="mt-4 space-y-4 text-base leading-8 text-[#5A514A]">
+              <p>
+                If you have questions about this Privacy Policy, how Oleni handles information, or if you want to request account or data deletion, email <a href="mailto:hello@oleni.app" className="underline">hello@oleni.app</a>.
+              </p>
+              <p>
+                Developer: BondWell Support Ltd, trading as Oleni, United Kingdom.
+              </p>
+            </div>
           </section>
         </div>
       </section>

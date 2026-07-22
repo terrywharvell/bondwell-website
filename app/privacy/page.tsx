@@ -42,7 +42,7 @@ export default function PrivacyPage() {
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#5A514A]">
               Oleni is built around calm support, consent, and clearer communication. This policy explains what information we collect, how we use it, and what may be shared when phones are linked for support.
             </p>
-            <p className="mt-4 text-sm text-[#7A6F66]">Last updated: May 2026</p>
+            <p className="mt-4 text-sm text-[#7A6F66]">Last updated: July 2026</p>
           </div>
         </div>
       </section>
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
               <ul className="list-disc space-y-2 pl-6">
                 <li>provide Oleni’s routine, reminder, and linked-support features</li>
                 <li>help both phones reflect the same shared routine and support status when phones are linked for support</li>
-                <li>send account, security, and launch-list communications</li>
+                <li>send account, security, and updates-list communications</li>
                 <li>improve reliability, safety, and product performance</li>
               </ul>
             </div>

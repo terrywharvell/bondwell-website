@@ -44,7 +44,7 @@ export default function DeleteAccountPage() {
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#5A514A]">
               You can delete your Oleni account and associated app data from inside the app. This page explains where to find the deletion option and how to contact us if you need help.
             </p>
-            <p className="mt-4 text-sm text-[#7A6F66]">Last updated: April 2026</p>
+            <p className="mt-4 text-sm text-[#7A6F66]">Last updated: July 2026</p>
           </div>
         </div>
       </section>

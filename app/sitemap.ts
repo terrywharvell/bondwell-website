@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.oleni.app";
   const homepageLastModified = new Date("2026-07-22");
-  const contentLastModified = new Date("2026-03-28");
+  const contentLastModified = new Date("2026-07-22");
 
   return [
     {

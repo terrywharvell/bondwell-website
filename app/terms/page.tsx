@@ -64,7 +64,7 @@ export default function TermsPage() {
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#5A514A]">
               These Terms explain how Oleni may be used, what the service is designed for, and the important boundaries around medical advice, emergency support, linked support, and optional premium features.
             </p>
-            <p className="mt-4 text-sm text-[#7A6F66]">Last updated: March 2026</p>
+            <p className="mt-4 text-sm text-[#7A6F66]">Last updated: July 2026</p>
           </div>
         </div>
       </section>

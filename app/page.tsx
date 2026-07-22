@@ -270,22 +270,22 @@ export default function Home() {
   const audienceCards = [
     {
       title: "People living with epilepsy",
-      text: "Oleni is designed to make everyday support feel calmer, clearer, and less repetitive.",
+      text: "Oleni is an epilepsy support app designed to make everyday support feel calmer, clearer, and less repetitive.",
     },
     {
-      title: "Partners, carers, and loved ones",
-      text: "A view-only, consent-led experience helps support feel connected rather than controlling.",
+      title: "People who support someone with epilepsy",
+      text: "Stay gently connected through optional, consent-based and strictly view-only linked support.",
     },
     {
-      title: "Both people, together",
-      text: "Oleni is built around the relationship too — helping support feel more joined-up, reassuring, and kind on both sides.",
+      title: "Support that works for both people",
+      text: "Oleni helps everyday support feel more joined-up, reassuring and kind, while the person using Oleni remains in control.",
     },
   ];
 
   const promiseCards = [
     {
       title: "Support without pressure",
-      text: "Oleni is being built to feel steady, reassuring, and never overwhelming.",
+      text: "Oleni is designed to feel steady, reassuring, and never overwhelming.",
     },
     {
       title: "Connection without control",
@@ -293,14 +293,14 @@ export default function Home() {
     },
     {
       title: "Care you can feel",
-      text: "Built to support the person living with epilepsy and the loved one beside them.",
+      text: "Built to support the person living with epilepsy and the support person beside them.",
     },
   ];
 
   const trustSignals = [
     "Designed around lived experience",
     "Focused on reassurance as well as routine",
-    "Made for both the person and the loved one beside them",
+    "Made for the person using Oleni and the support person beside them",
     "Built to feel caring rather than clinical",
   ];
 
@@ -635,7 +635,7 @@ export default function Home() {
               Conversations like “Have you taken your tablets?”, “Have you had
               enough water today?”, and “Have you eaten?” can repeat day after
               day. For the person living with epilepsy, that can feel tiring,
-              frustrating, and heavy. For the partner or carer, it can create
+              frustrating, and heavy. For the person supporting them, it can create
               constant background worry around whether the basics are okay.
             </p>
 
@@ -687,9 +687,9 @@ export default function Home() {
                 Founder note
               </p>
               <p className="mt-5 text-xl leading-9 text-[#2F2A26]">
-                “Oleni is being built to feel like a little more breathing room
+                “Oleni is designed to feel like a little more breathing room
                 in the day — calmer, kinder support for the person using it and
-                for the one beside them.”
+                for the support person beside them.”
               </p>
             </div>
           </div>
@@ -712,12 +712,12 @@ export default function Home() {
 
             <div className="rounded-[2rem] border border-[#E7DED4] bg-white p-8 shadow-sm">
               <h2 className="text-2xl font-semibold text-[#2F2A26]">
-                For partners and carers
+                For support people
               </h2>
               <p className="mt-4 leading-8 text-[#5A514A]">
-                Stay better in sync through consent-based sharing and a view-only
-                partner experience. Oleni supports connection without taking
-                control away from the person using it.
+                Stay gently informed through optional linked support, while the
+                person using Oleni remains in control. The support-person
+                experience is consent-based and strictly view-only.
               </p>
             </div>
           </div>
@@ -764,9 +764,9 @@ export default function Home() {
               </p>
 
               <p>
-                Oleni is being built with that understanding at its core —
-                not as a cold tracking tool, but as something calmer, more
-                human, and more respectful of what everyday life can really feel
+                Oleni is designed around calm routines, personal choice, and
+                gentle connection — not as a cold tracking tool, but as something
+                more human and respectful of what everyday life can really feel
                 like on the inside.
               </p>
 
@@ -793,8 +793,7 @@ export default function Home() {
 
             <p className="mx-auto mt-4 max-w-2xl leading-8 text-[#5A514A]">
               Oleni is designed to feel clear, gentle, and easy to follow —
-              for the person using it and for the partner or carer supporting
-              them.
+              for the person using it and for the support person beside them.
             </p>
           </div>
 
@@ -849,19 +848,19 @@ export default function Home() {
                   <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
                   <img
                     src="/screens/partner-support-requested.jpg"
-                    alt="Oleni partner support requested screen"
+                    alt="Oleni linked support screen showing a view-only support request update."
                     className="block w-full"
                   />
                 </div>
               </div>
 
               <p className="mt-6 text-base font-semibold text-[#2F2A26]">
-                Partner view
+                Linked support screen
               </p>
 
               <p className="mx-auto mt-2 max-w-[250px] text-sm leading-7 text-[#5A514A]">
-                A view-only screen that helps partners or carers stay in step,
-                gently and clearly.
+                A strictly view-only support update that helps someone stay in
+                step with the person they support.
               </p>
             </div>
           </div>
@@ -886,8 +885,9 @@ export default function Home() {
                 Set your gentle routine
               </h3>
               <p className="mt-4 leading-8 text-[#5A514A]">
-                Add the reminders you want for medication, hydration, meals, and
-                simple check-ins, in a way that feels gentle rather than demanding.
+                Add medication reminders, due-time support, hydration reminders,
+                meal reminders, energy check-ins, and rest support, with calm
+                follow-up when a medication check-in is still open.
               </p>
             </div>
 
@@ -897,8 +897,10 @@ export default function Home() {
                 Stay connected clearly
               </h3>
               <p className="mt-4 leading-8 text-[#5A514A]">
-                Oleni is designed to keep linked support clear, calm, and under
-                your control, so both people feel more settled.
+                Oleni keeps linked support clear, calm, and under your control.
+                A support person can receive selected view-only updates and send
+                a gentle “Thinking of you” check-in without taking control of
+                the other person’s routines.
               </p>
             </div>
 
@@ -908,8 +910,8 @@ export default function Home() {
                 Ask for support calmly
               </h3>
               <p className="mt-4 leading-8 text-[#5A514A]">
-                When support is needed, Oleni helps reduce guesswork and makes it
-                easier to reach out without turning the moment into something heavier.
+                Ask for support without needing to find the right words. Oleni
+                helps reduce guesswork and makes it easier to reach out calmly.
               </p>
             </div>
           </div>
@@ -955,8 +957,8 @@ export default function Home() {
             </h2>
             <p className="mt-4 leading-8 text-[#5A514A]">
               Oleni Free is for one person using Oleni on a single phone.
-              Oleni Premium is for shared support across two linked phones, so a partner,
-              carer, or loved one can stay gently in step through consent-based sharing.
+              Oleni Premium enables optional linked support across two phones for
+              the person using Oleni and a trusted support person.
             </p>
           </div>
 
@@ -985,11 +987,12 @@ export default function Home() {
               </p>
 
               <ul className="mt-6 space-y-3 text-[#5A514A]">
-                <li>Medication reminders</li>
+                <li>Medication reminders and due-time support</li>
                 <li>Hydration reminders</li>
                 <li>Meal reminders</li>
-                <li>Gentle check-ins</li>
-                <li>Support requested flow</li>
+                <li>Energy check-ins and rest support</li>
+                <li>Ask for support without needing to find the right words</li>
+                <li>Calm missed-check-in or overdue support</li>
                 <li>Calm daily routine support on one device</li>
               </ul>
             </div>
@@ -1007,16 +1010,18 @@ export default function Home() {
               </div>
 
               <p className="mt-3 leading-7 text-[#5A514A]">
-                Everything in Free, plus shared support between the person using
-                Oleni and a partner, carer, or loved one on a separate phone.
+                Everything in Free, plus optional linked support between the
+                person using Oleni and a trusted support person on a separate
+                phone.
               </p>
 
               <ul className="mt-6 space-y-3 text-[#5A514A]">
                 <li>Everything in Free</li>
-                <li>Shared support across two separate phones</li>
-                <li>View-only partner/carer connection</li>
-                <li>Consent-based shared support updates</li>
-                <li>Premium linked support features as Oleni grows</li>
+                <li>Optional linked support across two separate phones</li>
+                <li>Strictly view-only support-person experience</li>
+                <li>Consent-based linked support updates</li>
+                <li>Gentle “Thinking of you” check-ins</li>
+                <li>Additional linked support features as Oleni grows</li>
               </ul>
 
               <p className="mt-6 text-sm text-[#7A6F66]">
@@ -1037,9 +1042,9 @@ export default function Home() {
               Built around consent, clarity, and calmer communication
             </h2>
             <p className="mt-5 max-w-3xl leading-8 text-[#5A514A]">
-              Oleni is designed to reduce pressure, not create it. Shared support is
-              clear, consent-based, and focused on calm day-to-day support rather than
-              surveillance.
+              Oleni is designed to reduce pressure, not create it. Linked support
+              is clear, consent-based, strictly view-only, and focused on calm
+              day-to-day support rather than surveillance.
             </p>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -1050,10 +1055,11 @@ export default function Home() {
                 </p>
               </div>
               <div className="rounded-2xl bg-[#FAF7F2] p-5">
-                <p className="font-semibold text-[#2F2A26]">Partner mode is view-only</p>
+                <p className="font-semibold text-[#2F2A26]">Support-person view</p>
                 <p className="mt-2 text-sm leading-7 text-[#5A514A]">
-                  Partner or carer support is there to help someone stay in step, not to take
-                  control away from them.
+                  Linked support is optional, consent-based, and strictly
+                  view-only, so a support person can stay informed without taking
+                  control.
                 </p>
               </div>
               <div className="rounded-2xl bg-[#FAF7F2] p-5">
@@ -1124,22 +1130,25 @@ export default function Home() {
 
             <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
               <h3 className="font-semibold text-[#2F2A26]">
-                What can a partner or carer see?
+                What can a support person see?
               </h3>
               <p className="mt-2 leading-7 text-[#5A514A]">
-                Oleni is designed to share calm support information only, such as whether
-                something has been marked, whether support has been requested, and shared routine
-                timing. Medication names are not shown.
+                When linked support is enabled, a support person can receive
+                selected view-only updates, such as whether something has been
+                marked, whether support has been requested, and shared routine
+                timing. Medication names are not shown. A support person could be a partner, family member, friend or carer chosen by the person using Oleni.
               </p>
             </div>
 
             <div className="rounded-2xl border border-[#E7DED4] bg-[#FCFAF7] p-6 shadow-sm">
               <h3 className="font-semibold text-[#2F2A26]">
-                Can a partner control the app?
+                Can a support person control the app?
               </h3>
               <p className="mt-2 leading-7 text-[#5A514A]">
-                No. Partner features are designed to be view-only and consent-based, so support can
-                feel connected without becoming controlling.
+                No. The support-person view is strictly view-only. They can
+                receive selected updates and gentle support requests, but they
+                cannot mark medication as taken, edit routines, or control the
+                other person’s app.
               </p>
             </div>
 
@@ -1150,7 +1159,7 @@ export default function Home() {
               <p className="mt-2 leading-7 text-[#5A514A]">
                 Oleni is designed to encourage calm follow-through, not panic. Depending on the
                 settings chosen, the app may show the reminder as still open and may gently involve
-                a partner or carer when phones are linked for support.
+                a trusted support person when phones are linked for support.
               </p>
             </div>
 
@@ -1166,7 +1175,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="launch" className="scroll-mt-28 md:scroll-mt-32 bg-white">
+      <section id="download" className="scroll-mt-28 md:scroll-mt-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid gap-8 rounded-[2.2rem] border border-[#D9C29A] bg-[#FFF9F0] p-8 shadow-sm md:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
@@ -1228,7 +1237,7 @@ export default function Home() {
           <div className="rounded-[2rem] border border-[#E7DED4] bg-[#FCFAF7] p-8 shadow-sm">
             <h2 className="text-2xl font-semibold text-[#2F2A26]">Contact</h2>
             <p className="mt-4 leading-8 text-[#5A514A]">
-              Questions, feedback, or partnership ideas? Get in touch at{" "}
+              Questions, feedback, or collaboration ideas? Get in touch at{" "}
               <a href="mailto:hello@oleni.app" className="underline">
                 hello@oleni.app
               </a>

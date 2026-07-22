@@ -12,13 +12,18 @@ export const metadata: Metadata = {
 
 const sectionTitle = "text-2xl font-semibold tracking-tight text-[#2F2A26]";
 const bodyText = "mt-4 text-base leading-8 text-[#5A514A]";
+const focusVisibleClass =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b77a8] focus-visible:ring-offset-2";
 
 export default function DeleteAccountPage() {
   return (
     <main className="min-h-screen bg-white text-[#2F2A26]">
       <div className="border-b border-[#F0E8DE] bg-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
-          <Link href="/" className="text-sm font-medium text-[#5A514A] hover:text-[#2F2A26]">
+          <Link
+            href="/"
+            className={`text-sm font-medium text-[#5A514A] hover:text-[#2F2A26] ${focusVisibleClass}`}
+          >
             ← Back to Oleni
           </Link>
           <span className="text-xs uppercase tracking-[0.2em] text-[#8A7460]">
@@ -85,7 +90,7 @@ export default function DeleteAccountPage() {
           <section>
             <h2 className={sectionTitle}>Need help?</h2>
             <p className={bodyText}>
-              If you need help deleting your account or have questions about your information, email <a href="mailto:hello@oleni.app" className="underline">hello@oleni.app</a>.
+              If you need help deleting your account or have questions about your information, email <a href="mailto:hello@oleni.app" className={`underline ${focusVisibleClass}`}>hello@oleni.app</a>.
             </p>
           </section>
         </div>

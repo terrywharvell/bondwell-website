@@ -12,13 +12,18 @@ export const metadata: Metadata = {
 
 const sectionTitle = "text-2xl font-semibold tracking-tight text-[#2F2A26]";
 const bodyText = "mt-4 text-base leading-8 text-[#5A514A]";
+const focusVisibleClass =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b77a8] focus-visible:ring-offset-2";
 
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen bg-white text-[#2F2A26]">
       <div className="border-b border-[#F0E8DE] bg-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
-          <Link href="/" className="text-sm font-medium text-[#5A514A] hover:text-[#2F2A26]">
+          <Link
+            href="/"
+            className={`text-sm font-medium text-[#5A514A] hover:text-[#2F2A26] ${focusVisibleClass}`}
+          >
             ← Back to Oleni
           </Link>
           <span className="text-xs uppercase tracking-[0.2em] text-[#8A7460]">Privacy Policy</span>
@@ -136,7 +141,7 @@ export default function PrivacyPage() {
                 You can delete your Oleni account inside the app by going to Settings &gt; Account &gt; Delete Oleni account. This removes your Oleni account, saved routines, linked support data, and the connection to the linked phone.
               </p>
               <p>
-                If you cannot access the app, you can request account and data deletion by emailing <a href="mailto:hello@oleni.app" className="underline">hello@oleni.app</a>. Please include the email address linked to your Oleni account, or your Support ID if you have it, so we can find the correct account.
+                If you cannot access the app, you can request account and data deletion by emailing <a href="mailto:hello@oleni.app" className={`underline ${focusVisibleClass}`}>hello@oleni.app</a>. Please include the email address linked to your Oleni account, or your Support ID if you have it, so we can find the correct account.
               </p>
               <p>
                 When an account deletion request is confirmed, we delete or anonymise the personal data linked to that account within 30 days, unless we need to keep limited information for legal, security, fraud prevention, tax, accounting, dispute, or compliance reasons.
@@ -161,7 +166,7 @@ export default function PrivacyPage() {
             <h2 className={sectionTitle}>11. Contact</h2>
             <div className="mt-4 space-y-4 text-base leading-8 text-[#5A514A]">
               <p>
-                If you have questions about this Privacy Policy, how Oleni handles information, or if you want to request account or data deletion, email <a href="mailto:hello@oleni.app" className="underline">hello@oleni.app</a>.
+                If you have questions about this Privacy Policy, how Oleni handles information, or if you want to request account or data deletion, email <a href="mailto:hello@oleni.app" className={`underline ${focusVisibleClass}`}>hello@oleni.app</a>.
               </p>
               <p>
                 Developer: BondWell Support Ltd, trading as Oleni, United Kingdom.

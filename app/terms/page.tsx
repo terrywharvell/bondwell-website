@@ -74,7 +74,7 @@ export default function TermsPage() {
           <section>
             <h2 className={sectionTitle}>1. Using Oleni</h2>
             <p className={bodyText}>
-              Oleni is a daily support app designed to help people living with epilepsy and the partners, carers, or loved ones supporting them stay gently in step. By using Oleni, you agree to these Terms.
+              Oleni is a daily support app designed to help people living with epilepsy and the people who support them stay gently in step. By using Oleni, you agree to these Terms.
             </p>
           </section>
 
@@ -98,7 +98,7 @@ export default function TermsPage() {
           <section>
             <h2 className={sectionTitle}>4. Linked support</h2>
             <p className={bodyText}>
-              Oleni linked support is designed to help a partner or carer stay informed in a calm, consent-based, view-only way. The person using Oleni remains in control of linking and unlinking the other phone for support.
+              Oleni linked support is designed to help a support person stay informed in a calm, consent-based, view-only way. The person using Oleni remains in control of linking and unlinking the other phone for support.
             </p>
           </section>
 

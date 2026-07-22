@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Oleni Privacy Policy covering what information we collect, how it is used, what may be shared with a linked partner or carer, and the choices available to the person using Oleni.",
+    "Oleni Privacy Policy covering what information we collect, how it is used, what may be shared with a linked support person, and the choices available to the person using Oleni.",
   alternates: {
     canonical: "/privacy",
   },
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className={sectionTitle}>1. Who we are</h2>
             <p className={bodyText}>
-              Oleni is a daily support app designed to help people living with epilepsy and the partners, carers, or loved ones supporting them stay gently in step. If you have any privacy questions, you can contact us at hello@oleni.app.
+              Oleni is a daily support app designed to help people living with epilepsy and the people who support them stay gently in step. If you have any privacy questions, you can contact us at hello@oleni.app.
             </p>
           </section>
 
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
                 <li>account details such as email address when you secure your Oleni account</li>
                 <li>routine timing information such as medication check-in times, meal reminders, hydration reminders, and gentle check-ins</li>
                 <li>status information such as whether a check-in has been marked, whether support was requested, and whether rest mode is on</li>
-                <li>linked support information needed to connect two phones for partner or carer support</li>
+                <li>linked support information needed to connect two phones for support-person linked support</li>
                 <li>contact details you choose to save, such as an optional phone number used for support-related features, including contact flows inside the app</li>
                 <li>updates list information if you join the Oleni updates list on our website</li>
                 <li>basic technical and service information needed to keep the app working reliably and securely</li>
@@ -84,8 +84,8 @@ export default function PrivacyPage() {
             <div className="mt-4 space-y-4 text-base leading-8 text-[#5A514A]">
               <p>Oleni is designed to keep boundaries clear.</p>
               <ul className="list-disc space-y-2 pl-6">
-                <li>Medication names are not part of the shared partner experience.</li>
-                <li>Partner mode is designed to be view-only.</li>
+                <li>Medication names are not part of the linked support-person experience.</li>
+                <li>The support-person view is designed to be view-only.</li>
                 <li>Linked support is designed to feel clear, consent-based, and in your control.</li>
                 <li>Oleni is designed to support communication, not surveillance.</li>
               </ul>
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className={sectionTitle}>6. What may be shared with a linked partner or carer</h2>
+            <h2 className={sectionTitle}>6. What may be shared with a linked support person</h2>
             <p className={bodyText}>
               When phones are linked for support, Oleni may share routine and support status information such as whether a reminder has been marked, whether support was requested, whether rest mode is on, and selected contact details such as an optional saved phone number where needed for the support features the user chooses to use. The linked phone is designed to help someone support the person using Oleni — not to take control of the account.
             </p>

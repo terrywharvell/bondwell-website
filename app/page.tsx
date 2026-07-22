@@ -1,8 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.terrywharvell.bondwellmvp";
+const focusVisibleClass =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b77a8] focus-visible:ring-offset-2";
 
 const featureIconPaths = {
   medication: (
@@ -311,18 +314,25 @@ export default function Home() {
           <div className="flex items-center justify-between gap-4">
             <a
               href="#top"
+              aria-label="Oleni home"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex min-w-0 items-center gap-3 text-xl font-semibold tracking-tight hover:opacity-90"
+              className={`flex min-w-0 items-center gap-3 text-xl font-semibold tracking-tight hover:opacity-90 ${focusVisibleClass}`}
             >
-              <img
+              <Image
                 src="/oleni-emblem.png"
-                alt="Oleni emblem"
+                alt=""
+                width={2048}
+                height={2048}
+                priority
                 className="h-14 w-auto md:h-16"
               />
               <div className="min-w-0 leading-tight">
-                <img
+                <Image
                   src="/02_oleni_wordmark_transparent.png"
-                  alt="Oleni"
+                  alt=""
+                  width={480}
+                  height={158}
+                  priority
                   className="h-9 w-auto md:h-10"
                 />
                 <div className="mt-1 text-xs font-normal uppercase tracking-[0.18em] text-[#8A7460]">
@@ -331,29 +341,56 @@ export default function Home() {
               </div>
             </a>
 
-            <nav className="hidden items-center gap-7 text-sm text-[#5A514A] lg:flex">
-              <a href="#story" className="transition hover:text-[#2F2A26]">
+            <nav
+              aria-label="Primary navigation"
+              className="hidden items-center gap-7 text-sm text-[#5A514A] lg:flex"
+            >
+              <a
+                href="#story"
+                className={`transition hover:text-[#2F2A26] ${focusVisibleClass}`}
+              >
                 Story
               </a>
-              <a href="#perspective" className="transition hover:text-[#2F2A26]">
+              <a
+                href="#perspective"
+                className={`transition hover:text-[#2F2A26] ${focusVisibleClass}`}
+              >
                 Perspective
               </a>
-              <a href="#screens" className="transition hover:text-[#2F2A26]">
+              <a
+                href="#screens"
+                className={`transition hover:text-[#2F2A26] ${focusVisibleClass}`}
+              >
                 Screens
               </a>
-              <a href="#how-it-works" className="transition hover:text-[#2F2A26]">
+              <a
+                href="#how-it-works"
+                className={`transition hover:text-[#2F2A26] ${focusVisibleClass}`}
+              >
                 How it works
               </a>
-              <a href="#privacy" className="transition hover:text-[#2F2A26]">
+              <a
+                href="#privacy"
+                className={`transition hover:text-[#2F2A26] ${focusVisibleClass}`}
+              >
                 Privacy
               </a>
-              <a href="#faq" className="transition hover:text-[#2F2A26]">
+              <a
+                href="#faq"
+                className={`transition hover:text-[#2F2A26] ${focusVisibleClass}`}
+              >
                 FAQs
               </a>
-              <a href="/help" className="transition hover:text-[#2F2A26]">
+              <a
+                href="/help"
+                className={`transition hover:text-[#2F2A26] ${focusVisibleClass}`}
+              >
                 Help
               </a>
-              <a href="#contact" className="transition hover:text-[#2F2A26]">
+              <a
+                href="#contact"
+                className={`transition hover:text-[#2F2A26] ${focusVisibleClass}`}
+              >
                 Contact
               </a>
             </nav>
@@ -362,7 +399,7 @@ export default function Home() {
               href={PLAY_STORE_URL}
               target="_blank"
               rel="noreferrer"
-              className="hidden rounded-full bg-[#2F2A26] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90 lg:inline-flex"
+              className={`hidden rounded-full bg-[#2F2A26] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90 lg:inline-flex ${focusVisibleClass}`}
             >
               Get Oleni on Google Play
             </a>
@@ -372,7 +409,7 @@ export default function Home() {
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen((open) => !open)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#DCCFC1] bg-white text-[#2F2A26] transition hover:bg-[#FAF7F2] lg:hidden"
+              className={`inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#DCCFC1] bg-white text-[#2F2A26] transition hover:bg-[#FAF7F2] lg:hidden ${focusVisibleClass}`}
             >
               <span className="relative block h-4 w-5">
                 <span
@@ -396,67 +433,70 @@ export default function Home() {
 
           {mobileMenuOpen ? (
             <div className="mt-4 rounded-[1.8rem] border border-[#E7DED4] bg-white p-4 shadow-[0_18px_48px_rgba(47,42,38,0.08)] lg:hidden">
-              <nav className="flex flex-col text-sm text-[#5A514A]">
+              <nav
+                aria-label="Mobile navigation"
+                className="flex flex-col text-sm text-[#5A514A]"
+              >
                 <a
                   href="#story"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                  className={`rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26] ${focusVisibleClass}`}
                 >
                   Story
                 </a>
                 <a
                   href="#perspective"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                  className={`rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26] ${focusVisibleClass}`}
                 >
                   Perspective
                 </a>
                 <a
                   href="#screens"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                  className={`rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26] ${focusVisibleClass}`}
                 >
                   Screens
                 </a>
                 <a
                   href="#how-it-works"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                  className={`rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26] ${focusVisibleClass}`}
                 >
                   How it works
                 </a>
                 <a
                   href="#pricing"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                  className={`rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26] ${focusVisibleClass}`}
                 >
                   Pricing
                 </a>
                 <a
                   href="#privacy"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                  className={`rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26] ${focusVisibleClass}`}
                 >
                   Privacy
                 </a>
                 <a
                   href="#faq"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                  className={`rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26] ${focusVisibleClass}`}
                 >
                   FAQs
                 </a>
                 <a
                   href="/help"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                  className={`rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26] ${focusVisibleClass}`}
                 >
                   Help
                 </a>
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26]"
+                  className={`rounded-2xl px-4 py-3 transition hover:bg-[#FAF7F2] hover:text-[#2F2A26] ${focusVisibleClass}`}
                 >
                   Contact
                 </a>
@@ -467,7 +507,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-4 flex w-full items-center justify-center rounded-full bg-[#2F2A26] px-5 py-3 text-sm font-medium text-white transition hover:opacity-90"
+                className={`mt-4 flex w-full items-center justify-center rounded-full bg-[#2F2A26] px-5 py-3 text-sm font-medium text-white transition hover:opacity-90 ${focusVisibleClass}`}
               >
                 Get Oleni on Google Play
               </a>
@@ -505,14 +545,14 @@ export default function Home() {
                 href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full bg-[#2F2A26] px-7 py-3.5 text-center text-sm font-medium text-white transition hover:opacity-90"
+                className={`rounded-full bg-[#2F2A26] px-7 py-3.5 text-center text-sm font-medium text-white transition hover:opacity-90 ${focusVisibleClass}`}
               >
                 Get Oleni on Google Play
               </a>
 
               <a
                 href="#how-it-works"
-                className="rounded-full border border-[#DCCFC1] px-7 py-3.5 text-center text-sm font-medium text-[#2F2A26] transition hover:bg-[#FAF7F2]"
+                className={`rounded-full border border-[#DCCFC1] px-7 py-3.5 text-center text-sm font-medium text-[#2F2A26] transition hover:bg-[#FAF7F2] ${focusVisibleClass}`}
               >
                 See how Oleni works
               </a>
@@ -802,10 +842,13 @@ export default function Home() {
               <div className="mx-auto w-[250px] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
                 <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
                   <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
-                  <img
+                  <Image
                     src="/screens/user-home.jpg"
-                    alt="Oleni daily overview screen"
-                    className="block w-full"
+                    alt="Oleni home screen showing medication, hydration, meals, energy, rest and support check-ins."
+                    width={945}
+                    height={2048}
+                    sizes="(max-width: 767px) 82vw, (max-width: 1023px) 44vw, 320px"
+                    className="block h-auto w-full"
                   />
                 </div>
               </div>
@@ -824,10 +867,13 @@ export default function Home() {
               <div className="mx-auto w-[320px] rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.28)]">
                 <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
                   <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
-                  <img
+                  <Image
                     src="/screens/user-ask-for-support.jpg"
-                    alt="Oleni ask for support screen"
-                    className="block w-full"
+                    alt="Oleni screen for asking a trusted support person for help."
+                    width={945}
+                    height={2048}
+                    sizes="(max-width: 767px) 82vw, (max-width: 1023px) 44vw, 320px"
+                    className="block h-auto w-full"
                   />
                 </div>
               </div>
@@ -846,10 +892,13 @@ export default function Home() {
               <div className="mx-auto w-[250px] rounded-[2.6rem] bg-[#1F1A17] p-[10px] shadow-[0_20px_60px_rgba(47,42,38,0.18)]">
                 <div className="relative overflow-hidden rounded-[2.1rem] bg-black">
                   <div className="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-black" />
-                  <img
+                  <Image
                     src="/screens/partner-support-requested.jpg"
-                    alt="Oleni linked support screen showing a view-only support request update."
-                    className="block w-full"
+                    alt="Oleni linked support screen showing a strictly view-only support request update."
+                    width={1050}
+                    height={2048}
+                    sizes="(max-width: 767px) 82vw, (max-width: 1023px) 44vw, 320px"
+                    className="block h-auto w-full"
                   />
                 </div>
               </div>
@@ -1081,13 +1130,13 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4 text-sm">
               <a
                 href="/privacy"
-                className="rounded-full border border-[#DCCFC1] px-5 py-2.5 text-[#2F2A26] transition hover:bg-[#FAF7F2]"
+                className={`rounded-full border border-[#DCCFC1] px-5 py-2.5 text-[#2F2A26] transition hover:bg-[#FAF7F2] ${focusVisibleClass}`}
               >
                 Read Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="rounded-full border border-[#DCCFC1] px-5 py-2.5 text-[#2F2A26] transition hover:bg-[#FAF7F2]"
+                className={`rounded-full border border-[#DCCFC1] px-5 py-2.5 text-[#2F2A26] transition hover:bg-[#FAF7F2] ${focusVisibleClass}`}
               >
                 Read Terms of Use
               </a>
@@ -1219,7 +1268,7 @@ export default function Home() {
                 href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2F2A26] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
+                className={`mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2F2A26] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90 ${focusVisibleClass}`}
               >
                 Open Oleni on Google Play
               </a>
@@ -1238,7 +1287,10 @@ export default function Home() {
             <h2 className="text-2xl font-semibold text-[#2F2A26]">Contact</h2>
             <p className="mt-4 leading-8 text-[#5A514A]">
               Questions, feedback, or collaboration ideas? Get in touch at{" "}
-              <a href="mailto:hello@oleni.app" className="underline">
+              <a
+                href="mailto:hello@oleni.app"
+                className={`underline ${focusVisibleClass}`}
+              >
                 hello@oleni.app
               </a>
             </p>
@@ -1251,19 +1303,19 @@ export default function Home() {
           <p>© {new Date().getFullYear()} Oleni. All rights reserved.</p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="/privacy" className="hover:opacity-70">
+            <a href="/privacy" className={`hover:opacity-70 ${focusVisibleClass}`}>
               Privacy
             </a>
-            <a href="/terms" className="hover:opacity-70">
+            <a href="/terms" className={`hover:opacity-70 ${focusVisibleClass}`}>
               Terms
             </a>
-            <a href="/help" className="hover:opacity-70">
+            <a href="/help" className={`hover:opacity-70 ${focusVisibleClass}`}>
               Help
             </a>
-            <a href="#faq" className="hover:opacity-70">
+            <a href="#faq" className={`hover:opacity-70 ${focusVisibleClass}`}>
               FAQs
             </a>
-            <a href="#contact" className="hover:opacity-70">
+            <a href="#contact" className={`hover:opacity-70 ${focusVisibleClass}`}>
               Contact
             </a>
           </div>

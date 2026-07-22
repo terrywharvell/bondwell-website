@@ -88,6 +88,20 @@ export default function DeleteAccountPage() {
           </section>
 
           <section>
+            <h2 className={sectionTitle}>If Oleni Premium is active</h2>
+            <p className={bodyText}>
+              If Oleni Premium is active when deletion is requested, the request will remain pending until the current paid subscription period ends. Signing back into Oleni before that date cancels the pending deletion. After the paid period ends, Oleni continues the account-deletion process.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={sectionTitle}>Related information</h2>
+            <p className={bodyText}>
+              You can also read the <Link href="/privacy" className={`underline ${focusVisibleClass}`}>Privacy Policy</Link> and <Link href="/terms" className={`underline ${focusVisibleClass}`}>Terms of Use</Link>.
+            </p>
+          </section>
+
+          <section>
             <h2 className={sectionTitle}>Need help?</h2>
             <p className={bodyText}>
               If you need help deleting your account or have questions about your information, email <a href="mailto:hello@oleni.app" className={`underline ${focusVisibleClass}`}>hello@oleni.app</a>.

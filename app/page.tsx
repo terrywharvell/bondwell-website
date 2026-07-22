@@ -6,6 +6,35 @@ import { useState } from "react";
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.terrywharvell.bondwellmvp";
 const focusVisibleClass =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b77a8] focus-visible:ring-offset-2";
+const mobileApplicationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "@id": "https://www.oleni.app/#mobile-application",
+  name: "Oleni",
+  alternateName: "Oleni: Epilepsy Support",
+  operatingSystem: "Android",
+  applicationCategory: "HealthApplication",
+  url: "https://www.oleni.app/",
+  downloadUrl: PLAY_STORE_URL,
+  description:
+    "Oleni is a calm epilepsy support app with medication, hydration and meal reminders, energy and rest check-ins, and optional view-only linked support.",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "GBP",
+  },
+  image: "https://www.oleni.app/og-image-oleni.png",
+  screenshot: [
+    "https://www.oleni.app/screens/user-home.jpg",
+    "https://www.oleni.app/screens/user-ask-for-support.jpg",
+    "https://www.oleni.app/screens/partner-support-requested.jpg",
+  ],
+  publisher: {
+    "@type": "Organization",
+    name: "BondWell Support Ltd",
+    url: "https://www.oleni.app/",
+  },
+} as const;
 
 const featureIconPaths = {
   medication: (
@@ -309,6 +338,12 @@ export default function Home() {
 
   return (
     <main id="top" className="min-h-screen bg-white text-[#2F2A26]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(mobileApplicationJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <header className="sticky top-0 z-40 border-b border-[#EDE5DB] bg-white/95 backdrop-blur">
         <div className="mx-auto max-w-7xl px-6 py-4">
           <div className="flex items-center justify-between gap-4">

@@ -4,23 +4,249 @@ import { useState } from "react";
 
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.terrywharvell.bondwellmvp";
 
+const featureIconPaths = {
+  medication: (
+    <>
+      <path
+        d="M7.8 20.9 18.9 9.8a4.7 4.7 0 0 1 6.6 6.6L14.4 27.5a4.7 4.7 0 1 1-6.6-6.6Z"
+        fill="currentColor"
+        fillOpacity={0.06}
+      />
+      <path d="m12.3 16.4 6.3 6.3" />
+      <circle
+        cx="24.2"
+        cy="24.1"
+        r="4.1"
+        fill="white"
+        fillOpacity={0.88}
+      />
+      <path d="m22.4 24.1 1.2 1.3 2.4-2.8" />
+    </>
+  ),
+  hydration: (
+    <>
+      <path
+        d="M16 4.8c-2.8 4.8-7.3 9.3-7.3 14a7.3 7.3 0 0 0 14.6 0c0-4.7-4.5-9.2-7.3-14Z"
+        fill="currentColor"
+        fillOpacity={0.06}
+      />
+      <path d="M19.5 18.1a4.7 4.7 0 0 1-4.3 4.7" />
+      <circle
+        cx="24.8"
+        cy="24.6"
+        r="1"
+        fill="currentColor"
+        stroke="none"
+        opacity={0.52}
+      />
+    </>
+  ),
+  meals: (
+    <>
+      <path
+        d="M7.3 17.2h13.4c-.3 4.6-3.1 7.2-6.7 7.2s-6.4-2.6-6.7-7.2Z"
+        fill="currentColor"
+        fillOpacity={0.06}
+      />
+      <path d="M10 25.5h8" />
+      <path d="M10.7 12.8c-1.8-1.3-3-2.5-3-4.2a2.7 2.7 0 0 1 4.8-1.7A2.7 2.7 0 0 1 17.3 8.6c0 1.7-1.2 2.9-3 4.2l-1.8 1.3-1.8-1.3Z" />
+      <path d="M24 8.2v17.2M22.4 8.2v4.2M25.6 8.2v4.2M22.4 12.4h3.2" />
+    </>
+  ),
+  rest: (
+    <>
+      <path
+        d="M20.6 5.9A9.4 9.4 0 1 0 26 22.4a10.5 10.5 0 0 1-5.4-16.5Z"
+        fill="currentColor"
+        fillOpacity={0.06}
+      />
+      <path
+        d="m24.3 8.1.7 1.7 1.7.7-1.7.7-.7 1.7-.7-1.7-1.7-.7 1.7-.7.7-1.7Z"
+        fill="currentColor"
+        stroke="none"
+      />
+      <path
+        d="m26 15 .45 1.1 1.1.45-1.1.45-.45 1.1-.45-1.1-1.1-.45 1.1-.45.45-1.1Z"
+        fill="currentColor"
+        stroke="none"
+        opacity={0.72}
+      />
+      <path d="M7.2 26.1c4.4-1.7 8.7-1.7 13.1 0" />
+    </>
+  ),
+  support: (
+    <>
+      <path
+        d="M7.4 7.4h17.2a3.3 3.3 0 0 1 3.3 3.3v9.5a3.3 3.3 0 0 1-3.3 3.3H14.3L8 27.8v-4.3h-.6a3.3 3.3 0 0 1-3.3-3.3v-9.5a3.3 3.3 0 0 1 3.3-3.3Z"
+        fill="currentColor"
+        fillOpacity={0.05}
+      />
+      <path d="M10.4 14.3c0-2 2.6-2.9 4.1-.9 1.5-2 4.1-1.1 4.1.9 0 2-2.1 3.4-4.1 4.9-2-1.5-4.1-2.9-4.1-4.9Z" />
+      <circle
+        cx="21.4"
+        cy="16.5"
+        r="0.75"
+        fill="currentColor"
+        stroke="none"
+      />
+      <circle
+        cx="23.8"
+        cy="16.5"
+        r="0.75"
+        fill="currentColor"
+        stroke="none"
+      />
+      <circle
+        cx="26.2"
+        cy="16.5"
+        r="0.75"
+        fill="currentColor"
+        stroke="none"
+      />
+    </>
+  ),
+  linked: (
+    <>
+      <circle
+        cx="11.2"
+        cy="20.5"
+        r="6.3"
+        fill="currentColor"
+        fillOpacity={0.045}
+      />
+      <circle
+        cx="20.8"
+        cy="20.5"
+        r="6.3"
+        fill="currentColor"
+        fillOpacity={0.045}
+      />
+      <circle
+        cx="10.5"
+        cy="8.1"
+        r="2.2"
+        fill="currentColor"
+        fillOpacity={0.08}
+      />
+      <circle
+        cx="21.5"
+        cy="8.1"
+        r="2.2"
+        fill="currentColor"
+        fillOpacity={0.08}
+      />
+      <path d="M15.8 15.2c1.2-.8 2.7-1.1 4.1-.7" />
+    </>
+  ),
+} as const;
+
+type FeatureIconName = keyof typeof featureIconPaths;
+
+type HeroFeature = {
+  title: string;
+  text: string;
+  icon: FeatureIconName;
+  cardClassName: string;
+  iconBadgeClassName: string;
+  iconColourClassName: string;
+  highlightClassName: string;
+};
+
+function FeatureIcon({ name }: { name: FeatureIconName }) {
+  return (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      viewBox="0 0 32 32"
+      className="relative z-10 h-10 w-10 sm:h-14 sm:w-14"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.9}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {featureIconPaths[name]}
+    </svg>
+  );
+}
+
+const heroFeatures: HeroFeature[] = [
+  {
+    title: "Medication reminders",
+    text: "Gentle reminders and calm missed-check-in support",
+    icon: "medication",
+    cardClassName:
+      "border-[#E5D6C8] bg-gradient-to-br from-[#FFFDF9] via-[#FBE9DD] to-[#F7F1EA] hover:border-[#D9C4B3]",
+    iconBadgeClassName:
+      "border-[#E4D1C1] bg-gradient-to-br from-white/85 via-[#F9E6D9]/75 to-[#F5D8C6]/65",
+    iconColourClassName: "text-[#8D5F47]",
+    highlightClassName:
+      "bg-gradient-to-r from-transparent via-[#F2BFA3]/55 to-transparent",
+  },
+  {
+    title: "Hydration support",
+    text: "Simple hydration reminders throughout the day",
+    icon: "hydration",
+    cardClassName:
+      "border-[#D6E5EA] bg-gradient-to-br from-[#FBFEFF] via-[#E6F3FA] to-[#F4FAFB] hover:border-[#C4D7DF]",
+    iconBadgeClassName:
+      "border-[#CFE1E9] bg-gradient-to-br from-white/85 via-[#E4F2F8]/75 to-[#D9ECF4]/65",
+    iconColourClassName: "text-[#4F7890]",
+    highlightClassName:
+      "bg-gradient-to-r from-transparent via-[#A9D6E8]/55 to-transparent",
+  },
+  {
+    title: "Meal reminders",
+    text: "Calm breakfast, lunch and dinner check-ins",
+    icon: "meals",
+    cardClassName:
+      "border-[#E7D5D2] bg-gradient-to-br from-[#FFFDF8] via-[#FBE6E2] to-[#FAF2EC] hover:border-[#DCC2BE]",
+    iconBadgeClassName:
+      "border-[#E4CFCA] bg-gradient-to-br from-white/85 via-[#F9E1DC]/75 to-[#F5D4CE]/65",
+    iconColourClassName: "text-[#9A5A61]",
+    highlightClassName:
+      "bg-gradient-to-r from-transparent via-[#F0B8B0]/55 to-transparent",
+  },
+  {
+    title: "Energy & rest",
+    text: "Share energy levels or let someone know rest is needed",
+    icon: "rest",
+    cardClassName:
+      "border-[#DDD5E9] bg-gradient-to-br from-[#FEFCFF] via-[#ECE7FA] to-[#F8F5FB] hover:border-[#CCC2DF]",
+    iconBadgeClassName:
+      "border-[#D8CFE7] bg-gradient-to-br from-white/85 via-[#EDE6F8]/75 to-[#E2D9F1]/65",
+    iconColourClassName: "text-[#6F638E]",
+    highlightClassName:
+      "bg-gradient-to-r from-transparent via-[#C9B8EA]/55 to-transparent",
+  },
+  {
+    title: "Ask for support",
+    text: "Reach out without needing to find the right words",
+    icon: "support",
+    cardClassName:
+      "border-[#D6E3D9] bg-gradient-to-br from-[#FCFEFB] via-[#E7F2EB] to-[#F7FAF6] hover:border-[#C4D6CA]",
+    iconBadgeClassName:
+      "border-[#CCDECF] bg-gradient-to-br from-white/85 via-[#E5F1E9]/75 to-[#D8E9DE]/65",
+    iconColourClassName: "text-[#5F7A67]",
+    highlightClassName:
+      "bg-gradient-to-r from-transparent via-[#B7D9C1]/55 to-transparent",
+  },
+  {
+    title: "Linked support",
+    text: "Optional, consent-based and strictly view-only",
+    icon: "linked",
+    cardClassName:
+      "border-[#DADAE8] bg-gradient-to-br from-[#FFFCF8] via-[#EFEAF8] to-[#EAF3F6] hover:border-[#C8C8DA]",
+    iconBadgeClassName:
+      "border-[#D4D1E5] bg-gradient-to-br from-white/85 via-[#ECE7F7]/75 to-[#DEEAF0]/65",
+    iconColourClassName: "text-[#6D6688]",
+    highlightClassName:
+      "bg-gradient-to-r from-transparent via-[#C5C2EA]/55 to-transparent",
+  },
+];
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const heroCards = [
-    {
-      title: "Built from real life",
-      text: "Shaped through lived experience, not just an idea.",
-    },
-    {
-      title: "Calm by design",
-      text: "Made to feel gentle, clear, and emotionally safe.",
-    },
-    {
-      title: "Shared with care",
-      text: "Helping both people feel more supported, not more pressured.",
-    },
-  ];
 
   const trustPillars = [
     {
@@ -257,20 +483,21 @@ export default function Home() {
           <div className="absolute left-[-80px] top-[300px] h-[220px] w-[220px] rounded-full bg-[#EEF7F4] blur-3xl" />
         </div>
 
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-14 lg:grid-cols-[0.94fr_1.06fr] lg:items-center lg:gap-20 lg:pb-24 lg:pt-16">
-          <div className="max-w-2xl">
+        <div className="mx-auto grid max-w-7xl gap-9 px-6 pb-14 pt-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-start lg:gap-9 lg:pb-16 lg:pt-12 xl:gap-11">
+          <div className="max-w-2xl lg:max-w-none">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#E8DED1] bg-[#FCFAF7] px-4 py-2 text-sm text-[#8A7460]">
               <span className="h-2 w-2 rounded-full bg-[#C8A96B]" />
-              Calm support, shared gently
+              Calm epilepsy support, shared gently
             </div>
 
             <h1 className="mt-6 text-5xl font-semibold leading-[1.02] tracking-tight text-[#2F2A26] md:text-6xl">
-              Oleni helps daily support feel calmer, closer, and easier to carry.
+              Everyday epilepsy support without the constant pressure
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-[#5A514A] md:text-xl">
-              A gentle daily support app for people living with epilepsy and the
-              partner, carer, or loved one beside them.
+              Oleni brings medication reminders, meals, hydration, energy
+              check-ins, rest support and gentle communication into one calm app
+              — with optional view-only linked support for someone you trust.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -284,91 +511,60 @@ export default function Home() {
               </a>
 
               <a
-                href="#story"
+                href="#how-it-works"
                 className="rounded-full border border-[#DCCFC1] px-7 py-3.5 text-center text-sm font-medium text-[#2F2A26] transition hover:bg-[#FAF7F2]"
               >
-                Why Oleni exists
+                See how Oleni works
               </a>
-            </div>
-
-            <div className="mt-12 grid gap-4 sm:grid-cols-3">
-              {heroCards.map((card) => (
-                <div
-                  key={card.title}
-                  className="rounded-[1.6rem] border border-[#EEE4D8] bg-[#FCFAF7] p-5"
-                >
-                  <p className="text-sm font-semibold text-[#2F2A26]">
-                    {card.title}
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[#5A514A]">
-                    {card.text}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-7 rounded-[1.6rem] border border-[#EEE4D8] bg-white p-5 shadow-[0_12px_36px_rgba(47,42,38,0.05)]">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#8A7460]">
-                Built around epilepsy first
-              </p>
-              <p className="mt-3 text-sm leading-7 text-[#5A514A]">
-                Oleni is being shaped around epilepsy and everyday caring first.
-                Over time, the same calm, supportive approach may also feel helpful
-                in other long-term conditions and care needs where reassurance,
-                routine, and shared support matter.
-              </p>
             </div>
           </div>
 
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative h-[470px] w-full max-w-[680px] sm:h-[560px] lg:h-[640px]">
-              <div className="absolute left-1/2 top-8 h-[340px] w-[340px] -translate-x-1/2 rounded-full bg-[#F7F1E8] blur-3xl sm:h-[360px] sm:w-[360px]" />
-              <div className="absolute right-10 top-24 h-[180px] w-[180px] rounded-full bg-[#EEF4FF] blur-3xl" />
-              <div className="absolute left-12 bottom-20 h-[170px] w-[170px] rounded-full bg-[#EEF7F4] blur-3xl" />
-
-              <div className="absolute left-4 top-36 z-10 hidden w-[150px] -rotate-[9deg] opacity-95 md:block lg:left-8 lg:top-40 lg:w-[160px]">
-                <div className="rounded-[2rem] bg-[#1F1A17] p-[8px] shadow-[0_22px_60px_rgba(47,42,38,0.16)] transition duration-500 hover:-translate-y-2 hover:-rotate-[7deg]">
-                  <div className="relative overflow-hidden rounded-[1.6rem] bg-black">
-                    <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
-                    <img
-                      src="/screens/user-ask-for-support.jpg"
-                      alt="Oleni ask for support screen"
-                      className="block w-full"
+          <div className="grid grid-cols-1 gap-3.5 min-[380px]:grid-cols-2 min-[1180px]:grid-cols-3 lg:min-w-0 lg:pt-1">
+            {heroFeatures.map((feature) => (
+              <div
+                key={feature.title}
+                className={`group relative flex flex-col items-center overflow-hidden rounded-[1.85rem] border px-5 pb-7 pt-6 text-center shadow-[0_22px_64px_rgba(47,42,38,0.08)] transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_30px_76px_rgba(47,42,38,0.11)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:px-7 sm:pb-8 sm:pt-7 ${feature.cardClassName}`}
+              >
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_16%,rgba(255,255,255,0.82),rgba(255,255,255,0.38)_38%,rgba(255,255,255,0)_72%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]"
+                />
+                <div
+                  aria-hidden="true"
+                  className={`pointer-events-none absolute inset-x-5 top-0 h-px ${feature.highlightClassName}`}
+                />
+                <div className="relative flex w-full flex-col items-center text-center">
+                  <div
+                    aria-hidden="true"
+                    className={`relative mb-6 grid h-[92px] w-[92px] place-items-center rounded-full border bg-white/65 shadow-[0_18px_42px_rgba(31,41,55,0.12)] ring-1 ring-white/85 backdrop-blur-sm sm:mb-7 sm:h-[124px] sm:w-[124px] ${feature.iconBadgeClassName} ${feature.iconColourClassName}`}
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="absolute -bottom-3 h-7 w-20 rounded-full bg-current opacity-10 blur-xl sm:-bottom-4 sm:h-9 sm:w-24"
+                    />
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-[5px] rounded-full border border-white/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.88)] sm:inset-[7px]"
+                    />
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-1/2 top-4 h-8 w-16 -translate-x-1/2 rounded-full bg-white/35 blur-md sm:top-5 sm:h-10 sm:w-20"
+                    />
+                    <FeatureIcon name={feature.icon} />
+                    <span
+                      aria-hidden="true"
+                      className="absolute bottom-[18px] right-[20px] h-2 w-2 rounded-full bg-current opacity-40 ring-2 ring-white/80 sm:bottom-7 sm:right-8 sm:h-2.5 sm:w-2.5"
                     />
                   </div>
+                  <p className="text-base font-semibold leading-6 text-[#2F2A26] sm:text-lg">
+                    {feature.title}
+                  </p>
+                  <p className="mt-3 max-w-[15rem] text-sm leading-6 text-[#5A514A] sm:text-[15px] sm:leading-7">
+                    {feature.text}
+                  </p>
                 </div>
               </div>
-
-              <div className="absolute left-1/2 top-2 z-20 w-[250px] -translate-x-1/2 rotate-[1.5deg] sm:w-[285px] lg:top-3 lg:w-[320px]">
-                <div className="rounded-[3rem] bg-[#1F1A17] p-[10px] shadow-[0_40px_120px_rgba(47,42,38,0.22)] transition duration-500 hover:-translate-y-2">
-                  <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
-                    <div className="absolute left-1/2 top-3 z-10 h-7 w-32 -translate-x-1/2 rounded-full bg-black" />
-                    <img
-                      src="/screens/user-home.jpg"
-                      alt="Oleni user home screen"
-                      className="block w-full"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute right-2 top-28 z-10 hidden w-[150px] rotate-[9deg] opacity-95 md:block lg:right-8 lg:top-36 lg:w-[160px]">
-                <div className="rounded-[2rem] bg-[#1F1A17] p-[8px] shadow-[0_22px_60px_rgba(47,42,38,0.16)] transition duration-500 hover:-translate-y-2 hover:rotate-[7deg]">
-                  <div className="relative overflow-hidden rounded-[1.6rem] bg-black">
-                    <div className="absolute left-1/2 top-2.5 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
-                    <img
-                      src="/screens/partner-support-requested.jpg"
-                      alt="Oleni partner support requested screen"
-                      className="block w-full"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute bottom-8 left-1/2 z-30 hidden -translate-x-1/2 rounded-full border border-[#E8DED1] bg-white px-5 py-3 text-sm text-[#5A514A] shadow-[0_14px_34px_rgba(47,42,38,0.12)] md:flex">
-                Designed to feel calm, simple, and supportive
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -766,8 +962,8 @@ export default function Home() {
 
           <div className="mb-6 rounded-[1.6rem] border border-[#E7DED4] bg-[#FCFAF7] p-5">
             <p className="text-sm leading-7 text-[#5A514A]">
-              Android is launching first. Oleni Premium is managed through Google Play
-              on Android at £5.99/month.
+              Oleni is live on Google Play for Android. Oleni Premium is managed
+              through Google Play at £5.99/month.
             </p>
           </div>
 
@@ -1006,8 +1202,9 @@ export default function Home() {
                 Get Oleni for Android
               </h3>
               <p className="mt-3 text-sm leading-7 text-[#5A514A]">
-                Oleni is launching on Android first. The Google Play link will open
-                the live store listing once the app is published.
+                Oleni is available now on Google Play for Android. Download Oleni
+                for calm everyday epilepsy support and optional, consent-based,
+                strictly view-only linked support.
               </p>
               <a
                 href={PLAY_STORE_URL}

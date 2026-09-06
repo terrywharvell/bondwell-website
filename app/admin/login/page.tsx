@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 import { isAdminAuthenticated, isAdminEnvConfigured } from "@/lib/adminAuth";
+
+export const metadata: Metadata = {
+  title: "Admin login",
+  robots: {
+    index: false,
+    follow: false,
+  },
+  alternates: {
+    canonical: null,
+  },
+};
 
 type LoginPageProps = {
   searchParams?: Promise<{

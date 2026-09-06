@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "Delete your Oleni account",
   description:
     "How to delete your Oleni account and associated app data, including the in-app account deletion path and support contact details.",
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
     canonical: "/delete-account",
   },

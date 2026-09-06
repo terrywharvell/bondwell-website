@@ -36,11 +36,29 @@ const homepageJsonLd = {
       downloadUrl: PLAY_STORE_URL,
       description:
         "Oleni is a calm epilepsy support app with medication, hydration and meal reminders, energy and rest check-ins, and optional view-only linked support.",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "GBP",
-      },
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Oleni Free",
+          price: "0",
+          priceCurrency: "GBP",
+          description: "Free single-phone use of Oleni.",
+          url: PLAY_STORE_URL,
+        },
+        {
+          "@type": "Offer",
+          name: "Oleni Premium",
+          description:
+            "Optional monthly subscription for linked support through Google Play.",
+          url: PLAY_STORE_URL,
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "5.99",
+            priceCurrency: "GBP",
+            unitText: "month",
+          },
+        },
+      ],
       image: "https://www.oleni.app/og-image-oleni.png",
       screenshot: [
         "https://www.oleni.app/screens/user-home.jpg",

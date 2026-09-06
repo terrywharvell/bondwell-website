@@ -6,34 +6,52 @@ import { useState } from "react";
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.terrywharvell.bondwellmvp";
 const focusVisibleClass =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b77a8] focus-visible:ring-offset-2";
-const mobileApplicationJsonLd = {
+const homepageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "MobileApplication",
-  "@id": "https://www.oleni.app/#mobile-application",
-  name: "Oleni",
-  alternateName: "Oleni: Epilepsy Support",
-  operatingSystem: "Android",
-  applicationCategory: "HealthApplication",
-  url: "https://www.oleni.app/",
-  downloadUrl: PLAY_STORE_URL,
-  description:
-    "Oleni is a calm epilepsy support app with medication, hydration and meal reminders, energy and rest check-ins, and optional view-only linked support.",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "GBP",
-  },
-  image: "https://www.oleni.app/og-image-oleni.png",
-  screenshot: [
-    "https://www.oleni.app/screens/user-home.jpg",
-    "https://www.oleni.app/screens/user-ask-for-support.jpg",
-    "https://www.oleni.app/screens/partner-support-requested.jpg",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.oleni.app/#organization",
+      name: "BondWell Support Ltd",
+      url: "https://www.oleni.app/",
+      logo: "https://www.oleni.app/oleni-icon-192.png",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.oleni.app/#website",
+      name: "Oleni",
+      url: "https://www.oleni.app/",
+      publisher: {
+        "@id": "https://www.oleni.app/#organization",
+      },
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://www.oleni.app/#mobile-application",
+      name: "Oleni",
+      alternateName: "Oleni: Epilepsy Support",
+      operatingSystem: "Android",
+      applicationCategory: "HealthApplication",
+      url: "https://www.oleni.app/",
+      downloadUrl: PLAY_STORE_URL,
+      description:
+        "Oleni is a calm epilepsy support app with medication, hydration and meal reminders, energy and rest check-ins, and optional view-only linked support.",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "GBP",
+      },
+      image: "https://www.oleni.app/og-image-oleni.png",
+      screenshot: [
+        "https://www.oleni.app/screens/user-home.jpg",
+        "https://www.oleni.app/screens/user-ask-for-support.jpg",
+        "https://www.oleni.app/screens/partner-support-requested.jpg",
+      ],
+      publisher: {
+        "@id": "https://www.oleni.app/#organization",
+      },
+    },
   ],
-  publisher: {
-    "@type": "Organization",
-    name: "BondWell Support Ltd",
-    url: "https://www.oleni.app/",
-  },
 } as const;
 
 const featureIconPaths = {
@@ -341,7 +359,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(mobileApplicationJsonLd).replace(/</g, "\\u003c"),
+          __html: JSON.stringify(homepageJsonLd).replace(/</g, "\\u003c"),
         }}
       />
       <header className="sticky top-0 z-40 border-b border-[#EDE5DB] bg-white/95 backdrop-blur">
